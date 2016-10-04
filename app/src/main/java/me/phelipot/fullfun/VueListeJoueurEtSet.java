@@ -147,11 +147,9 @@ public class VueListeJoueurEtSet extends AppCompatActivity {
         public CharSequence getPageTitle(int position) {
             switch (position) {
                 case 0:
-                    return "SECTION 1";
+                    return "Liste des sets de questions";
                 case 1:
-                    return "SECTION 2";
-                case 2:
-                    return "SECTION 3";
+                    return "Liste des joueurs";
             }
             return null;
         }
