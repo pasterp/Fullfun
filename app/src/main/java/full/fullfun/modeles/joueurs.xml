@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<joueurs>
+    <joueur id="0" pseudo="Quentin" sexe="homme"/>
+    <joueur id="1" pseudo="Samir" sexe="homme"/>
+    <joueur id="2" pseudo="Pascal" sexe="homme"/>
+</joueurs>
