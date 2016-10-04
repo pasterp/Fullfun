@@ -12,6 +12,7 @@ import java.io.File;
 import java.io.IOException;
 
 import me.phelipot.fullfun.donnees.GestionnaireXML;
+import me.phelipot.fullfun.donnees.Partie;
 import me.phelipot.fullfun.donnees.SetQuestionsDAO;
 
 public class ActivitePrincipale extends AppCompatActivity {
@@ -20,6 +21,8 @@ public class ActivitePrincipale extends AppCompatActivity {
     protected Button boutonJouer;
 
     protected SetQuestionsDAO accesseurSetQuestionDAO;
+
+    public static Partie partieActuelle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,7 +64,10 @@ public class ActivitePrincipale extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     Intent intention = new Intent(ActivitePrincipale.this, VueQuestion.class);
-                    intention.putExtra("question", accesseurSetQuestionDAO.getListeSetQuestion().get(0).getListeQuestions().get(0).getTexte());
+
+                    partieActuelle = new Partie();
+                    partieActuelle.ajouterSet(accesseurSetQuestionDAO.getListeSetQuestion().get(0));
+
                     startActivity(intention);
                 }
             });

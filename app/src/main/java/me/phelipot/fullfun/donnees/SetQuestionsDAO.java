@@ -37,23 +37,25 @@ public class SetQuestionsDAO {
     }
 
     public void initialisationQuestions(AssetManager manageurAssets){
-        SetQuestions setQuestions = null;
-        this.manageurAsset = manageurAssets;
+        if (this.manageurAsset == null) {
+            SetQuestions setQuestions = null;
+            this.manageurAsset = manageurAssets;
 
-        Log.d("XML_Assets", "Liste des assets:");
-        try {
-            for (String s :
-                    Resources.getSystem().getAssets().list(File.separator+"assets"+File.separator)) {
-                Log.d("XML_Assets", s);
+            Log.d("XML_Assets", "Liste des assets:");
+            try {
+                for (String s :
+                        Resources.getSystem().getAssets().list(File.separator + "assets" + File.separator)) {
+                    Log.d("XML_Assets", s);
+                }
+
+
+                setQuestions = new GestionnaireXML().lireSetQuestions(manageurAsset.open("questions.xml"));
+            } catch (IOException e) {
+                e.printStackTrace();
             }
 
-
-            setQuestions = new GestionnaireXML().lireSetQuestions(manageurAsset.open("questions.xml"));
-        } catch (IOException e) {
-            e.printStackTrace();
+            listeSetQuestion.add(setQuestions);
         }
-
-        listeSetQuestion.add(setQuestions);
     }
 
     public List<HashMap<String, String>> listerSetQuestionsEnHasmap(){
