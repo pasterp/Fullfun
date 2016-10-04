@@ -1,11 +1,11 @@
-package full.fullfun.donnees;
+package me.phelipot.fullfun.donnees;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import full.fullfun.modeles.Joueur;
-import full.fullfun.modeles.Sexe;
+import me.phelipot.fullfun.modeles.Joueur;
+import me.phelipot.fullfun.modeles.Sexe;
 
 /**
  * Created by 1634836 on 03/10/2016.

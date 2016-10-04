@@ -1,10 +1,10 @@
-package full.fullfun.donnees;
+package me.phelipot.fullfun.donnees;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import full.fullfun.modeles.SetQuestions;
+import me.phelipot.fullfun.modeles.SetQuestions;
 
 /**
  * Created by 1634836 on 03/10/2016.

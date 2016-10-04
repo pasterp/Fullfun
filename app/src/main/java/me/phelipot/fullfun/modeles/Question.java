@@ -1,6 +1,4 @@
-package full.fullfun.modeles;
-
-import java.util.HashMap;
+package me.phelipot.fullfun.modeles;
 
 public class Question {
 

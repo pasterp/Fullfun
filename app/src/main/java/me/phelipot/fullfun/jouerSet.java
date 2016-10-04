@@ -1,4 +1,4 @@
-package full.fullfun;
+package me.phelipot.fullfun;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

@@ -1,4 +1,4 @@
-package full.fullfun.donnees;
+package me.phelipot.fullfun.donnees;
 
 import android.util.Xml;
 
@@ -10,14 +10,12 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
-import java.text.AttributedCharacterIterator;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
-import full.fullfun.modeles.Joueur;
-import full.fullfun.modeles.Question;
-import full.fullfun.modeles.SetQuestions;
+import me.phelipot.fullfun.modeles.Joueur;
+import me.phelipot.fullfun.modeles.Question;
+import me.phelipot.fullfun.modeles.SetQuestions;
 
 public class GestionnaireXML {
 

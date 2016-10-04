@@ -1,4 +1,4 @@
-package full.fullfun;
+package me.phelipot.fullfun;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,7 +8,7 @@ import android.widget.SimpleAdapter;
 import java.util.HashMap;
 import java.util.List;
 
-import full.fullfun.donnees.SetQuestionsDAO;
+import me.phelipot.fullfun.donnees.SetQuestionsDAO;
 
 public class MesSets extends AppCompatActivity {
     protected SetQuestionsDAO accesseurSetQuestionDAO;

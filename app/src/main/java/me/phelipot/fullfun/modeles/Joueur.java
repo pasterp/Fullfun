@@ -1,4 +1,4 @@
-package full.fullfun.modeles;
+package me.phelipot.fullfun.modeles;
 
 
 import java.util.HashMap;
