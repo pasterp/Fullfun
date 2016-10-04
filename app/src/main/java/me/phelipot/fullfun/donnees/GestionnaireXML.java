@@ -1,5 +1,7 @@
 package me.phelipot.fullfun.donnees;
 
+import android.content.res.XmlResourceParser;
+import android.util.Log;
 import android.util.Xml;
 
 import org.xmlpull.v1.XmlPullParser;
@@ -73,6 +75,86 @@ public class GestionnaireXML {
 
         try {
             flux = new FileInputStream(new File(fichierXML));
+            lecteur = Xml.newPullParser();
+            lecteur.setFeature(XmlPullParser.FEATURE_PROCESS_NAMESPACES, false);
+            lecteur.setInput(flux, null);
+            String nom;
+            while (lecteur.next() != XmlPullParser.END_DOCUMENT){
+                nom = lecteur.getName();
+                switch (lecteur.getEventType()){
+                    case XmlPullParser.START_TAG:
+                        if (nom.equals(SET)){
+                            lireSetQuestionsDonnees(lecteur, setQ);
+                        }else if (nom.equals(QUESTION)){
+                            setQ.ajouterQuestion(lireQuestionsDonnees(lecteur));
+                        }
+                        break;
+
+                }
+            }
+
+            // Enfin on ferme le flux de lecture
+            flux.close();
+        }catch (XmlPullParserException e) {
+            e.printStackTrace();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return setQ;
+    }
+
+    public SetQuestions lireSetQuestions(XmlResourceParser fichierXML) {
+        Log.d("XLM_Reader", "Debut de la lecture des questions du set");
+        Question question = null;
+        SetQuestions setQ = new SetQuestions();
+
+        try {
+            lecteur = fichierXML;
+            lecteur.setFeature(XmlPullParser.FEATURE_PROCESS_NAMESPACES, false);
+            lecteur.setInput(flux, null);
+            String nom;
+            while (lecteur.next() != XmlPullParser.END_DOCUMENT){
+                Log.d("XLM_Reader", "question lue ");
+                nom = lecteur.getName();
+                switch (lecteur.getEventType()){
+                    case XmlPullParser.START_TAG:
+                        if (nom.equals(SET)){
+                            lireSetQuestionsDonnees(lecteur, setQ);
+                        }else if (nom.equals(QUESTION)){
+                            setQ.ajouterQuestion(lireQuestionsDonnees(lecteur));
+                        }
+                        break;
+
+                }
+            }
+
+            // Enfin on ferme le flux de lecture
+            flux.close();
+        }catch (XmlPullParserException e) {
+            e.printStackTrace();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return setQ;
+    }
+
+
+    /**
+     * GOOD VERSION - USE IT
+     * @param flux - InputStream (openFile())
+     * @return
+     */
+    public SetQuestions lireSetQuestions(InputStream flux) {
+        Question question = null;
+        SetQuestions setQ = new SetQuestions();
+
+        try {
             lecteur = Xml.newPullParser();
             lecteur.setFeature(XmlPullParser.FEATURE_PROCESS_NAMESPACES, false);
             lecteur.setInput(flux, null);

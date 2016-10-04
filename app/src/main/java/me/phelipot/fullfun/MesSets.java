@@ -20,6 +20,7 @@ public class MesSets extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mes_sets);
         accesseurSetQuestionDAO = SetQuestionsDAO.getInstance();
+        accesseurSetQuestionDAO.initialisationQuestions(getResources().getAssets());
         vueListeSetQuestions = (ListView) findViewById(R.id.listeViewSetQuestions);
         afficherMesSets();
         //REFRESH !
@@ -31,7 +32,7 @@ public class MesSets extends AppCompatActivity {
                 this,
                 listeSetQuestion,
                 android.R.layout.two_line_list_item,
-                new String[]{"nom", "id"},
+                new String[]{"nom", "createur"},
                 new int []{android.R.id.text1,android.R.id. text2} );
 
         vueListeSetQuestions.setAdapter(adapteur);

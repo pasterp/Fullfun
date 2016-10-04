@@ -130,6 +130,8 @@ public class SetQuestions {
         HashMap<String, String> setQuestion = new HashMap<String, String>();
         setQuestion.put("id", String.valueOf(this.id));
         setQuestion.put("nom", String.valueOf(this.nom));
+        setQuestion.put("createur", String.valueOf(this.createur));
+
         return setQuestion;
     }
 

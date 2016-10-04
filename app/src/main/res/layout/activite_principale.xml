@@ -32,4 +32,14 @@
         android:id="@+id/actionMesSets"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="Jouer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/actionMesSets"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="148dp"
+        android:id="@+id/playBouton"
+        android:elevation="5dp" />
 </RelativeLayout>
