@@ -29,7 +29,7 @@ public class Partie {
         }
     }
 
-    public void melangerQuestion(){
+    public void melangerQuestions(){
         Collections.shuffle(questions);
     }
 

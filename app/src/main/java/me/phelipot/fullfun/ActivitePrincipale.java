@@ -67,6 +67,7 @@ public class ActivitePrincipale extends AppCompatActivity {
 
                     partieActuelle = new Partie();
                     partieActuelle.ajouterSet(accesseurSetQuestionDAO.getListeSetQuestion().get(0));
+                    partieActuelle.melangerQuestions();
 
                     startActivity(intention);
                 }
