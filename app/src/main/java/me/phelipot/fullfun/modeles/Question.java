@@ -1,5 +1,7 @@
 package me.phelipot.fullfun.modeles;
 
+import java.util.HashMap;
+
 public class Question {
 
     /***** Attributs *****/
@@ -50,5 +52,12 @@ public class Question {
     }
 
     /***** Methodes *****/
+
+    public HashMap<String, String> exporterHashmap(){
+        HashMap<String, String> donnees = new HashMap<>();
+        donnees.put("categorie", categorie);
+        donnees.put("texte", texte);
+        return donnees;
+    }
 
 }

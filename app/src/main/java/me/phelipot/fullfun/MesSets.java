@@ -1,7 +1,10 @@
 package me.phelipot.fullfun;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
@@ -23,7 +26,15 @@ public class MesSets extends AppCompatActivity {
         accesseurSetQuestionDAO.initialisationQuestions(getResources().getAssets());
         vueListeSetQuestions = (ListView) findViewById(R.id.listeViewSetQuestions);
         afficherMesSets();
-        //REFRESH !
+
+        vueListeSetQuestions.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent ouvrirDetails = new Intent(MesSets.this, DetailsSetQuestions.class);
+                ouvrirDetails.putExtra("set", listeSetQuestion.get(position).get("nom"));
+                startActivity(ouvrirDetails);
+            }
+        });
 
     }
     public void afficherMesSets(){

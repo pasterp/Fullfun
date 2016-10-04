@@ -18,7 +18,8 @@
         <activity android:name=".MesSets" />
         <activity android:name=".MesJoueurs" />
         <activity android:name=".jouerSet" />
-        <activity android:name=".VueQuestion"></activity>
+        <activity android:name=".VueQuestion" />
+        <activity android:name=".DetailsSetQuestions"></activity>
     </application>
 
 </manifest>
