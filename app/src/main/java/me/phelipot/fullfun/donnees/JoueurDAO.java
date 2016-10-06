@@ -26,7 +26,7 @@ public class JoueurDAO {
         return instance;
     }
     private JoueurDAO(){
-        listeJoueur = new ArrayList<Joueur>();
+        listeJoueur = new ArrayList<>();
         Joueur joueur;
 
         joueur = new Joueur(0 , "Quentin", Sexe.Homme);
@@ -39,6 +39,12 @@ public class JoueurDAO {
         listeJoueur.add(joueur);
 
         joueur = new Joueur(3 , "Samir", Sexe.Homme);
+        listeJoueur.add(joueur);
+
+        joueur = new Joueur(3 , "Audrey", Sexe.Femme);
+        listeJoueur.add(joueur);
+
+        joueur = new Joueur(4 , "Nico", Sexe.Confus);
         listeJoueur.add(joueur);
     }
 

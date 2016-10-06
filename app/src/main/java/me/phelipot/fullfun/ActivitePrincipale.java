@@ -10,10 +10,15 @@ import android.widget.Button;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
+import me.phelipot.fullfun.donnees.GenerateurPartie;
 import me.phelipot.fullfun.donnees.GestionnaireXML;
+import me.phelipot.fullfun.donnees.JoueurDAO;
 import me.phelipot.fullfun.donnees.Partie;
 import me.phelipot.fullfun.donnees.SetQuestionsDAO;
+import me.phelipot.fullfun.modeles.SetQuestions;
 
 public class ActivitePrincipale extends AppCompatActivity {
     protected Button bouttonMesJoueurs;
@@ -66,7 +71,14 @@ public class ActivitePrincipale extends AppCompatActivity {
                     Intent intention = new Intent(ActivitePrincipale.this, VueQuestion.class);
 
                     partieActuelle = new Partie();
-                    partieActuelle.ajouterSet(accesseurSetQuestionDAO.getListeSetQuestion().get(0));
+                    List<SetQuestions> setPourJouer = new ArrayList<>();
+                    setPourJouer.add(accesseurSetQuestionDAO.getListeSetQuestion().get(0));
+                    partieActuelle.ajouterSet(
+                            new GenerateurPartie().genererSet(
+                                    setPourJouer,
+                                    JoueurDAO.getInstance().getListeJoueur()
+                            )
+                    );
                     partieActuelle.melangerQuestions();
 
                     startActivity(intention);

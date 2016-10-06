@@ -136,5 +136,14 @@ public class SetQuestions {
     }
 
 
+    /**
+     * Ajoute toutes les questions du set donné.
+     * @param set Le set contenant les questions à ajouter.
+     */
+    public void ajouterSetQuestions(SetQuestions set) {
+        for (Question q : set.listeQuestions){
+            listeQuestions.add(new Question(q.getId(), q.getCategorie(), q.getTexte()));
+        }
+    }
 }
 

@@ -1,10 +1,7 @@
 package me.phelipot.fullfun.donnees;
 
-import android.content.Context;
 import android.content.res.AssetManager;
 import android.content.res.Resources;
-import android.content.res.XmlResourceParser;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
 import java.io.File;
@@ -13,7 +10,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import me.phelipot.fullfun.R;
 import me.phelipot.fullfun.modeles.SetQuestions;
 
 /**
@@ -49,7 +45,7 @@ public class SetQuestionsDAO {
                 }
 
 
-                setQuestions = new GestionnaireXML().lireSetQuestions(manageurAsset.open("questions.xml"));
+                setQuestions = new GestionnaireXML().lireSetQuestions(manageurAsset.open("set_01.xml"));
             } catch (IOException e) {
                 e.printStackTrace();
             }

@@ -3,4 +3,6 @@
     <joueur id="0" pseudo="Quentin" sexe="homme"/>
     <joueur id="1" pseudo="Samir" sexe="homme"/>
     <joueur id="2" pseudo="Pascal" sexe="homme"/>
+    <joueur id="3" pseudo="Audrey" sexe="femme"/>
+    <joueur id="4" pseudo="Jordan" sexe="confus"/>
 </joueurs>

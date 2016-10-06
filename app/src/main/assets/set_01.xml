@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<set id = "0" nom = "Set de base" date = "30/09/2016"
+         score = "5" difficulte = "1" duree = "3" createur = "Quentin">
+
+    <question id = "0" categorie = "normale"> #{h} boit 3 gorgées parce que c'est un homme !</question>
+    <question id = "1" categorie = "normale">#{m} donne 25 gorgées parce qu'il a de la chance !</question>
+    <question id = "2" categorie = "normale">#{f} boit 1 gorgée parce que les filles sont faibles !</question>
+
+</set>
