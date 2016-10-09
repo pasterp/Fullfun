@@ -18,7 +18,6 @@ import me.phelipot.fullfun.modeles.SetQuestions;
 
 public class SetQuestionsDAO {
     protected List<SetQuestions> listeSetQuestion;
-    protected QuestionDAO accesseurQuestionDAO = QuestionDAO.getInstance();
     private static SetQuestionsDAO instance = null;
     private AssetManager manageurAsset;
 

@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <joueurs>
-    <joueur id="0" pseudo="Quentin" sexe="homme"/>
-    <joueur id="1" pseudo="Samir" sexe="homme"/>
-    <joueur id="2" pseudo="Pascal" sexe="homme"/>
-    <joueur id="3" pseudo="Audrey" sexe="femme"/>
-    <joueur id="4" pseudo="Jordan" sexe="confus"/>
-    <joueur id="5" pseudo="Ahmed" sexe="homme"/>
+    <groupe id ="0" nom="Frenchelous">
+        <joueur id="0" pseudo="Quentin" sexe="homme"/>
+        <joueur id="1" pseudo="Samir" sexe="homme"/>
+        <joueur id="2" pseudo="Pascal" sexe="homme"/>
+        <joueur id="3" pseudo="Audrey" sexe="femme"/>
+        <joueur id="4" pseudo="Jordan" sexe="confus"/>
+        <joueur id="5" pseudo="Ahmed" sexe="homme"/>
+    </groupe>
 </joueurs>

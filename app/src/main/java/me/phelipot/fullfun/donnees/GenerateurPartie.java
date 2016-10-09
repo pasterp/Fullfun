@@ -1,10 +1,10 @@
 package me.phelipot.fullfun.donnees;
 
+import android.util.Log;
+
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Random;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import me.phelipot.fullfun.modeles.Joueur;
@@ -18,7 +18,14 @@ import me.phelipot.fullfun.modeles.Sexe;
  */
 public class GenerateurPartie {
 
+
+    /**
+     * Cette valeur est ajouté à la borne supérieur du random pour le nombre de gorgée afin
+     * d'amplifier la range de génération artificiellement. Pour le moment ça semble nécessaire
+     * pour avoir des valeurs "correctes" de gorgées.
+     */
     private static final int MARGE_GORGEE = 2;
+
     /***** Constantes *****/
 
     private final String TAG_HOMME =            "#{h}";
@@ -50,11 +57,12 @@ public class GenerateurPartie {
             totalDifficulte += set.getDifficulte();
         }
         setFinal.setDifficulte(totalDifficulte / sets.size());
-        HashMap<String, Integer> tags = new HashMap<>();
+        Log.d("Difficulte", "yo");
         boolean ok;
         // Parsing des questions
         for (Question q : setFinal.getListeQuestions()){
             ok = false;
+            // Tant qu'on trouve des tags dans le texte on continue à parser.
             while (!ok){
                 if (q.getTexte().contains(TAG_HOMME))
                     parserNom(q, joueurs, TAG_HOMME);
@@ -69,8 +77,6 @@ public class GenerateurPartie {
             }
 
         }
-
-
         return setFinal;
     }
 
@@ -117,7 +123,7 @@ public class GenerateurPartie {
             potentielsJoueurs.addAll(joueurs);
         else{
             for (Joueur j : joueurs){
-                if (j.getSexe().equals(sexe) && !(q.getTexte().contains(j.getPseudo())))
+                if (j.getSexe().equals(sexe) && !(q.getTexte().contains(j.getPseudo())) && !potentielsJoueurs.contains(j))
                     potentielsJoueurs.add(j);
             }
         }

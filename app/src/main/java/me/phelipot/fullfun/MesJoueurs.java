@@ -22,6 +22,7 @@ public class MesJoueurs extends AppCompatActivity {
         setContentView(R.layout.mes_joueurs);
         accesseurJoueurDAO = JoueurDAO.getInstance();
         vueListeJoueur = (ListView) findViewById(R.id.vueListeJoueur);
+        accesseurJoueurDAO.initialiserJoueurs(getAssets());
         afficherMesJoueurs();
         //REFRESH !
     }

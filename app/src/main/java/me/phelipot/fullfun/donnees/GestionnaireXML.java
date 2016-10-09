@@ -15,6 +15,7 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
+import me.phelipot.fullfun.modeles.GroupeJoueur;
 import me.phelipot.fullfun.modeles.Joueur;
 import me.phelipot.fullfun.modeles.Question;
 import me.phelipot.fullfun.modeles.SetQuestions;
@@ -48,11 +49,11 @@ public class GestionnaireXML {
 
     protected final String SEXE = "sexe";
 
-    protected static final String JOUEUR = "joueur";
+    protected final String JOUEUR = "joueur";
+
+    protected final String GROUPE = "groupe";
 
     /***** Attributs *****/
-
-    protected InputStream flux;
 
     protected XmlPullParser lecteur;
 
@@ -64,96 +65,14 @@ public class GestionnaireXML {
 
     /***** Methodes *****/
 
-    /**
-     * Génère le Set de Questions à partir du fichier XMl passé en paramètre.
-     * @param fichierXML Le fichier contenant les questions.
-     * @return Le SetQuestions correspondant.
-     */
-    public SetQuestions lireSetQuestions(String fichierXML) {
-        Question question = null;
-        SetQuestions setQ = new SetQuestions();
-
-        try {
-            flux = new FileInputStream(new File(fichierXML));
-            lecteur = Xml.newPullParser();
-            lecteur.setFeature(XmlPullParser.FEATURE_PROCESS_NAMESPACES, false);
-            lecteur.setInput(flux, null);
-            String nom;
-            while (lecteur.next() != XmlPullParser.END_DOCUMENT){
-                nom = lecteur.getName();
-                switch (lecteur.getEventType()){
-                    case XmlPullParser.START_TAG:
-                        if (nom.equals(SET)){
-                            lireSetQuestionsDonnees(lecteur, setQ);
-                        }else if (nom.equals(QUESTION)){
-                            setQ.ajouterQuestion(lireQuestionsDonnees(lecteur));
-                        }
-                        break;
-
-                }
-            }
-
-            // Enfin on ferme le flux de lecture
-            flux.close();
-        }catch (XmlPullParserException e) {
-            e.printStackTrace();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        return setQ;
-    }
-
-    public SetQuestions lireSetQuestions(XmlResourceParser fichierXML) {
-        Log.d("XLM_Reader", "Debut de la lecture des questions du set");
-        Question question = null;
-        SetQuestions setQ = new SetQuestions();
-
-        try {
-            lecteur = fichierXML;
-            lecteur.setFeature(XmlPullParser.FEATURE_PROCESS_NAMESPACES, false);
-            lecteur.setInput(flux, null);
-            String nom;
-            while (lecteur.next() != XmlPullParser.END_DOCUMENT){
-                Log.d("XLM_Reader", "question lue ");
-                nom = lecteur.getName();
-                switch (lecteur.getEventType()){
-                    case XmlPullParser.START_TAG:
-                        if (nom.equals(SET)){
-                            lireSetQuestionsDonnees(lecteur, setQ);
-                        }else if (nom.equals(QUESTION)){
-                            setQ.ajouterQuestion(lireQuestionsDonnees(lecteur));
-                        }
-                        break;
-
-                }
-            }
-
-            // Enfin on ferme le flux de lecture
-            flux.close();
-        }catch (XmlPullParserException e) {
-            e.printStackTrace();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        return setQ;
-    }
-
 
     /**
      * GOOD VERSION - USE IT
      * @param flux - InputStream (openFile())
-     * @return
+     * @return Le SetQuestion du fichier.
      */
     public SetQuestions lireSetQuestions(InputStream flux) {
-        Question question = null;
         SetQuestions setQ = new SetQuestions();
-
         try {
             lecteur = Xml.newPullParser();
             lecteur.setFeature(XmlPullParser.FEATURE_PROCESS_NAMESPACES, false);
@@ -169,10 +88,8 @@ public class GestionnaireXML {
                             setQ.ajouterQuestion(lireQuestionsDonnees(lecteur));
                         }
                         break;
-
                 }
             }
-
             // Enfin on ferme le flux de lecture
             flux.close();
         }catch (XmlPullParserException e) {
@@ -195,11 +112,52 @@ public class GestionnaireXML {
         return question;
     }
 
-    public List<Joueur> lireListeJoueurs(String fichierXML){
+    public List<GroupeJoueur> lireGroupesJoueurs(InputStream flux){
         List<Joueur> joueurs = new ArrayList<>();
-        Joueur joueur = null;
+        List<GroupeJoueur> groupes = new ArrayList<>();
+        Joueur joueur;
+        GroupeJoueur groupe = null;
+        try {
+            lecteur = Xml.newPullParser();
+            lecteur.setFeature(XmlPullParser.FEATURE_PROCESS_NAMESPACES, false);
+            lecteur.setInput(flux, null);
+            String nom;
+            while (lecteur.next() != XmlPullParser.END_DOCUMENT){
+                nom = lecteur.getName();
+                switch (lecteur.getEventType()){
+                    case XmlPullParser.START_TAG:
+                        if (nom.equals(GROUPE)){
+                            groupe = new GroupeJoueur();
+                            groupe.setId(Integer.parseInt(lecteur.getAttributeValue(null, ID)));
+                            groupe.setNom(lecteur.getAttributeValue(null, NOM));
 
-        return joueurs;
+
+                        }else if(nom.equals(JOUEUR)){
+                            joueur = new Joueur();
+                            joueur.setId(Integer.parseInt(lecteur.getAttributeValue(null, ID)));
+                            joueur.setPseudo(lecteur.getAttributeValue(null, PSEUDO));
+                            joueur.setSexe(lecteur.getAttributeValue(null, SEXE));
+                            joueurs.add(joueur);
+                        }
+                        break;
+                    case XmlPullParser.END_TAG:
+                        if (groupe != null && !joueurs.isEmpty() && nom.equals(GROUPE)){
+                            groupe.setJoueurs(joueurs);
+                            groupes.add(groupe);
+                            joueurs = new ArrayList<>();
+                        }
+                }
+            }
+            // Enfin on ferme le flux de lecture
+            flux.close();
+        }catch (XmlPullParserException e) {
+            e.printStackTrace();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return groupes;
     }
 
     public void lireSetQuestionsDonnees(XmlPullParser lecteur, SetQuestions setQuestions){

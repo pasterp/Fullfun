@@ -1,20 +1,15 @@
 package me.phelipot.fullfun;
 
 import android.content.Intent;
-import android.content.res.Resources;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
-import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 import me.phelipot.fullfun.donnees.GenerateurPartie;
-import me.phelipot.fullfun.donnees.GestionnaireXML;
 import me.phelipot.fullfun.donnees.JoueurDAO;
 import me.phelipot.fullfun.donnees.Partie;
 import me.phelipot.fullfun.donnees.SetQuestionsDAO;
@@ -27,6 +22,8 @@ public class ActivitePrincipale extends AppCompatActivity {
 
     protected SetQuestionsDAO accesseurSetQuestionDAO;
 
+    protected JoueurDAO accesseurJoueursDAO;
+
     public static Partie partieActuelle;
 
     @Override
@@ -35,6 +32,7 @@ public class ActivitePrincipale extends AppCompatActivity {
         setContentView(R.layout.activite_principale);
 
         accesseurSetQuestionDAO = SetQuestionsDAO.getInstance();
+        accesseurJoueursDAO = JoueurDAO.getInstance();
 
         bouttonMesJoueurs = (Button) findViewById(R.id.actionMesJoueurs);
         bouttonMesJoueurs.setOnClickListener(new View.OnClickListener() {
@@ -62,7 +60,7 @@ public class ActivitePrincipale extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
 
-        if (accesseurSetQuestionDAO.isInitialise()){
+        if (accesseurSetQuestionDAO.isInitialise() && accesseurJoueursDAO.isInitialise()){
             boutonJouer.setEnabled(true);
 
             boutonJouer.setOnClickListener(new View.OnClickListener() {
@@ -76,7 +74,7 @@ public class ActivitePrincipale extends AppCompatActivity {
                     partieActuelle.ajouterSet(
                             new GenerateurPartie().genererSet(
                                     setPourJouer,
-                                    JoueurDAO.getInstance().getListeJoueur()
+                                    JoueurDAO.getInstance().getListeGroupes().get(0).getJoueurs()
                             )
                     );
                     partieActuelle.melangerQuestions();

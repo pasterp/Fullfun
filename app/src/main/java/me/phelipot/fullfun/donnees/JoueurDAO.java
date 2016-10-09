@@ -1,23 +1,34 @@
 package me.phelipot.fullfun.donnees;
 
+import android.content.res.AssetManager;
+import android.content.res.Resources;
+import android.util.Log;
+
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+import me.phelipot.fullfun.modeles.GroupeJoueur;
 import me.phelipot.fullfun.modeles.Joueur;
-import me.phelipot.fullfun.modeles.Sexe;
 
 /**
  * Created by 1634836 on 03/10/2016.
  */
 
 public class JoueurDAO {
-    public List<Joueur> getListeJoueur() {
-        return listeJoueur;
-    }
 
-    protected List<Joueur> listeJoueur;
+    /***** Attributs *****/
+
+    private AssetManager manageurAsset;
+
+    protected List<GroupeJoueur> listeGroupes;
+
     private static JoueurDAO instance = null;
+
+
+    /***** Constructeurs *****/
 
     public static JoueurDAO getInstance(){
         if(null == instance){
@@ -25,39 +36,56 @@ public class JoueurDAO {
         }
         return instance;
     }
+
     private JoueurDAO(){
-        listeJoueur = new ArrayList<>();
-        Joueur joueur;
+        listeGroupes = new ArrayList<>();
+    }
 
-        joueur = new Joueur(0 , "Quentin", Sexe.Homme);
-        listeJoueur.add(joueur);
 
-        joueur = new Joueur(1 , "Pascal", Sexe.Homme);
-        listeJoueur.add(joueur);
+    /***** Accesseurs *****/
 
-        joueur = new Joueur(2 , "Jordan", Sexe.Homme);
-        listeJoueur.add(joueur);
+    public List<GroupeJoueur> getListeGroupes() {
+        return listeGroupes;
+    }
 
-        joueur = new Joueur(3 , "Samir", Sexe.Homme);
-        listeJoueur.add(joueur);
 
-        joueur = new Joueur(3 , "Audrey", Sexe.Femme);
-        listeJoueur.add(joueur);
+    /***** Methodes *****/
 
-        joueur = new Joueur(4 , "Nico", Sexe.Confus);
-        listeJoueur.add(joueur);
+    public void initialiserJoueurs(AssetManager manageurAssets){
+        if (this.manageurAsset == null) {
+            List<GroupeJoueur> listeGroupes = null;
+            this.manageurAsset = manageurAssets;
 
-        joueur = new Joueur(5 , "Ahmed", Sexe.Homme);
-        listeJoueur.add(joueur);
+            Log.d("XML_Assets", "Liste des assets:");
+            try {
+                for (String s :
+                        Resources.getSystem().getAssets().list(File.separator + "assets" + File.separator)) {
+                    Log.d("XML_Assets", s);
+                }
+
+
+                listeGroupes = new GestionnaireXML().lireGroupesJoueurs(manageurAsset.open("joueurs.xml"));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+            this.listeGroupes = listeGroupes;
+        }
     }
 
     public List<HashMap<String, String>> listerJoueurEnHasmap(){
 
-        List<HashMap<String , String>> listeJoueurHashMap = new ArrayList<HashMap<String , String>>();
+        List<HashMap<String , String>> listeJoueurHashMap = new ArrayList<>();
 
-        for (Joueur j : this.getListeJoueur()){
-            listeJoueurHashMap.add(j.exporterHashMap());
+        for (GroupeJoueur g : this.getListeGroupes()){
+            for (Joueur j : g.getJoueurs()){
+                listeJoueurHashMap.add(j.exporterHashMap());
+            }
         }
         return listeJoueurHashMap;
+    }
+
+    public boolean isInitialise() {
+        return manageurAsset != null;
     }
 }
