@@ -46,6 +46,9 @@ public class JoueurDAO {
 
         joueur = new Joueur(4 , "Nico", Sexe.Confus);
         listeJoueur.add(joueur);
+
+        joueur = new Joueur(5 , "Ahmed", Sexe.Homme);
+        listeJoueur.add(joueur);
     }
 
     public List<HashMap<String, String>> listerJoueurEnHasmap(){
