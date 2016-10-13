@@ -140,13 +140,13 @@ public class GestionnaireXML {
         String texte = "";
         if (lecteur.next() == XmlPullParser.TEXT)
             texte = lecteur.getText();
-
         switch (categorie){
             case CATEGORIE_ETAT:
                 lecteur.next();
                 Question finEtat = lireQuestionsDonnees(lecteur);
                 question = new QuestionEtat();
                 ((QuestionEtat)question).setQuestionFinEtat(finEtat);
+                Log.e("Texte fin etat", ((QuestionEtat)question).getQuestionFinEtat().getTexte());
                 break;
             default:
                 question = new Question();

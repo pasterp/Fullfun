@@ -103,6 +103,9 @@ public class GenerateurPartie {
                 QuestionEtat qEtat = (QuestionEtat)q;
                 // Génération de la durée de l'état en fonction de la longueur du Set final.
                 int duree = rng.nextInt(2 + (questionsNormales.size() / 4));
+                if (duree < 2){
+                    duree = 2;
+                }
                 qEtat.setDuree(duree);
                 // Calcul de la place maximale de la question en fonction de la durée de l'état.
                 int place = rng.nextInt(questionsNormales.size() - qEtat.getDuree() - 1);
