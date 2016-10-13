@@ -3,6 +3,7 @@ package me.phelipot.fullfun.donnees;
 import android.util.Log;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 import java.util.regex.Pattern;
@@ -48,6 +49,14 @@ public class GenerateurPartie {
 
     /***** Methodes *****/
 
+    /**
+     * Méthode à appeler pour générer le SetQuestion utilisé lors de la partie. Il va regrouper toutes
+     * les questions de tout les SetQuestions passés en paramètres puis d'y générer les différents
+     * éléments dynamiques comme les prénoms et les nombres de gorgées.
+     * @param sets Une List de SetQuestions qui seront utilisés pour la partie.
+     * @param joueurs Une List contenant tout les joueurs de la partie.
+     * @return Le SetQuestion prêt à l'usage.
+     */
     public SetQuestions genererSet(List<SetQuestions> sets, List<Joueur> joueurs){
         SetQuestions setFinal = new SetQuestions();
         int totalDifficulte = 0;
@@ -56,8 +65,29 @@ public class GenerateurPartie {
             setFinal.ajouterSetQuestions(set);
             totalDifficulte += set.getDifficulte();
         }
+        // Moyenne des difficultés de tout les sets.
         setFinal.setDifficulte(totalDifficulte / sets.size());
-        Log.d("Difficulte", "yo");
+        parserQuestions(setFinal, joueurs);
+        organiserSet(setFinal);
+        return setFinal;
+    }
+
+    /**
+     * Mélange correctement toutes les questions.
+     * Pour le moment, fait juste un shuffle classique mais après avec les nouveaux types de questions
+     * il faudra modifier ici.
+     * @param setFinal Le setFinal.
+     */
+    private void organiserSet(SetQuestions setFinal) {
+        Collections.shuffle(setFinal.getListeQuestions());
+    }
+
+    /**
+     * Parse chaque question du set final.
+     * @param setFinal Le SetQuestion final à parser.
+     * @param joueurs La liste des joueurs.
+     */
+    private void parserQuestions(SetQuestions setFinal, List<Joueur> joueurs) {
         boolean ok;
         // Parsing des questions
         for (Question q : setFinal.getListeQuestions()){
@@ -77,7 +107,6 @@ public class GenerateurPartie {
             }
 
         }
-        return setFinal;
     }
 
     /**
@@ -127,7 +156,7 @@ public class GenerateurPartie {
                     potentielsJoueurs.add(j);
             }
         }
-        // Parsing du nom en UNE LIGNE
+        // Parsing du nom en UNE LIGNE: Remplace le tag par un nom de joueur choisi aléatoirement.
         q.setTexte(q.getTexte().replaceFirst(Pattern.quote(tag),potentielsJoueurs.get(new Random().nextInt(potentielsJoueurs.size())).getPseudo()));
     }
 }

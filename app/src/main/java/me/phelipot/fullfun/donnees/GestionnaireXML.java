@@ -6,12 +6,14 @@ import android.util.Xml;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
+import org.xmlpull.v1.XmlSerializer;
 
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -67,6 +69,7 @@ public class GestionnaireXML {
 
 
     /**
+     * Lit le SetQuestion passé en paramètre par le biais du flux.
      * GOOD VERSION - USE IT
      * @param flux - InputStream (openFile())
      * @return Le SetQuestion du fichier.
@@ -82,8 +85,10 @@ public class GestionnaireXML {
                 nom = lecteur.getName();
                 switch (lecteur.getEventType()){
                     case XmlPullParser.START_TAG:
+                        // Si on trouve un tag de Set on le lit
                         if (nom.equals(SET)){
                             lireSetQuestionsDonnees(lecteur, setQ);
+                        // Sinon si c'est une question o n l'ajoute au set.
                         }else if (nom.equals(QUESTION)){
                             setQ.ajouterQuestion(lireQuestionsDonnees(lecteur));
                         }
@@ -103,6 +108,13 @@ public class GestionnaireXML {
         return setQ;
     }
 
+    /**
+     * Lit la question suicante dans le XML lorsqu'on en détecte une.
+     * @param lecteur Le lecteur XML
+     * @return La Question générée à partir du XML.
+     * @throws IOException
+     * @throws XmlPullParserException
+     */
     private Question lireQuestionsDonnees(XmlPullParser lecteur) throws IOException, XmlPullParserException {
         Question question =new Question();
         question.setId(Integer.parseInt(lecteur.getAttributeValue(null, ID)));
@@ -112,6 +124,11 @@ public class GestionnaireXML {
         return question;
     }
 
+    /**
+     * Lit tout les groupes de joueur dans le fichier XML passé en paramètre par le biais du flux.
+     * @param flux Le flux de lecture.
+     * @return Une List de GroupeJoueur.
+     */
     public List<GroupeJoueur> lireGroupesJoueurs(InputStream flux){
         List<Joueur> joueurs = new ArrayList<>();
         List<GroupeJoueur> groupes = new ArrayList<>();
@@ -126,12 +143,12 @@ public class GestionnaireXML {
                 nom = lecteur.getName();
                 switch (lecteur.getEventType()){
                     case XmlPullParser.START_TAG:
+                        // Si on détecte une balise Groupe.
                         if (nom.equals(GROUPE)){
                             groupe = new GroupeJoueur();
                             groupe.setId(Integer.parseInt(lecteur.getAttributeValue(null, ID)));
                             groupe.setNom(lecteur.getAttributeValue(null, NOM));
-
-
+                        // Si on détecte une balise Joueur.
                         }else if(nom.equals(JOUEUR)){
                             joueur = new Joueur();
                             joueur.setId(Integer.parseInt(lecteur.getAttributeValue(null, ID)));
@@ -160,6 +177,11 @@ public class GestionnaireXML {
         return groupes;
     }
 
+    /**
+     * Lit les données du Setquestion détecté.
+     * @param lecteur Le lecteur XML.
+     * @param setQuestions Le SetQuestions à paramétrer.
+     */
     public void lireSetQuestionsDonnees(XmlPullParser lecteur, SetQuestions setQuestions){
         setQuestions.setId(Integer.parseInt(lecteur.getAttributeValue(null, ID)));
         setQuestions.setCreateur(lecteur.getAttributeValue(null, CREATEUR));
@@ -168,5 +190,42 @@ public class GestionnaireXML {
         setQuestions.setDuree(Integer.parseInt(lecteur.getAttributeValue(null, DUREE)));
         setQuestions.setNom(lecteur.getAttributeValue(null, NOM));
         setQuestions.setScore(Integer.parseInt(lecteur.getAttributeValue(null, SCORE)));
+    }
+
+    /**
+     * Ecrit tout les GroupeJoueurs dans le fichier passé en paramètre par le biais du flux.
+     * @param groupes La liste de tout les groupeJoueurs.
+     * @param flux Le flux d'écriture.
+     */
+    public void sauvegarderGroupeJoueurs(List<GroupeJoueur> groupes, OutputStream flux){
+
+        XmlSerializer serializer = Xml.newSerializer();
+
+        try {
+            serializer.setOutput(flux, "UTF-8");
+            serializer.startDocument(null, true);
+            serializer.setFeature("http://xmlpull.org/v1/doc/features.html#indent-output", true);
+            // Iteration des GroupesJoueurs
+            for (GroupeJoueur g : groupes){
+                serializer.startTag(null, GROUPE);
+                serializer.attribute(null, ID, String.valueOf(g.getId()));
+                serializer.attribute(null, NOM, g.getNom());
+                // Itération des Joueurs
+                for (Joueur j : g.getJoueurs()){
+                    serializer.startTag(null, JOUEUR);
+                    serializer.attribute(null, ID, String.valueOf(j.getId()));
+                    serializer.attribute(null, PSEUDO, j.getPseudo());
+                    serializer.attribute(null, SEXE, j.getSexe().toString());
+                    serializer.endTag(null, JOUEUR);
+                }
+                serializer.endTag(null, GROUPE);
+            }
+            // Fin d'écriture - Flush du buffer puis fermeture du flux.
+            serializer.endDocument();
+            serializer.flush();
+            flux.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
