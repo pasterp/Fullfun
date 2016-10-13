@@ -1,7 +1,4 @@
-#Thu Oct 13 18:26:50 EDT 2016
-base.0=C\:\\Users\\quent\\Documents\\GitHub\\MesRecycleViews\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_d3d3d30d326b364a9755053ce33562029bace71f
-renamed.1=classes.dex
-renamed.0=classes2.dex
-file.1=C\:\\Users\\quent\\Documents\\GitHub\\MesRecycleViews\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_fe51afae7140a30afafdaeca775f466aeb65c567\\classes.dex
-base.1=C\:\\Users\\quent\\Documents\\GitHub\\MesRecycleViews\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_fe51afae7140a30afafdaeca775f466aeb65c567
-file.0=C\:\\Users\\quent\\Documents\\GitHub\\MesRecycleViews\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_d3d3d30d326b364a9755053ce33562029bace71f\\classes.dex
+#Thu Oct 13 18:56:46 EDT 2016
+base.0=C\:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
+renamed.0=classes.dex
+file.0=C\:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex
