@@ -7,7 +7,9 @@
     <question id="1" categorie="normale">#{m} donne #{g} gorgée parce qu'il a de la chance !</question>
     <question id="2" categorie="normale">#{f} boit #{g} gorgée parce que les filles sont faibles !</question>
     <question id="3" categorie="normale">#{m} donne autant de gorgée que tu veux à #{m} !</question>
-    <question id="4" categorie="etat" etat="doubleGorgee">#{m} boit double jusqu'à nouvel ordre !</question>
-    <question id="5" categorie="normale">#{m} distribue #{gs} gorgée !</question>
+    <question id="4" categorie="etat" etat="doubleGorgee">#{m} boit double jusqu'à nouvel ordre !
+        <question id="5" categorie="normale">#{m} ne boit plus double !</question>
+    </question>
+    <question id="6" categorie="normale">#{m} distribue #{gs} gorgée !</question>
 
 </set>

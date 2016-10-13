@@ -10,6 +10,7 @@ import java.util.regex.Pattern;
 
 import me.phelipot.fullfun.modeles.Joueur;
 import me.phelipot.fullfun.modeles.Question;
+import me.phelipot.fullfun.modeles.QuestionEtat;
 import me.phelipot.fullfun.modeles.SetQuestions;
 import me.phelipot.fullfun.modeles.Sexe;
 
@@ -63,13 +64,14 @@ public class GenerateurPartie {
         SetQuestions setFinal = new SetQuestions();
         int totalDifficulte = 0;
         // Regroupe toutes les questions dans un même set.
+        List<Question> questions = new ArrayList<>();
         for (SetQuestions set : sets){
-            setFinal.ajouterSetQuestions(set);
+            questions.addAll(set.getListeQuestions());
             totalDifficulte += set.getDifficulte();
         }
+        setFinal.setListeQuestions(preparerListeQuestions(questions));
         // Moyenne des difficultés de tout les sets.
         setFinal.setDifficulte(totalDifficulte / sets.size());
-        organiserSet(setFinal);
         parserQuestions(setFinal, joueurs);
         return setFinal;
     }
@@ -78,11 +80,42 @@ public class GenerateurPartie {
      * Mélange correctement toutes les questions.
      * Pour le moment, fait juste un shuffle classique mais après avec les nouveaux types de questions
      * il faudra modifier ici.
-     * @param setFinal Le setFinal.
+     * @param questions Le setFinal.
      */
-    private void organiserSet(SetQuestions setFinal) {
+    private List<Question> preparerListeQuestions(List<Question> questions) {
         // TODO: 13/10/2016 Extraire les questions nécessitant un placement particulier, shuffle les autres puis placer procéduralement celles extraites.
-        Collections.shuffle(setFinal.getListeQuestions());
+        // Séparations des types de questions.
+        List<Question> questionsSpeciales = new ArrayList<>();
+        List<Question> questionsNormales = new ArrayList<>();
+        for (Question q : questions){
+            if (q instanceof QuestionEtat){
+                questionsSpeciales.add(q);
+            }else{
+                questionsNormales.add(q);
+            }
+        }
+        // Ajout de toutes les questions normales
+        Collections.shuffle(questionsNormales);
+        // Traitement des questions à placement particulier.
+        for (Question q : questionsSpeciales){
+            if (q instanceof QuestionEtat){
+                Random rng = new Random();
+                QuestionEtat qEtat = (QuestionEtat)q;
+                // Génération de la durée de l'état en fonction de la longueur du Set final.
+                int duree = rng.nextInt(2 + (questionsNormales.size() / 4));
+                qEtat.setDuree(duree);
+                // Calcul de la place maximale de la question en fonction de la durée de l'état.
+                int place = rng.nextInt(questionsNormales.size() - qEtat.getDuree() - 1);
+                Log.d("Place:", String.valueOf(place));
+                if (place < 0)
+                    place = 0;
+                // Ajout de la QuestionEtat et de sa Question servant de fin d'état.
+                questionsNormales.add(place, qEtat);
+                questionsNormales.add(place + qEtat.getDuree(), qEtat.getQuestionFinEtat());
+            }
+        }
+
+        return questionsNormales;
     }
 
     /**
@@ -168,6 +201,13 @@ public class GenerateurPartie {
             }
         }
         // Parsing du nom en UNE LIGNE: Remplace le tag par un nom de joueur choisi aléatoirement.
-        q.setTexte(q.getTexte().replaceFirst(Pattern.quote(tag),potentielsJoueurs.get(new Random().nextInt(potentielsJoueurs.size())).getPseudo()));
+        q.setTexte(
+                q.getTexte().replaceFirst(Pattern.quote(tag),
+                        potentielsJoueurs.get(new Random().nextInt(potentielsJoueurs.size())).getPseudo()));
+        // Si la question est une question d'état, alors le nom du joueur est aussi remplacée dans la question de fin d'état
+        if (q instanceof QuestionEtat)
+            ((QuestionEtat)q).getQuestionFinEtat().setTexte(
+                    q.getTexte().replaceFirst(Pattern.quote(tag),
+                            potentielsJoueurs.get(new Random().nextInt(potentielsJoueurs.size())).getPseudo()));
     }
 }

@@ -20,6 +20,7 @@ import java.util.List;
 import me.phelipot.fullfun.modeles.GroupeJoueur;
 import me.phelipot.fullfun.modeles.Joueur;
 import me.phelipot.fullfun.modeles.Question;
+import me.phelipot.fullfun.modeles.QuestionEtat;
 import me.phelipot.fullfun.modeles.SetQuestions;
 
 public class GestionnaireXML {
@@ -55,6 +56,8 @@ public class GestionnaireXML {
 
     protected final String GROUPE = "groupe";
 
+    private final String CATEGORIE_ETAT = "etat";
+
     /***** Attributs *****/
 
     protected XmlPullParser lecteur;
@@ -88,7 +91,7 @@ public class GestionnaireXML {
                         // Si on trouve un tag de Set on le lit
                         if (nom.equals(SET)){
                             lireSetQuestionsDonnees(lecteur, setQ);
-                        // Sinon si c'est une question o n l'ajoute au set.
+                        // Sinon si c'est une question on l'ajoute au set.
                         }else if (nom.equals(QUESTION)){
                             setQ.ajouterQuestion(lireQuestionsDonnees(lecteur));
                         }
@@ -109,6 +112,21 @@ public class GestionnaireXML {
     }
 
     /**
+     * Lit les données du Setquestion détecté.
+     * @param lecteur Le lecteur XML.
+     * @param setQuestions Le SetQuestions à paramétrer.
+     */
+    public void lireSetQuestionsDonnees(XmlPullParser lecteur, SetQuestions setQuestions){
+        setQuestions.setId(Integer.parseInt(lecteur.getAttributeValue(null, ID)));
+        setQuestions.setCreateur(lecteur.getAttributeValue(null, CREATEUR));
+        setQuestions.setDate(lecteur.getAttributeValue(null, DATE));
+        setQuestions.setDifficulte(Integer.parseInt(lecteur.getAttributeValue(null, DIFFICULTE)));
+        setQuestions.setDuree(Integer.parseInt(lecteur.getAttributeValue(null, DUREE)));
+        setQuestions.setNom(lecteur.getAttributeValue(null, NOM));
+        setQuestions.setScore(Integer.parseInt(lecteur.getAttributeValue(null, SCORE)));
+    }
+
+    /**
      * Lit la question suicante dans le XML lorsqu'on en détecte une.
      * @param lecteur Le lecteur XML
      * @return La Question générée à partir du XML.
@@ -116,11 +134,26 @@ public class GestionnaireXML {
      * @throws XmlPullParserException
      */
     private Question lireQuestionsDonnees(XmlPullParser lecteur) throws IOException, XmlPullParserException {
-        Question question =new Question();
-        question.setId(Integer.parseInt(lecteur.getAttributeValue(null, ID)));
-        question.setCategorie(lecteur.getAttributeValue(null ,CATEGORIE));
+        Question question;
+        int id = Integer.parseInt(lecteur.getAttributeValue(null, ID));
+        String categorie = lecteur.getAttributeValue(null ,CATEGORIE);
+        String texte = "";
         if (lecteur.next() == XmlPullParser.TEXT)
-            question.setTexte(lecteur.getText());
+            texte = lecteur.getText();
+
+        switch (categorie){
+            case CATEGORIE_ETAT:
+                lecteur.next();
+                Question finEtat = lireQuestionsDonnees(lecteur);
+                question = new QuestionEtat();
+                ((QuestionEtat)question).setQuestionFinEtat(finEtat);
+                break;
+            default:
+                question = new Question();
+        }
+        question.setId(id);
+        question.setCategorie(categorie);
+        question.setTexte(texte);
         return question;
     }
 
@@ -177,20 +210,6 @@ public class GestionnaireXML {
         return groupes;
     }
 
-    /**
-     * Lit les données du Setquestion détecté.
-     * @param lecteur Le lecteur XML.
-     * @param setQuestions Le SetQuestions à paramétrer.
-     */
-    public void lireSetQuestionsDonnees(XmlPullParser lecteur, SetQuestions setQuestions){
-        setQuestions.setId(Integer.parseInt(lecteur.getAttributeValue(null, ID)));
-        setQuestions.setCreateur(lecteur.getAttributeValue(null, CREATEUR));
-        setQuestions.setDate(lecteur.getAttributeValue(null, DATE));
-        setQuestions.setDifficulte(Integer.parseInt(lecteur.getAttributeValue(null, DIFFICULTE)));
-        setQuestions.setDuree(Integer.parseInt(lecteur.getAttributeValue(null, DUREE)));
-        setQuestions.setNom(lecteur.getAttributeValue(null, NOM));
-        setQuestions.setScore(Integer.parseInt(lecteur.getAttributeValue(null, SCORE)));
-    }
 
     /**
      * Ecrit tout les GroupeJoueurs dans le fichier passé en paramètre par le biais du flux.

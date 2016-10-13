@@ -18,7 +18,7 @@ public class Question {
 
     }
 
-    public Question(int id, String categorie, String  texte){
+    public Question(int id, String categorie, String texte){
         this();
         this.id = id;
         this.categorie = categorie;
