@@ -71,13 +71,15 @@ public class ActivitePrincipale extends AppCompatActivity {
                     partieActuelle = new Partie();
                     List<SetQuestions> setPourJouer = new ArrayList<>();
                     setPourJouer.add(accesseurSetQuestionDAO.getListeSetQuestion().get(0));
+                    // Génération puis ajout du Set à la partie.
                     partieActuelle.ajouterSet(
                             new GenerateurPartie().genererSet(
                                     setPourJouer,
                                     JoueurDAO.getInstance().getListeGroupes().get(0).getJoueurs()
                             )
                     );
-                    partieActuelle.melangerQuestions();
+                    // Plus besoin de mélanger le set via la partie, désormais fait à la génération.
+                    //partieActuelle.melangerQuestions();
 
                     startActivity(intention);
                 }

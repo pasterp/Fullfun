@@ -88,4 +88,16 @@ public class JoueurDAO {
     public boolean isInitialise() {
         return manageurAsset != null;
     }
+
+    /**
+     * Sauvegarde les joueurs dans le XML. Si le DAO n'a pas été initialisé via <code>initialiserJoueur</code>
+     * alors cela ne fera rien.
+     */
+    public void sauvegarderJoueurs(){
+        if (isInitialise()){
+           // @todo Trouver le moyen de sauvegarder.
+        }else{
+            Log.d("Sauvegarde Impossible", "DAO non initialisé: Appel à initialiserJoueur d'abord.");
+        }
+    }
 }

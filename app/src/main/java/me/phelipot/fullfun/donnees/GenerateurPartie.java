@@ -29,13 +29,15 @@ public class GenerateurPartie {
 
     /***** Constantes *****/
 
-    private final String TAG_HOMME =            "#{h}";
+    private final String TAG_HOMME =                     "#{h}";
 
-    private final String TAG_FEMME =            "#{f}";
+    private final String TAG_FEMME =                     "#{f}";
 
-    private final String TAG_MIXTE =            "#{m}";
+    private final String TAG_MIXTE =                     "#{m}";
 
-    private final String TAG_GORGEE_ALEATOIRE = "#{g}";
+    private final String TAG_GORGEE_ALEATOIRE =          "#{g}";
+
+    private final String TAG_GORGEE_ALEATOIRE_MULTIPLE = "#{gs}"; // Gorgée aléatoire forcément supérieur à 1
 
     /***** Attributs *****/
 
@@ -67,8 +69,8 @@ public class GenerateurPartie {
         }
         // Moyenne des difficultés de tout les sets.
         setFinal.setDifficulte(totalDifficulte / sets.size());
-        parserQuestions(setFinal, joueurs);
         organiserSet(setFinal);
+        parserQuestions(setFinal, joueurs);
         return setFinal;
     }
 
@@ -79,6 +81,7 @@ public class GenerateurPartie {
      * @param setFinal Le setFinal.
      */
     private void organiserSet(SetQuestions setFinal) {
+        // TODO: 13/10/2016 Extraire les questions nécessitant un placement particulier, shuffle les autres puis placer procéduralement celles extraites.
         Collections.shuffle(setFinal.getListeQuestions());
     }
 
@@ -102,6 +105,8 @@ public class GenerateurPartie {
                     parserNom(q, joueurs, TAG_MIXTE);
                 else if (q.getTexte().contains(TAG_GORGEE_ALEATOIRE))
                     parserGorgee(q, setFinal.getDifficulte(), TAG_GORGEE_ALEATOIRE);
+                else if (q.getTexte().contains(TAG_GORGEE_ALEATOIRE_MULTIPLE))
+                    parserGorgee(q, setFinal.getDifficulte(), TAG_GORGEE_ALEATOIRE_MULTIPLE);
                 else
                     ok = true;
             }
@@ -116,12 +121,18 @@ public class GenerateurPartie {
      * @param tag Le tag correspondant.
      */
     private void parserGorgee(Question q, int difficulte, String tag) {
+        int nbr;
         switch (tag){
             case TAG_GORGEE_ALEATOIRE:
-                int nbr = 1 + new Random().nextInt(difficulte + MARGE_GORGEE);
+                nbr = 1 + new Random().nextInt(difficulte + MARGE_GORGEE);
                 q.setTexte(q.getTexte().replaceFirst(Pattern.quote(tag), String.valueOf(nbr)));
                 if (nbr > 1)
                     q.setTexte(q.getTexte().replaceFirst(Pattern.quote("gorgée"), "gorgées"));
+                break;
+            case TAG_GORGEE_ALEATOIRE_MULTIPLE:
+                nbr = 2 + new Random().nextInt(difficulte + MARGE_GORGEE);
+                q.setTexte(q.getTexte().replaceFirst(Pattern.quote(tag), String.valueOf(nbr)));
+                q.setTexte(q.getTexte().replaceFirst(Pattern.quote("gorgée"), "gorgées"));
                 break;
         }
     }
