@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\quent\Documents\GitHub\MesRecycleViews\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="c84e216d9bf618464d6b9564d71d9a656433e7c4">
+        <dex dex="C:\Users\quent\Documents\GitHub\MesRecycleViews\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-24.2.0_36f7327a0c2269cbc7e9d04708daf1b1a44e23e2\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\quent\Documents\GitHub\MesRecycleViews\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="f9b41622897665678d31d78e57a361cb0cebcb0d">
+        <dex dex="C:\Users\quent\Documents\GitHub\MesRecycleViews\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-24.2.0_b450335f4ba0024e5a115afba6162c1fb2996a6a\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\quent\Documents\GitHub\MesRecycleViews\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\24.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="96e33a7aaee00ab64270e2a9887b8f9ef32c8b73">
+        <dex dex="C:\Users\quent\Documents\GitHub\MesRecycleViews\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-cardview-v7-24.2.0_2fca6e691d71f4c1f4c43e4c79a9cd1016b058d4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\quent\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.2.0\support-annotations-24.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="6be858a75633b1f0a2d24cad740db57775cb6871">
+        <dex dex="C:\Users\quent\Documents\GitHub\MesRecycleViews\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-24.2.0_cc21d78233b6a0dbd9c8bd060e6d5d5f874ef937\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\quent\Documents\GitHub\MesRecycleViews\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\24.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="c755536e5a100d9c76c8ea0b72f76c018f7a9de2">
+        <dex dex="C:\Users\quent\Documents\GitHub\MesRecycleViews\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-24.2.0_1be85769ac00f6bfb01087d1e0437c4620cb882e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\quent\Documents\GitHub\MesRecycleViews\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="8a6075605ca0940a2209e1fd23163555d61ad048">
+        <dex dex="C:\Users\quent\Documents\GitHub\MesRecycleViews\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_fe51afae7140a30afafdaeca775f466aeb65c567\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\quent\Documents\GitHub\MesRecycleViews\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="fcc945a86ebcbf527429acb8216ec7dae2c06417">
+        <dex dex="C:\Users\quent\Documents\GitHub\MesRecycleViews\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-24.2.0_d2cacc31676e024da417f0b60019c46554baf03c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\quent\Documents\GitHub\MesRecycleViews\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="45f5eda279825ff470e3f51019d374d1ef61e000">
+        <dex dex="C:\Users\quent\Documents\GitHub\MesRecycleViews\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-24.2.0_6fbb1663805debf478af6a1dd1ae9549fbc522bd\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\quent\Documents\GitHub\MesRecycleViews\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.0\jars\libs\internal_impl-24.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="771b3cc0e597b54da25f8086ba73180c59c6bc71">
+        <dex dex="C:\Users\quent\Documents\GitHub\MesRecycleViews\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.0_699dabaefbbbe6c84b531e74ab604fd206d05641\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\quent\Documents\GitHub\MesRecycleViews\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.0\jars\libs\internal_impl-24.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="045be695d968dd707691cc55d23746dbf8cf569a">
+        <dex dex="C:\Users\quent\Documents\GitHub\MesRecycleViews\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.0_939b4c8bc9f8e63a810cdd3ab4dd06b4ffa5c4a5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\quent\Documents\GitHub\MesRecycleViews\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.0\jars\libs\internal_impl-24.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="6e02e34594ebe9c0501ffda8dd48497f81b82977">
+        <dex dex="C:\Users\quent\Documents\GitHub\MesRecycleViews\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.0_f0e90064eaba42019ed934f779b0f743028dc492\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\quent\Documents\GitHub\MesRecycleViews\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="f3ee23ef25c9a8fe3d40246d0b7097267963a612">
+        <dex dex="C:\Users\quent\Documents\GitHub\MesRecycleViews\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-animated-vector-drawable-24.2.0_44973d2ce10682de425dd2eef56eb90ebd9896b3\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\quent\Documents\GitHub\MesRecycleViews\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="d8bd2268fdcbfd52c76ade65d9900cd8def93a44">
+        <dex dex="C:\Users\quent\Documents\GitHub\MesRecycleViews\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-24.2.0_2f23a059742b61930d3b657c372d96d85deabcde\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\quent\Documents\GitHub\MesRecycleViews\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="6eb9107eb34d2fe2b020662b7fbbec991dcba846">
+        <dex dex="C:\Users\quent\Documents\GitHub\MesRecycleViews\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-media-compat-24.2.0_1c6dad7f7464670e4e75db40eecac83f4a067308\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\quent\Documents\GitHub\MesRecycleViews\app\build\intermediates\exploded-aar\com.android.support\design\24.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="23eb0d2998a782213b56168cbf23a0688b9111d9">
+        <dex dex="C:\Users\quent\Documents\GitHub\MesRecycleViews\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-24.2.0_7635abcc9d98d310db3ea60c19ab58987dd7314c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\quent\Documents\GitHub\MesRecycleViews\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="ddb69d272a537b98fd3ee5ad9b07b10818beb7db">
+        <dex dex="C:\Users\quent\Documents\GitHub\MesRecycleViews\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_d3d3d30d326b364a9755053ce33562029bace71f\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\quent\Documents\GitHub\MesRecycleViews\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.0\jars\libs\internal_impl-24.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="032a4b53def5e2ceedfc2e793b126c0163cfa1dd">
+        <dex dex="C:\Users\quent\Documents\GitHub\MesRecycleViews\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.0_a240298eebe3b6108bff78af6bb0b995d1f20fbe\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\quent\Documents\GitHub\MesRecycleViews\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="c3c638be6e650b165ab9ae144857b64e82787fad">
+        <dex dex="C:\Users\quent\Documents\GitHub\MesRecycleViews\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-24.2.0_126143b4944042c5341925f250aee1af3a0872f8\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\quent\Documents\GitHub\MesRecycleViews\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.0\jars\libs\internal_impl-24.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="60d7b23621d31e6f42f4f76f16af467e57a20cda">
+        <dex dex="C:\Users\quent\Documents\GitHub\MesRecycleViews\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.0_41c3f39c77c5291fcc41868c1af30c88c58e161c\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\quent\Documents\GitHub\MesRecycleViews\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="beac40bcc8a320a896dd15f5109cfcaea5e1e0e3">
+        <dex dex="C:\Users\quent\Documents\GitHub\MesRecycleViews\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-24.2.0_bd0d70687a6b9ca9950c0aa4d25a04449d588e23\classes.dex" />
+    </item>
+
+</items>

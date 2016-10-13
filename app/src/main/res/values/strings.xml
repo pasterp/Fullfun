@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">FullFun</string>
+    <string name="app_name">MesRecycleViews</string>
+    <string name="item_title">16dp</string>
 </resources>
