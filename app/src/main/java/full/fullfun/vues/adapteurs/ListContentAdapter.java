@@ -16,23 +16,32 @@ import java.util.List;
 import full.fullfun.R;
 import full.fullfun.modeles.Joueur;
 import full.fullfun.modeles.Sexe;
+import full.fullfun.vues.MainActivity;
 
 /**
  * Created by 1634836 on 04/10/2016.
  */
 
 public class ListContentAdapter extends RecyclerView.Adapter<ListContentAdapter.ViewHolder> {
-    /***** Varibales ******/
+
+    /***** Attributs ******/
+
     private Context mContext;
-    List<Joueur> listeJoueur;
+
+    private List<Joueur> listeJoueur;
+
+    private MainActivity mainActivity;
 
     /***** Liste des joueurs selecitonne******/
     public List<Joueur> joueursSelect = new ArrayList<>();
 
+    public void setMainActivity(MainActivity mainActivity) {
+        this.mainActivity = mainActivity;
+    }
+
     /***** fonction qui recupere les elements graphiques******/
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         private SparseBooleanArray selectedItems = new SparseBooleanArray();
-
         protected TextView textNom;
         protected ImageView imgSexe;
 
@@ -90,10 +99,9 @@ public class ListContentAdapter extends RecyclerView.Adapter<ListContentAdapter.
                     joueursSelect.add(joueurEnCours);
                     v.setBackgroundColor(Color.GREEN);
                 }
-                }
-
+                mainActivity.verifierLancementPartie();
+            }
         });
-
     }
 
     /***** Compte les elements de la liste ******/
@@ -102,5 +110,7 @@ public class ListContentAdapter extends RecyclerView.Adapter<ListContentAdapter.
         return listeJoueur.size();
     }
 
-
+    public List<Joueur> getJoueursSelect(){
+        return joueursSelect;
+    }
 }

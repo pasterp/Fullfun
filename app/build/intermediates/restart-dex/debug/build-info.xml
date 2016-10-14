@@ -1,33 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="armeabi-v7a,armeabi"
-    api-level="19"
+    abi="arm64-v8a,armeabi-v7a,armeabi"
+    api-level="21"
     density="xxhdpi"
     format="8"
     plugin-version="2.2.1"
-    timestamp="34378824027477"
+    timestamp="35107102394267"
     token="-5814025905430453719"
     verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="1570" />
+        duration="3099" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="619" />
+        duration="970" />
     <task
         name="verifier"
-        duration="168" />
+        duration="276" />
 
     <artifact
         location="C:\Users\quent\Documents\GitHub\Fullfun\app\build\outputs\apk\app-debug.apk"
         type="MAIN" />
 
     <build
-        timestamp="34378824027477"
+        timestamp="35107102394267"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Users\quent\Documents\GitHub\Fullfun\app\build\outputs\apk\app-debug.apk"

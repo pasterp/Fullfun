@@ -13,6 +13,7 @@ import java.util.List;
 
 import full.fullfun.donnees.SetQuestionsDAO;
 import full.fullfun.modeles.SetQuestions;
+import full.fullfun.vues.MainActivity;
 import full.fullfun.vues.adapteurs.CardContentAdapter;
 import full.fullfun.R;
 
@@ -33,6 +34,7 @@ public class FragmentSets extends Fragment {
     /***** Acces aux sets *****/
     private SetQuestionsDAO accesseurDAO = SetQuestionsDAO.getInstance();
     private List<SetQuestions> listeSetQuestions;
+    private MainActivity mainActivity;
 
     /***** Instantie le recyclerView xml dans le vue ******/
     @Override
@@ -40,6 +42,7 @@ public class FragmentSets extends Fragment {
         View vue = inflater.inflate(R.layout.recycler_view, container, false);
         initView(vue);
         initRecyclerView();
+        mAdapter.setMainActivity(mainActivity);
         return vue;
     }
 
@@ -52,7 +55,7 @@ public class FragmentSets extends Fragment {
     private void initRecyclerView() {
         accesseurDAO.initialisationQuestions(getResources().getAssets());
         listeSetQuestions = accesseurDAO.getListeSetQuestion();
-        mAdapter = new CardContentAdapter(getActivity().getApplicationContext(),listeSetQuestions );
+        mAdapter = new CardContentAdapter(getActivity().getApplicationContext(),listeSetQuestions);
         mRecyclerView.setAdapter(mAdapter);
         mRecyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(getActivity());
@@ -62,4 +65,12 @@ public class FragmentSets extends Fragment {
 
     }
 
+
+    public List<SetQuestions> getSetSelect(){
+        return mAdapter.getSetSelect();
+    }
+
+    public void setMainActivity(MainActivity mainActivity) {
+        this.mainActivity = mainActivity;
+    }
 }

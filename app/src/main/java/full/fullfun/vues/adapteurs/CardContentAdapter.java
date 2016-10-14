@@ -13,12 +13,15 @@ import java.util.List;
 
 import full.fullfun.R;
 import full.fullfun.modeles.SetQuestions;
+import full.fullfun.vues.MainActivity;
 
 public class CardContentAdapter extends RecyclerView.Adapter<CardContentAdapter.ViewHolder> {
 
     /***** Varibales ******/
     private Context mContext;
+
     List<SetQuestions> listeSetQuestions;
+    private MainActivity mainActivity;
 
     /***** Liste des sets selecitonne******/
     public List<SetQuestions> setSelect = new ArrayList<>();
@@ -66,6 +69,7 @@ public class CardContentAdapter extends RecyclerView.Adapter<CardContentAdapter.
                     setSelect.add(setEnCours);
                     v.setBackgroundColor(Color.GREEN);
                 }
+                mainActivity.verifierLancementPartie();
             }
 
         });
@@ -78,5 +82,11 @@ public class CardContentAdapter extends RecyclerView.Adapter<CardContentAdapter.
         return listeSetQuestions.size();
     }
 
+    public List<SetQuestions> getSetSelect(){
+        return setSelect;
+    }
 
+    public void setMainActivity(MainActivity mainActivity){
+        this.mainActivity = mainActivity;
+    }
 }
