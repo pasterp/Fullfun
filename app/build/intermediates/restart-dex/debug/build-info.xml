@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="x86"
-    api-level="23"
-    density="420dpi"
+    abi="arm64-v8a,armeabi-v7a,armeabi"
+    api-level="21"
+    density="xxhdpi"
     format="8"
     plugin-version="2.2.1"
+<<<<<<< HEAD
     timestamp="175864812498357"
     token="477967454622851"
     verifier="COLD_SWAP_REQUESTED" >
@@ -12,11 +13,21 @@
     <task
         name="javac"
         duration="472" />
+=======
+    timestamp="5345387494194"
+    token="-5814025905430453719"
+    verifier="FULL_BUILD_REQUESTED" >
+
+    <task
+        name="javac"
+        duration="888" />
+>>>>>>> origin/master
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
+<<<<<<< HEAD
         duration="109" />
     <task
         name="verifier"
@@ -28,14 +39,25 @@
     <artifact
         location="C:\Users\1634836\Documents\GitHub\Fullfun\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_2\classes.dex"
         type="DEX" />
+=======
+        duration="519" />
+    <task
+        name="verifier"
+        duration="160" />
+
+    <artifact
+        location="C:\Users\quent\Documents\GitHub\Fullfun\app\build\outputs\apk\app-debug.apk"
+        type="MAIN" />
+>>>>>>> origin/master
 
     <build
-        timestamp="168163937061946"
+        timestamp="5345387494194"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="C:\Users\1634836\Documents\GitHub\Fullfun\app\build\outputs\apk\app-debug.apk"
+            location="C:\Users\quent\Documents\GitHub\Fullfun\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
     </build>
+<<<<<<< HEAD
     <build
         timestamp="171497905292604"
         verifier="R_CLASS_CHANGE" >
@@ -63,5 +85,7 @@
             location="C:\Users\1634836\Documents\GitHub\Fullfun\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_2\classes.dex"
             type="DEX" />
     </build>
+=======
+>>>>>>> origin/master
 
 </instant-run>

@@ -159,11 +159,9 @@ public class GestionnaireXML {
      * @param flux Le flux de lecture.
      * @return Une List de GroupeJoueur.
      */
-    public List<GroupeJoueur> lireGroupesJoueurs(InputStream flux){
+    public List<Joueur> lireJoueurs(InputStream flux){
         List<Joueur> joueurs = new ArrayList<>();
-        List<GroupeJoueur> groupes = new ArrayList<>();
-        Joueur joueur;
-        GroupeJoueur groupe = null;
+        Joueur joueur = null;
         try {
             lecteur = Xml.newPullParser();
             lecteur.setFeature(XmlPullParser.FEATURE_PROCESS_NAMESPACES, false);
@@ -173,13 +171,8 @@ public class GestionnaireXML {
                 nom = lecteur.getName();
                 switch (lecteur.getEventType()){
                     case XmlPullParser.START_TAG:
-                        // Si on détecte une balise Groupe.
-                        if (nom.equals(GROUPE)){
-                            groupe = new GroupeJoueur();
-                            groupe.setId(Integer.parseInt(lecteur.getAttributeValue(null, ID)));
-                            groupe.setNom(lecteur.getAttributeValue(null, NOM));
                         // Si on détecte une balise Joueur.
-                        }else if(nom.equals(JOUEUR)){
+                        if(nom.equals(JOUEUR)){
                             joueur = new Joueur();
                             joueur.setId(Integer.parseInt(lecteur.getAttributeValue(null, ID)));
                             joueur.setPseudo(lecteur.getAttributeValue(null, PSEUDO));
@@ -187,12 +180,6 @@ public class GestionnaireXML {
                             joueurs.add(joueur);
                         }
                         break;
-                    case XmlPullParser.END_TAG:
-                        if (groupe != null && !joueurs.isEmpty() && nom.equals(GROUPE)){
-                            groupe.setJoueurs(joueurs);
-                            groupes.add(groupe);
-                            joueurs = new ArrayList<>();
-                        }
                 }
             }
             // Enfin on ferme le flux de lecture
@@ -204,16 +191,15 @@ public class GestionnaireXML {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        return groupes;
+        return joueurs;
     }
 
 
     /**
      * Ecrit tout les GroupeJoueurs dans le fichier passé en paramètre par le biais du flux.
-     * @param groupes La liste de tout les groupeJoueurs.
      * @param flux Le flux d'écriture.
      */
-    public void sauvegarderGroupeJoueurs(List<GroupeJoueur> groupes, OutputStream flux){
+    public void sauvegarderGroupeJoueurs(List<Joueur> joueurs, OutputStream flux){
 
         XmlSerializer serializer = Xml.newSerializer();
 
@@ -221,20 +207,13 @@ public class GestionnaireXML {
             serializer.setOutput(flux, "UTF-8");
             serializer.startDocument(null, true);
             serializer.setFeature("http://xmlpull.org/v1/doc/features.html#indent-output", true);
-            // Iteration des GroupesJoueurs
-            for (GroupeJoueur g : groupes){
-                serializer.startTag(null, GROUPE);
-                serializer.attribute(null, ID, String.valueOf(g.getId()));
-                serializer.attribute(null, NOM, g.getNom());
-                // Itération des Joueurs
-                for (Joueur j : g.getJoueurs()){
-                    serializer.startTag(null, JOUEUR);
-                    serializer.attribute(null, ID, String.valueOf(j.getId()));
-                    serializer.attribute(null, PSEUDO, j.getPseudo());
-                    serializer.attribute(null, SEXE, j.getSexe().toString());
-                    serializer.endTag(null, JOUEUR);
-                }
-                serializer.endTag(null, GROUPE);
+            // Iteration des Joueurs
+            for (Joueur j : joueurs){
+                serializer.startTag(null, JOUEUR);
+                serializer.attribute(null, ID, String.valueOf(j.getId()));
+                serializer.attribute(null, PSEUDO, j.getPseudo());
+                serializer.attribute(null, SEXE, j.getSexe().toString());
+                serializer.endTag(null, JOUEUR);
             }
             // Fin d'écriture - Flush du buffer puis fermeture du flux.
             serializer.endDocument();

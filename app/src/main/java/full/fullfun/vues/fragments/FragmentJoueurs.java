@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -38,7 +37,7 @@ public class FragmentJoueurs extends Fragment {
     /***** Acces aux joueurs *****/
     private JoueurDAO accesseurDAO = JoueurDAO.getInstance();
 
-    private List<GroupeJoueur> listeGroupes;
+    private List<Joueur> listeJoueurs;
 
     /***** Instantie le recyclerView xml dans le vue ******/
     @Override
@@ -58,13 +57,8 @@ public class FragmentJoueurs extends Fragment {
 
     /***** Instanciation des items et du layout*****/
     private void initRecyclerView() {
-        accesseurDAO.initialiserJoueurs(getResources().getAssets());
-        listeGroupes = accesseurDAO.getListeGroupes();
-        List<Joueur> joueurs = new ArrayList<>();
-        for (GroupeJoueur g: listeGroupes){
-            joueurs.addAll(g.getJoueurs());
-        }
-        mAdapter = new ListContentAdapter(getActivity().getApplicationContext(), joueurs);
+        listeJoueurs = accesseurDAO.getListeJoueurs();
+        mAdapter = new ListContentAdapter(getActivity().getApplicationContext(), listeJoueurs);
         mRecyclerView.setAdapter(mAdapter);
         mRecyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(getActivity());
@@ -79,5 +73,9 @@ public class FragmentJoueurs extends Fragment {
 
     public void setMainActivity(MainActivity m){
         mainActivity = m;
+    }
+
+    public void rafraichir() {
+        listeJoueurs = accesseurDAO.getListeJoueurs();
     }
 }

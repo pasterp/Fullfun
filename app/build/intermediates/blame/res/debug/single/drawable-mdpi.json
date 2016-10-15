@@ -1,9 +1,10 @@
 [
     {
-        "merged": "C:\\Users\\1634836\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_share_black_24dp.png",
-        "source": "C:\\Users\\1634836\\Documents\\GitHub\\Fullfun\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_share_black_24dp.png"
+        "merged": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_share_black_24dp.png",
+        "source": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_share_black_24dp.png"
     },
     {
+<<<<<<< HEAD
         "merged": "C:\\Users\\1634836\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\boy.png",
         "source": "C:\\Users\\1634836\\Documents\\GitHub\\Fullfun\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\boy.png"
     },
@@ -18,5 +19,9 @@
     {
         "merged": "C:\\Users\\1634836\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\girl.png",
         "source": "C:\\Users\\1634836\\Documents\\GitHub\\Fullfun\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\girl.png"
+=======
+        "merged": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_menu_black_24dp.png",
+        "source": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_menu_black_24dp.png"
+>>>>>>> origin/master
     }
 ]

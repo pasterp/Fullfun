@@ -54,10 +54,10 @@ public class Joueur {
 
     public void setSexe(String sexe){
         switch (sexe) {
-            case "homme":
+            case "Homme":
                 this.sexe = Sexe.Homme;
                 break;
-            case "femme":
+            case "Femme":
                 this.sexe = Sexe.Femme;
                 break;
             default:
