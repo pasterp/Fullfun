@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-#Sat Oct 15 12:39:37 EDT 2016
-=======
-#Sat Oct 15 13:18:23 EDT 2016
->>>>>>> origin/master
+#Sat Oct 15 19:08:38 EDT 2016
