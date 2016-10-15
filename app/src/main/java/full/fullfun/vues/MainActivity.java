@@ -9,11 +9,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import full.fullfun.R;
 import full.fullfun.vues.adapteurs.PageVueAdapteur;
+import full.fullfun.vues.adapteurs.ToastCustom;
 import full.fullfun.vues.fragments.FragmentJoueurs;
 import full.fullfun.vues.fragments.FragmentSets;
 
@@ -79,7 +84,9 @@ public class MainActivity extends AppCompatActivity {
             boutonLancerPartie.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    new ToastCustom("Selectionner au moins un set", getApplicationContext(), getLayoutInflater(), findViewById(R.id.toast_id));
                     ((ViewPager)findViewById(R.id.viewpager)).setCurrentItem(FRAGMENT_SETS);
+
                 }
             });
         }else if (fragmentJoueurs.getJoueursSelect().isEmpty() && !fragmentSets.getSetSelect().isEmpty()){
@@ -87,6 +94,7 @@ public class MainActivity extends AppCompatActivity {
             boutonLancerPartie.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    new ToastCustom("Selectionner au moins un joueur", getApplicationContext(), getLayoutInflater(), findViewById(R.id.toast_id));
                     ((ViewPager)findViewById(R.id.viewpager)).setCurrentItem(FRAGMENT_JOUEURS);
                 }
             });
@@ -95,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
             boutonLancerPartie.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText(MainActivity.this, "Lancement de la partie ici", Toast.LENGTH_SHORT).show();
+                    new ToastCustom("Lancement de la partie ici", getApplicationContext(), getLayoutInflater(), findViewById(R.id.toast_id));
                 }
             });
         }else {

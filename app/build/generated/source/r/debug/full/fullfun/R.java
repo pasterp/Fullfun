@@ -2698,12 +2698,13 @@ containing a value of this type.
         public static final int design_ic_visibility=0x7f020052;
         public static final int design_snackbar_background=0x7f020053;
         public static final int femme=0x7f020054;
-        public static final int ic_menu_black_24dp=0x7f020055;
-        public static final int ic_share_black_24dp=0x7f020056;
-        public static final int male=0x7f020057;
-        public static final int navigation_empty_icon=0x7f020058;
-        public static final int notification_template_icon_bg=0x7f02005a;
-        public static final int trans=0x7f020059;
+        public static final int ic_error_outline_black_24dp=0x7f020055;
+        public static final int ic_menu_black_24dp=0x7f020056;
+        public static final int ic_share_black_24dp=0x7f020057;
+        public static final int male=0x7f020058;
+        public static final int navigation_empty_icon=0x7f020059;
+        public static final int notification_template_icon_bg=0x7f02005b;
+        public static final int trans=0x7f02005a;
     }
     public static final class id {
         public static final int action0=0x7f0c0088;
@@ -2846,6 +2847,9 @@ containing a value of this type.
         public static final int time=0x7f0c008e;
         public static final int title=0x7f0c0046;
         public static final int title_template=0x7f0c004b;
+        public static final int toast_ico=0x7f0c0097;
+        public static final int toast_id=0x7f0c0096;
+        public static final int toast_text=0x7f0c0098;
         public static final int toolbar=0x7f0c006f;
         public static final int top=0x7f0c002b;
         public static final int topPanel=0x7f0c004a;
@@ -2922,6 +2926,7 @@ containing a value of this type.
         public static final int select_dialog_multichoice_material=0x7f040034;
         public static final int select_dialog_singlechoice_material=0x7f040035;
         public static final int support_simple_spinner_dropdown_item=0x7f040036;
+        public static final int toast_custom=0x7f040037;
     }
     public static final class mipmap {
         public static final int ic_launcher=0x7f030000;
