@@ -1,18 +1,25 @@
 package full.fullfun.vues;
 
-import android.content.Intent;
+import android.content.Context;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
-import android.support.v4.app.FragmentManager;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
 import full.fullfun.R;
+import full.fullfun.donnees.JoueurDAO;
+import full.fullfun.modeles.GroupeJoueur;
+import full.fullfun.modeles.Joueur;
+import full.fullfun.modeles.Sexe;
 import full.fullfun.vues.adapteurs.PageVueAdapteur;
 import full.fullfun.vues.fragments.FragmentJoueurs;
 import full.fullfun.vues.fragments.FragmentSets;
@@ -37,7 +44,33 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        // Initialisation des DAO
+        try {
+            JoueurDAO.getInstance().initialiserJoueurs(openFileInput("joueurs.xml"));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+            try {
+                openFileOutput("joueurs.xml", Context.MODE_PRIVATE);
+                JoueurDAO.getInstance().initialiserJoueurs(getResources().getAssets().open("joueurs.xml"));
+                JoueurDAO.getInstance().sauvegarderJoueurs(JoueurDAO.getInstance().getListeJoueurs(), openFileOutput("joueurs.xml", Context.MODE_PRIVATE));
+            } catch (IOException e1) {
+                e1.printStackTrace();
+            }
+        }
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.ajouterJoueur);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                try {
+                    List<Joueur> listeG = new ArrayList<>();
+                    listeG.add(new Joueur(0, "Quentin", Sexe.Homme));
+                    JoueurDAO.getInstance().sauvegarderJoueurs(listeG, openFileOutput("joueurs.xml", Context.MODE_PRIVATE));
+                    fragmentJoueurs.rafraichir();
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
         instancierFragments();
 
         /***** Ajout de la toolbar a l'activite principale *****/

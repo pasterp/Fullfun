@@ -1,18 +1,10 @@
 [
     {
-        "merged": "C:\\Users\\1634836\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\boy.xml",
-        "source": "C:\\Users\\1634836\\Documents\\GitHub\\Fullfun\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\boy.xml"
+        "merged": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\ic_share_black_24dp.xml",
+        "source": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_share_black_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\1634836\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\girl.xml",
-        "source": "C:\\Users\\1634836\\Documents\\GitHub\\Fullfun\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\girl.xml"
-    },
-    {
-        "merged": "C:\\Users\\1634836\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\ic_share_black_24dp.xml",
-        "source": "C:\\Users\\1634836\\Documents\\GitHub\\Fullfun\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_share_black_24dp.xml"
-    },
-    {
-        "merged": "C:\\Users\\1634836\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\ic_menu_black_24dp.xml",
-        "source": "C:\\Users\\1634836\\Documents\\GitHub\\Fullfun\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_menu_black_24dp.xml"
+        "merged": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\ic_menu_black_24dp.xml",
+        "source": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_menu_black_24dp.xml"
     }
 ]

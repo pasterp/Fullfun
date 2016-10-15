@@ -3,7 +3,7 @@ package full.fullfun.modeles;
 public enum Sexe{
     Homme,
     Femme,
-    Confus, Sexe;
+    Confus;
 
     public String toString(){
         switch (this){
@@ -17,7 +17,6 @@ public enum Sexe{
                 return "Confus";
         }
     }
-
 
 
 }

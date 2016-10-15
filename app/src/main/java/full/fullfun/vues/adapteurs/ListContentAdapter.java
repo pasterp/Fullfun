@@ -3,6 +3,7 @@ package full.fullfun.vues.adapteurs;
 import android.content.Context;
 import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.util.SparseBooleanArray;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -79,7 +80,6 @@ public class ListContentAdapter extends RecyclerView.Adapter<ListContentAdapter.
 
         Joueur joueurEnCours = listeJoueur.get(position);
         holder.textNom.setText(joueurEnCours.getPseudo());
-
         if(joueurEnCours.getSexe().equals(Sexe.Homme)){
             holder.imgSexe.setImageResource(R.drawable.male);
         }else if(joueurEnCours.getSexe().equals(Sexe.Femme)){
