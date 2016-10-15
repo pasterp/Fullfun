@@ -1,14 +1,18 @@
 [
     {
-        "merged": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\boy.png",
-        "source": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\boy.png"
+        "merged": "C:\\Users\\1634836\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\boy.png",
+        "source": "C:\\Users\\1634836\\Documents\\GitHub\\Fullfun\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\boy.png"
     },
     {
-        "merged": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_share_black_24dp.png",
-        "source": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_share_black_24dp.png"
+        "merged": "C:\\Users\\1634836\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_menu_black_24dp.png",
+        "source": "C:\\Users\\1634836\\Documents\\GitHub\\Fullfun\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_menu_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\girl.png",
-        "source": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\girl.png"
+        "merged": "C:\\Users\\1634836\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\ic_share_black_24dp.png",
+        "source": "C:\\Users\\1634836\\Documents\\GitHub\\Fullfun\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_share_black_24dp.png"
+    },
+    {
+        "merged": "C:\\Users\\1634836\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi\\girl.png",
+        "source": "C:\\Users\\1634836\\Documents\\GitHub\\Fullfun\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\girl.png"
     }
 ]

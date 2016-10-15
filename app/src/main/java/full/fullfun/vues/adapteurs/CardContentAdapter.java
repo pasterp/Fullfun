@@ -31,11 +31,19 @@ public class CardContentAdapter extends RecyclerView.Adapter<CardContentAdapter.
     /***** fonction qui recupere les elements graphiques******/
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        protected TextView textNom;
+        protected TextView texteNom;
+        protected TextView texteDifficulte;
+        protected TextView texteCreateur;
+        protected TextView texteDate;
+        protected TextView texteDuree;
 
         public ViewHolder(View vue) {
             super(vue);
-            textNom =  (TextView) vue.findViewById(R.id.card_Nom);
+            texteNom =  (TextView) vue.findViewById(R.id.card_Nom);
+            texteDifficulte =  (TextView) vue.findViewById(R.id.card_diff);
+            texteCreateur =  (TextView) vue.findViewById(R.id.card_createur);
+            texteDate =  (TextView) vue.findViewById(R.id.card_date);
+            texteDuree=  (TextView) vue.findViewById(R.id.card_duree);
         }
     }
 
@@ -57,7 +65,11 @@ public class CardContentAdapter extends RecyclerView.Adapter<CardContentAdapter.
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
         final SetQuestions setEnCours = listeSetQuestions.get(position);
-        holder.textNom.setText(setEnCours.getNom());
+        holder.texteNom.setText(setEnCours.getNom());
+        holder.texteCreateur.setText(setEnCours.getCreateur());
+        holder.texteDifficulte.setText(String.valueOf(setEnCours.getDifficulte()));
+        holder.texteDate.setText(setEnCours.getDate());
+        holder.texteDuree.setText(String.valueOf(setEnCours.getDuree()));
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

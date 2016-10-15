@@ -49,7 +49,7 @@ public class ListContentAdapter extends RecyclerView.Adapter<ListContentAdapter.
             super(vue);
             textNom =  (TextView) vue.findViewById(R.id.listNom);
             imgSexe = (ImageView) vue.findViewById(R.id.listSexImg);
-            //textNom.setOnClickListener(this);
+            //texteNom.setOnClickListener(this);
         }
 
         @Override
@@ -81,11 +81,11 @@ public class ListContentAdapter extends RecyclerView.Adapter<ListContentAdapter.
         holder.textNom.setText(joueurEnCours.getPseudo());
 
         if(joueurEnCours.getSexe().equals(Sexe.Homme)){
-            holder.imgSexe.setImageResource(R.drawable.boy);
+            holder.imgSexe.setImageResource(R.drawable.male);
         }else if(joueurEnCours.getSexe().equals(Sexe.Femme)){
-            holder.imgSexe.setImageResource(R.drawable.girl);
+            holder.imgSexe.setImageResource(R.drawable.femme);
         }else{
-            holder.imgSexe.setImageResource(R.drawable.girl);
+            holder.imgSexe.setImageResource(R.drawable.trans);
         }
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
