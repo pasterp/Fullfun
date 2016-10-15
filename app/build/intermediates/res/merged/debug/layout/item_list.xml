@@ -2,9 +2,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="?android:attr/selectableItemBackground"
     android:padding="@dimen/seize_padding"
-    android:clickable="true">
+    android:clickable="true"
+    >
 
 
     <TextView
@@ -21,10 +21,7 @@
         android:layout_height="16dp"
         android:scaleType="centerCrop"
         android:layout_alignParentRight="true"
-        android:layout_margin="10dp"
-
-
-        />
+        android:layout_margin="10dp" />
 
 
 

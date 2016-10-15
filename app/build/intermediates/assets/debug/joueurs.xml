@@ -1,20 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <joueurs>
-<<<<<<< HEAD
-    <groupe id ="0" nom="Frenchelous">
-        <joueur id="0" pseudo="Quentin" sexe="homme"/>
-        <joueur id="1" pseudo="Samir" sexe="homme"/>
-        <joueur id="2" pseudo="Pascal" sexe="homme"/>
-        <joueur id="3" pseudo="Audrey" sexe="femme"/>
-        <joueur id="4" pseudo="Jordan" sexe="confus"/>
-        <joueur id="5" pseudo="Ahmed" sexe="homme"/>
-    </groupe>
-=======
     <joueur id="0" pseudo="Quentin" sexe="Homme"/>
     <joueur id="1" pseudo="Samir" sexe="Homme"/>
     <joueur id="2" pseudo="Pascal" sexe="Homme"/>
     <joueur id="3" pseudo="Audrey" sexe="Femme"/>
     <joueur id="4" pseudo="Jordan" sexe="Confus"/>
     <joueur id="5" pseudo="Ahmed" sexe="Homme"/>
->>>>>>> origin/master
 </joueurs>

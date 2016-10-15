@@ -1,20 +1,24 @@
 package full.fullfun.vues;
 
 import android.content.Context;
+import android.provider.ContactsContract;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-<<<<<<< HEAD
+
 import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
-=======
->>>>>>> origin/master
+
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -41,6 +45,12 @@ public class MainActivity extends AppCompatActivity {
 
     private static final int FRAGMENT_JOUEURS = 0;
 
+    private static final int TOAST_SET = 1;
+    private static final int TOAST_JOUEUR = 2;
+    private static final int TOAST_PARTIE = 3;
+
+
+
     /***** Attributs *****/
 
     protected FragmentJoueurs fragmentJoueurs;
@@ -48,6 +58,8 @@ public class MainActivity extends AppCompatActivity {
     protected FragmentSets fragmentSets;
 
     protected FloatingActionButton boutonLancerPartie;
+
+    protected ImageButton ajouterSetouJoueur;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,6 +97,20 @@ public class MainActivity extends AppCompatActivity {
         /***** Ajout de la toolbar a l'activite principale *****/
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        ActionBar ab = getSupportActionBar();
+        //ab.setDisplayShowTitleEnabled(true); // disable the default title element here (for centered title)
+
+
+        ajouterSetouJoueur = (ImageButton) findViewById(R.id.ajouter);
+        ajouterSetouJoueur.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                new ToastCustom(MainActivity.this, 0);
+            }
+        });
+
+
         /***** Reglage du viewpager pour chaque tabs   *****/
         ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
         setupViewPager(viewPager);
@@ -96,6 +122,7 @@ public class MainActivity extends AppCompatActivity {
         boutonLancerPartie = (FloatingActionButton) findViewById(R.id.boutonLancerPartie);
         boutonLancerPartie.hide();
     }
+
 
     private void instancierFragments() {
         fragmentJoueurs = new FragmentJoueurs();
@@ -121,7 +148,7 @@ public class MainActivity extends AppCompatActivity {
             boutonLancerPartie.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    new ToastCustom("Selectionner au moins un set", getApplicationContext(), getLayoutInflater(), findViewById(R.id.toast_id));
+                    new ToastCustom(MainActivity.this,TOAST_SET);
                     ((ViewPager)findViewById(R.id.viewpager)).setCurrentItem(FRAGMENT_SETS);
 
                 }
@@ -131,7 +158,7 @@ public class MainActivity extends AppCompatActivity {
             boutonLancerPartie.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    new ToastCustom("Selectionner au moins un joueur", getApplicationContext(), getLayoutInflater(), findViewById(R.id.toast_id));
+                    new ToastCustom(MainActivity.this,TOAST_JOUEUR);
                     ((ViewPager)findViewById(R.id.viewpager)).setCurrentItem(FRAGMENT_JOUEURS);
                 }
             });
@@ -140,7 +167,7 @@ public class MainActivity extends AppCompatActivity {
             boutonLancerPartie.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    new ToastCustom("Lancement de la partie ici", getApplicationContext(), getLayoutInflater(), findViewById(R.id.toast_id));
+                    new ToastCustom(MainActivity.this,TOAST_PARTIE);
                 }
             });
         }else {

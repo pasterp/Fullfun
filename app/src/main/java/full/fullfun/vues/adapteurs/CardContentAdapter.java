@@ -2,6 +2,7 @@ package full.fullfun.vues.adapteurs;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -51,6 +52,7 @@ public class CardContentAdapter extends RecyclerView.Adapter<CardContentAdapter.
     public CardContentAdapter(Context mContext, List<SetQuestions> listeSetQuestions) {
         this.mContext = mContext;
         this.listeSetQuestions = listeSetQuestions;
+
     }
 
     /***** Instantie le layout xml dans le vue ******/
@@ -58,25 +60,30 @@ public class CardContentAdapter extends RecyclerView.Adapter<CardContentAdapter.
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemVue = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.item_card, parent, false);
+
         return new ViewHolder(itemVue);
     }
 
     /***** Association des elements de la liste avec les elements graphique ******/
     @Override
-    public void onBindViewHolder(ViewHolder holder, final int position) {
+    public void onBindViewHolder(final ViewHolder holder, final int position) {
         final SetQuestions setEnCours = listeSetQuestions.get(position);
         holder.texteNom.setText(setEnCours.getNom());
         holder.texteCreateur.setText(setEnCours.getCreateur());
         holder.texteDifficulte.setText(String.valueOf(setEnCours.getDifficulte()));
         holder.texteDate.setText(setEnCours.getDate());
         holder.texteDuree.setText(String.valueOf(setEnCours.getDuree()));
+
+
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 SetQuestions setEnCours = listeSetQuestions.get(position);
+
                 if(setSelect.contains(setEnCours)){
                     setSelect.remove(setEnCours);
                     v.setBackgroundColor(Color.WHITE);
+
                 }else{
                     setSelect.add(setEnCours);
                     v.setBackgroundColor(Color.GREEN);
