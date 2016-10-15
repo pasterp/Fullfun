@@ -75,7 +75,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void verifierLancementPartie(){
         if (!fragmentJoueurs.getJoueursSelect().isEmpty() && fragmentSets.getSetSelect().isEmpty()){
-            Log.e("here", "go selec set");
             boutonLancerPartie.show();
             boutonLancerPartie.setOnClickListener(new View.OnClickListener() {
                 @Override

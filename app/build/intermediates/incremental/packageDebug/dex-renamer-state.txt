@@ -1,7 +1,7 @@
-#Fri Oct 14 18:51:11 EDT 2016
-base.0=C\:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_12906ef5b25c329e1afacd5f94d4ebfa79abb891
+#Sat Oct 15 11:13:19 EDT 2016
+base.0=C\:\\Users\\1634836\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_cc426dc565bb5f387093a2b9f6607bcd88ef8928
 renamed.1=classes.dex
 renamed.0=classes2.dex
-file.1=C\:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_4e4d9effc36ebe396ebbd8b902d56dc134211931\\classes.dex
-base.1=C\:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_4e4d9effc36ebe396ebbd8b902d56dc134211931
-file.0=C\:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_12906ef5b25c329e1afacd5f94d4ebfa79abb891\\classes.dex
+file.1=C\:\\Users\\1634836\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_fef80d2f33a1bd1d660eed2507655ead762f58de\\classes.dex
+base.1=C\:\\Users\\1634836\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_fef80d2f33a1bd1d660eed2507655ead762f58de
+file.0=C\:\\Users\\1634836\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_cc426dc565bb5f387093a2b9f6607bcd88ef8928\\classes.dex
