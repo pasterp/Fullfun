@@ -5,6 +5,10 @@ public enum Sexe{
     Femme,
     Confus;
 
+    /**
+     * Permet d'obtenir une retranscription littérale du sexe.
+     * @return Le String associé à chaque sexe.
+     */
     public String toString(){
         switch (this){
             case Homme:
@@ -17,6 +21,4 @@ public enum Sexe{
                 return "Confus";
         }
     }
-
-
 }

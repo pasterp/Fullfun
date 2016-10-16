@@ -126,21 +126,11 @@ public class SetQuestions {
 
     /***** Methodes *****/
 
-    public HashMap<String, String> exporterHashMap(){
-        HashMap<String, String> setQuestion = new HashMap<String, String>();
-        setQuestion.put("id", String.valueOf(this.id));
-        setQuestion.put("nom", String.valueOf(this.nom));
-        setQuestion.put("createur", String.valueOf(this.createur));
-
-        return setQuestion;
-    }
-
-
     /**
      * Ajoute toutes les questions du set donné.
      * @param set Le set contenant les questions à ajouter.
      */
-    public void ajouterSetQuestions(SetQuestions set) {
+    public void ajouterQuestionsFromSetQuestions(SetQuestions set) {
         for (Question q : set.listeQuestions){
             listeQuestions.add(new Question(q.getId(), q.getCategorie(), q.getTexte()));
         }
