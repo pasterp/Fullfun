@@ -13,38 +13,72 @@ import java.util.List;
 import full.fullfun.modeles.SetQuestions;
 
 
-/**
- * Created by 1634836 on 03/10/2016.
- */
-
 public class SetQuestionsDAO {
+
+    /***** Attributs *****/
+
+    /**
+     * ArrayList des SetsQuestions.
+     * @see SetQuestions
+     */
     protected List<SetQuestions> listeSetQuestion;
-    private static SetQuestionsDAO instance = null;
+
+    /**
+     * L'AssetManager permet d'accéder au Set de base stocké dans les assets du projet.
+     */
     private AssetManager manageurAsset;
 
+    /**
+     * Instance Singleton du DAO. Le seul moyen d'y accéder et de passer par <code>getInstance()</code>.
+     */
+    private static SetQuestionsDAO instance = null;
+
+
+    /***** Constructeurs *****/
+
+    /**
+     * Méthode permettant d'accéder à l'instance du DAO.
+     * @return Le singleton de SetQuestionsDAO.
+     */
     public static SetQuestionsDAO getInstance(){
         if(null == instance){
             instance = new SetQuestionsDAO();
         }
         return instance;
     }
+
+    /**
+     * Constructeur privé utilisé par <code>getInstance()</code>.
+     */
     private SetQuestionsDAO(){
-        listeSetQuestion = new ArrayList<SetQuestions>();
+        listeSetQuestion = new ArrayList<>();
     }
 
-    public void initialisationQuestions(AssetManager manageurAssets){
+
+    /***** Accesseurs *****/
+
+    /**
+     * Getter de la liste des sets de question.
+     * @return Arraylist de SetQuestions.
+     * @see SetQuestions
+     */
+    public List<SetQuestions> getListeSetQuestion() {
+        return listeSetQuestion;
+    }
+
+
+    /***** Méthodes *****/
+
+    /**
+     * Permet de charger le SetQuestion de base. Nécessite d'être appelée une unique fois.
+     * @param manageurAssets L'AssetManager permettant de trouver les assets.
+     */
+    public void chargerSauvegardeAsset(AssetManager manageurAssets){
         if (this.manageurAsset == null) {
             SetQuestions setQuestions = null;
             this.manageurAsset = manageurAssets;
 
-            Log.d("XML_Assets", "Liste des assets:");
             try {
-                for (String s :
-                        Resources.getSystem().getAssets().list(File.separator + "assets" + File.separator)) {
-                    Log.d("XML_Assets", s);
-                }
-
-
                 setQuestions = new GestionnaireXML().lireSetQuestions(manageurAsset.open("set_01.xml"));
             } catch (IOException e) {
                 e.printStackTrace();
@@ -54,21 +88,12 @@ public class SetQuestionsDAO {
         }
     }
 
-    public List<HashMap<String, String>> listerSetQuestionsEnHasmap(){
 
-        List<HashMap<String , String>> listeSetQuestionHashMap = new ArrayList<>();
-
-        for (SetQuestions sq : listeSetQuestion){
-            listeSetQuestionHashMap.add(sq.exporterHashMap());
-        }
-        return listeSetQuestionHashMap;
-    }
-
-    public boolean isInitialise(){
-        return manageurAsset != null;
-    }
-
-    public List<SetQuestions> getListeSetQuestion() {
-        return listeSetQuestion;
+    /**
+     * Ajoute le set de question passé en paramètre au DAO.
+     * @param setQuestion SetQuestions à ajouter.
+     */
+    public void ajouterSetQuestions(SetQuestions setQuestion) {
+        listeSetQuestion.add(setQuestion);
     }
 }

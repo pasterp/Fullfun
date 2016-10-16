@@ -11,10 +11,6 @@ import full.fullfun.modeles.Question;
 import full.fullfun.modeles.SetQuestions;
 
 
-/**
- * Created by pascal on 16-10-04.
- */
-
 public class Partie {
 
     /***** Attributs *****/

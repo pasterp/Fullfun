@@ -53,7 +53,7 @@ public class FragmentSets extends Fragment {
 
     /***** Instanciation des items et du layout*****/
     private void initRecyclerView() {
-        accesseurDAO.initialisationQuestions(getResources().getAssets());
+        accesseurDAO.chargerSauvegardeAsset(getResources().getAssets());
         listeSetQuestions = accesseurDAO.getListeSetQuestion();
         mAdapter = new CardContentAdapter(getActivity().getApplicationContext(),listeSetQuestions);
         mRecyclerView.setAdapter(mAdapter);

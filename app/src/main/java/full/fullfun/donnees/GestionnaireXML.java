@@ -51,7 +51,7 @@ public class GestionnaireXML {
 
     protected final String JOUEUR = "joueur";
 
-    protected final String GROUPE = "groupe";
+    //protected final String GROUPE = "groupe";
 
     private final String CATEGORIE_ETAT = "etat";
 
