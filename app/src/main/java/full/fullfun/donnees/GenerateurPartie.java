@@ -47,10 +47,20 @@ public class GenerateurPartie {
 
     /***** Attributs *****/
 
+    private static GenerateurPartie instance;
+
     /***** Constructeur *****/
 
-    public GenerateurPartie(){}
+    private GenerateurPartie(){
 
+    }
+
+
+    public GenerateurPartie getInstance(){
+        if (instance == null)
+            instance = new GenerateurPartie();
+        return instance;
+    }
 
     /***** Accesseurs *****/
 
