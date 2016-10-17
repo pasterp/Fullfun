@@ -2,10 +2,15 @@ package full.fullfun.donnees;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import full.fullfun.modeles.Joueur;
+import full.fullfun.modeles.Partie;
 import full.fullfun.modeles.Question;
 import full.fullfun.modeles.SetQuestions;
 
@@ -132,9 +137,52 @@ public class BaseDeDonnees extends SQLiteOpenHelper {
     }
 
     /**
-     * Méthodeu tilisée pour nettoyer la base après une partie.
+     * Méthode utilisée pour nettoyer la base après une partie.
      */
     public void viderBase(){
         onUpgrade(getWritableDatabase(), 1, 1);
+    }
+
+    /**
+     * Retourne le SetQuestion utilisé par la partie en cours.
+     * @return SetQuestion de la partie.
+     */
+    public SetQuestions recupererSetPartie(){
+        SetQuestions setQ = new SetQuestions();
+        List<Question> questions = new ArrayList<>();
+
+        // Curseur des tabes.
+        Cursor curseurQuestions = getReadableDatabase().rawQuery(REQ_SELECT_QUESTIONS, null);
+        Cursor curseurSet = getReadableDatabase().rawQuery(REQ_SELECT_SETS, null);
+
+        // Récupération du Set
+        for (curseurSet.moveToFirst(); !curseurSet.isAfterLast(); curseurSet.moveToNext()){
+            setQ.setId(curseurSet.getInt(curseurSet.getColumnIndex("id")));
+            setQ.setNom(curseurSet.getString(curseurSet.getColumnIndex("nom")));
+            setQ.setCreateur(curseurSet.getString(curseurSet.getColumnIndex("createur")));
+            setQ.setDifficulte(curseurSet.getInt(curseurSet.getColumnIndex("difficulte")));
+            setQ.setDate(curseurSet.getString(curseurSet.getColumnIndex("date")));
+            setQ.setDuree(curseurSet.getInt(curseurSet.getColumnIndex("duree")));
+            setQ.setScore(curseurSet.getInt(curseurSet.getColumnIndex("score")));
+        }
+
+        // Récupération des questions
+        Question q;
+        for (curseurQuestions.moveToFirst(); !curseurQuestions.isAfterLast(); curseurQuestions.moveToNext()){
+            q = new Question();
+            q.setId(curseurQuestions.getInt(curseurQuestions.getColumnIndex("id")));
+            q.setCategorie(curseurQuestions.getString(curseurQuestions.getColumnIndex("categorie")));
+            q.setTexte(curseurQuestions.getString(curseurQuestions.getColumnIndex("texte")));
+            setQ.ajouterQuestion(q);
+        }
+
+        return setQ;
+    }
+
+    public void sauvegarderPartie(Partie partie){
+        for (Joueur j : partie.getJoueurs()){
+            ajouterJoueur(j);
+        }
+        ajouterSet(partie.getSetQuestions());
     }
 }

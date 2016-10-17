@@ -251,8 +251,9 @@ public class GestionnaireXML {
                 serializer.text(q.getTexte());
                 serializer.endTag(null, QUESTION);
             }
-
             serializer.endTag(null, SET);
+            flux.flush();
+            flux.close();
         } catch (IOException e) {
             e.printStackTrace();
         }

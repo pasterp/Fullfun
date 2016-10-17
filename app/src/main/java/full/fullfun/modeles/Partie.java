@@ -7,16 +7,13 @@ import java.util.Collections;
 import java.util.List;
 
 import full.fullfun.donnees.GenerateurPartie;
-import full.fullfun.modeles.Joueur;
-import full.fullfun.modeles.Question;
-import full.fullfun.modeles.SetQuestions;
 
 
 public class Partie {
 
     /***** Attributs *****/
 
-    private List<Question> questions;
+    private SetQuestions setQuestions;
 
     private List<Question> questionsArchivees;
 
@@ -25,7 +22,7 @@ public class Partie {
     /***** Constructeurs *****/
 
     public Partie(){
-        questions = new ArrayList<>();
+        setQuestions = new SetQuestions();
         questionsArchivees = new ArrayList<>();
         joueurs = new ArrayList<>();
     }
@@ -37,10 +34,7 @@ public class Partie {
      * @param set Le SetQuestions de la partie.
      */
     public void ajouterSet(SetQuestions set){
-        Log.d("Partie", "Ajout du set "+set.getNom()+" crée par "+set.getCreateur());
-        for (Question q : set.getListeQuestions()) {
-            questions.add(q);
-        }
+        setQuestions.ajouterQuestionsFromSetQuestions(set);
     }
 
     /**
@@ -60,12 +54,12 @@ public class Partie {
     }
 
     /**
-     * Mélange les questions. NE PLUS UTILISER ! Désormais fait dans le GenerateurPartie.
+     * Mélange les setQuestions. NE PLUS UTILISER ! Désormais fait dans le GenerateurPartie.
      * @deprecated
      * @see GenerateurPartie
      */
     public void melangerQuestions(){
-        Collections.shuffle(questions);
+        Collections.shuffle(setQuestions.getListeQuestions());
     }
 
     /**
@@ -73,15 +67,23 @@ public class Partie {
      * @return La Question à afficher.
      */
     public Question getQuestionSuivante(){
-        Question q = questions.get(0);
-        questionsArchivees.add(questions.remove(0));
+        Question q = setQuestions.getListeQuestions().get(0);
+        questionsArchivees.add(setQuestions.getListeQuestions().remove(0));
         return q;
     }
 
     /**
-     * @return true tant que la partie a encore des questions non lue.
+     * @return true tant que la partie a encore des setQuestions non lue.
      */
     public boolean hasQuestions(){
-        return questions.size() > 0;
+        return setQuestions.getListeQuestions().size() > 0;
+    }
+
+    public List<Joueur> getJoueurs() {
+        return joueurs;
+    }
+
+    public SetQuestions getSetQuestions() {
+        return setQuestions;
     }
 }

@@ -2,13 +2,17 @@ package full.fullfun.donnees;
 
 import android.util.Log;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Collections;
+import java.util.Date;
 import java.util.List;
 import java.util.Random;
 import java.util.regex.Pattern;
 
 import full.fullfun.modeles.Joueur;
+import full.fullfun.modeles.Partie;
 import full.fullfun.modeles.Question;
 import full.fullfun.modeles.QuestionEtat;
 import full.fullfun.modeles.SetQuestions;
@@ -59,10 +63,17 @@ public class GenerateurPartie {
      * éléments dynamiques comme les prénoms et les nombres de gorgées.
      * @param sets Une List de SetQuestions qui seront utilisés pour la partie.
      * @param joueurs Une List contenant tout les joueurs de la partie.
-     * @return Le SetQuestion prêt à l'usage.
+     * @return La Partie prête à l'utilisage.
      */
-    public SetQuestions genererSet(List<SetQuestions> sets, List<Joueur> joueurs){
+    public Partie genererPartie(List<SetQuestions> sets, List<Joueur> joueurs){
+        Partie partie = new Partie();
+        partie.ajouterJoueurs(joueurs);
+
         SetQuestions setFinal = new SetQuestions();
+        setFinal.setId(999);
+        setFinal.setCreateur("FullFun");
+        setFinal.setScore(5);
+        setFinal.setDate(SimpleDateFormat.getInstance().format(Calendar.getInstance()));
         int totalDifficulte = 0;
         // Regroupe toutes les questions dans un même set.
         List<Question> questions = new ArrayList<>();
@@ -70,11 +81,19 @@ public class GenerateurPartie {
             questions.addAll(set.getListeQuestions());
             totalDifficulte += set.getDifficulte();
         }
-        setFinal.setListeQuestions(preparerListeQuestions(questions));
+        //setFinal.setListeQuestions(preparerListeQuestions(questions));
+        setFinal.setListeQuestions(questions);
         // Moyenne des difficultés de tout les sets.
         setFinal.setDifficulte(totalDifficulte / sets.size());
         parserQuestions(setFinal, joueurs);
-        return setFinal;
+        partie.ajouterSet(setFinal);
+
+        // Ajout de la partie à la base de données.
+        BaseDeDonnees bdd = BaseDeDonnees.getInstance();
+        if (bdd != null){
+            bdd.sauvegarderPartie(partie);
+        }
+        return partie;
     }
 
     /**
@@ -209,9 +228,9 @@ public class GenerateurPartie {
                 q.getTexte().replaceFirst(Pattern.quote(tag),
                         potentielsJoueurs.get(new Random().nextInt(potentielsJoueurs.size())).getPseudo()));
         // Si la question est une question d'état, alors le nom du joueur est aussi remplacée dans la question de fin d'état
-        if (q instanceof QuestionEtat)
+        /*if (q instanceof QuestionEtat)
             ((QuestionEtat)q).getQuestionFinEtat().setTexte(
                     q.getTexte().replaceFirst(Pattern.quote(tag),
-                            potentielsJoueurs.get(new Random().nextInt(potentielsJoueurs.size())).getPseudo()));
+                            potentielsJoueurs.get(new Random().nextInt(potentielsJoueurs.size())).getPseudo()));*/
     }
 }
