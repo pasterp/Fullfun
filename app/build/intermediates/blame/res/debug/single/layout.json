@@ -16,28 +16,32 @@
         "source": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\layout\\abc_select_dialog_material.xml"
     },
     {
-        "merged": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_multichoice_material.xml",
-        "source": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\layout\\select_dialog_multichoice_material.xml"
+        "merged": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_question.xml",
+        "source": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\src\\main\\res\\layout\\fragment_question.xml"
     },
     {
-        "merged": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_list.xml",
-        "source": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\src\\main\\res\\layout\\item_list.xml"
+        "merged": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\layout\\select_dialog_multichoice_material.xml",
+        "source": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\layout\\select_dialog_multichoice_material.xml"
     },
     {
         "merged": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_content_include.xml",
         "source": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\layout\\abc_screen_content_include.xml"
     },
     {
-        "merged": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\layout\\barre_navigation.xml",
-        "source": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\src\\main\\res\\layout\\barre_navigation.xml"
+        "merged": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\layout\\item_list.xml",
+        "source": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\src\\main\\res\\layout\\item_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
+        "source": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
     },
     {
         "merged": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_menu_item_action_area.xml",
         "source": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.2.0\\res\\layout\\design_menu_item_action_area.xml"
     },
     {
-        "merged": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_bar_view_list_nav_layout.xml",
-        "source": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\layout\\abc_action_bar_view_list_nav_layout.xml"
+        "merged": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\layout\\barre_navigation.xml",
+        "source": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\src\\main\\res\\layout\\barre_navigation.xml"
     },
     {
         "merged": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_toolbar.xml",
@@ -130,10 +134,6 @@
     {
         "merged": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_mode_bar.xml",
         "source": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\layout\\abc_action_mode_bar.xml"
-    },
-    {
-        "merged": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_fragment_question.xml",
-        "source": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\src\\main\\res\\layout\\fragment_fragment_question.xml"
     },
     {
         "merged": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_activity_chooser_view.xml",

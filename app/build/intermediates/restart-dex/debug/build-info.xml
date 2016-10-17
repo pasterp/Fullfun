@@ -5,60 +5,64 @@
     density="xxhdpi"
     format="8"
     plugin-version="2.2.1"
-    timestamp="183067062989473"
+    timestamp="196020293325096"
     token="-5814025905430453719"
-    verifier="COLD_SWAP_REQUESTED" >
+    verifier="COMPATIBLE" >
 
     <task
         name="javac"
-        duration="571" />
+        duration="0" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="32" />
+        duration="0" />
     <task
         name="verifier"
-        duration="2" />
+        duration="0" />
 
     <artifact
         location="C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
         type="RESOURCES" />
-    <artifact
-        location="C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_1\classes.dex"
-        type="DEX" />
 
     <build
-        timestamp="181681760448356"
+        timestamp="194728836160969"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Users\quent\Documents\GitHub\Fullfun\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
     </build>
     <build
-        timestamp="182727406829792"
+        timestamp="195453974375498"
+        verifier="CLASS_ADDED" >
+        <artifact
+            location="C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_7\classes.dex"
+            type="DEX" />
+        <artifact
+            location="C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_1\classes.dex"
+            type="DEX" />
+    </build>
+    <build
+        timestamp="195498971169269"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_5\classes.dex"
             type="DEX" />
     </build>
     <build
-        timestamp="182906322150493"
+        timestamp="195588882953962"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_2\classes.dex"
             type="DEX" />
     </build>
     <build
-        timestamp="183067062989473"
-        verifier="COLD_SWAP_REQUESTED" >
+        timestamp="196020293325096"
+        verifier="COMPATIBLE" >
         <artifact
             location="C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
             type="RESOURCES" />
-        <artifact
-            location="C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_1\classes.dex"
-            type="DEX" />
     </build>
 
 </instant-run>

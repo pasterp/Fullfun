@@ -51,7 +51,9 @@ ADDED from C:\Users\quent\Documents\GitHub\Fullfun\app\src\main\AndroidManifest.
 	android:name
 		ADDED from C:\Users\quent\Documents\GitHub\Fullfun\app\src\main\AndroidManifest.xml:15:27-74
 activity#full.fullfun.vues.VuePartie
-ADDED from C:\Users\quent\Documents\GitHub\Fullfun\app\src\main\AndroidManifest.xml:18:9-61
+ADDED from C:\Users\quent\Documents\GitHub\Fullfun\app\src\main\AndroidManifest.xml:18:9-99
+	android:screenOrientation
+		ADDED from C:\Users\quent\Documents\GitHub\Fullfun\app\src\main\AndroidManifest.xml:18:50-87
 	android:name
 		ADDED from C:\Users\quent\Documents\GitHub\Fullfun\app\src\main\AndroidManifest.xml:18:19-49
 uses-sdk

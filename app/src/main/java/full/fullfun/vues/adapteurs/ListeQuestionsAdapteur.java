@@ -19,6 +19,8 @@ public class ListeQuestionsAdapteur extends FragmentStatePagerAdapter {
 
     List<Question> listeQuestions;
 
+    Question questionActuel;
+
     /***** Constructeurs *****/
 
     public ListeQuestionsAdapteur(FragmentManager fm, List<Question> questions) {
@@ -33,9 +35,10 @@ public class ListeQuestionsAdapteur extends FragmentStatePagerAdapter {
     @Override
     public Fragment getItem(int position) {
         if (position >= 0 && position < listeQuestions.size()){
+            questionActuel = listeQuestions.get(position);
             FragmentQuestion frag = new FragmentQuestion();
             Bundle arg = new Bundle();
-            arg.putString("texteQuestion", listeQuestions.get(position).getTexte());
+            arg.putString("texteQuestion", questionActuel.getTexte());
             frag.setArguments(arg);
             return frag;
         }

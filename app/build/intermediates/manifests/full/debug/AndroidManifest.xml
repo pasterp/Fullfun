@@ -21,7 +21,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="full.fullfun.vues.VuePartie" />
+        <activity
+            android:name="full.fullfun.vues.VuePartie"
+            android:screenOrientation="landscape" />
     </application>
 
 </manifest>

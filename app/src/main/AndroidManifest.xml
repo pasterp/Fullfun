@@ -15,7 +15,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".vues.VuePartie"></activity>
+        <activity android:name=".vues.VuePartie" android:screenOrientation="landscape"></activity>
     </application>
 
 </manifest>

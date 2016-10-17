@@ -12,6 +12,7 @@ import android.support.v7.widget.Toolbar;
 
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -20,6 +21,7 @@ import full.fullfun.R;
 import full.fullfun.donnees.BaseDeDonnees;
 import full.fullfun.donnees.GenerateurPartie;
 import full.fullfun.donnees.JoueurDAO;
+import full.fullfun.exceptions.ParsingNomJoueurImpossibleException;
 import full.fullfun.modeles.Partie;
 import full.fullfun.vues.adapteurs.PageVueAdapteur;
 import full.fullfun.vues.adapteurs.ToastCustom;
@@ -147,11 +149,18 @@ public class MainActivity extends AppCompatActivity {
             boutonLancerPartie.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    new ToastCustom(MainActivity.this,TOAST_PARTIE);
-                    Partie partie = GenerateurPartie.getInstance().genererPartie(fragmentSets.getSetSelect(), fragmentJoueurs.getJoueursSelect());
-                    Intent lancerPartie = new Intent(MainActivity.this, VuePartie.class);
-                    lancerPartie.putExtra("partie", partie);
-                    startActivity(lancerPartie);
+
+                    Partie partie = null;
+                    try {
+                        partie = GenerateurPartie.getInstance().genererPartie(fragmentSets.getSetSelect(), fragmentJoueurs.getJoueursSelect());
+                        Intent lancerPartie = new Intent(MainActivity.this, VuePartie.class);
+                        lancerPartie.putExtra("partie", partie);
+                        new ToastCustom(MainActivity.this,TOAST_PARTIE);
+                        startActivity(lancerPartie);
+                    } catch (ParsingNomJoueurImpossibleException e) {
+                        new ToastCustom(MainActivity.this, ToastCustom.ERREUR);
+                    }
+
                 }
             });
         }else {

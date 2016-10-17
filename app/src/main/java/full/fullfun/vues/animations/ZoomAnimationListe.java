@@ -1,6 +1,7 @@
 package full.fullfun.vues.animations;
 
 import android.support.v4.view.ViewPager;
+import android.view.MotionEvent;
 import android.view.View;
 
 public class ZoomAnimationListe implements ViewPager.PageTransformer {
@@ -26,6 +27,7 @@ public class ZoomAnimationListe implements ViewPager.PageTransformer {
         int largeurPage = vue.getWidth();
         int hauteurPage = vue.getHeight();
 
+
         if (position < -1){
             vue.setAlpha(0);
         }else if (position <= 1){
@@ -33,10 +35,9 @@ public class ZoomAnimationListe implements ViewPager.PageTransformer {
             float margeVerticale = hauteurPage * (1 - scaling) / 2;
             float margeHorizontal = largeurPage * (1 - scaling) / 2;
 
-            if (position < 0)
-                vue.setTranslationY(margeHorizontal - margeVerticale / 2);
-            else
-                vue.setTranslationY(-margeHorizontal + margeVerticale / 2);
+            vue.setTranslationX(largeurPage * -position);
+
+            vue.setTranslationY(hauteurPage * position);
 
             vue.setScaleX(scaling);
             vue.setScaleY(scaling);

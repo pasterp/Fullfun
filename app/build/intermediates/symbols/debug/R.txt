@@ -871,7 +871,7 @@ int layout design_navigation_item_subheader 0x7f040027
 int layout design_navigation_menu 0x7f040028
 int layout design_navigation_menu_item 0x7f040029
 int layout design_text_input_password_icon 0x7f04002a
-int layout fragment_fragment_question 0x7f04002b
+int layout fragment_question 0x7f04002b
 int layout item_card 0x7f04002c
 int layout item_list 0x7f04002d
 int layout notification_media_action 0x7f04002e

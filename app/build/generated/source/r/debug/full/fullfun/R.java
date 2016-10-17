@@ -2920,7 +2920,7 @@ containing a value of this type.
         public static final int design_navigation_menu=0x7f040028;
         public static final int design_navigation_menu_item=0x7f040029;
         public static final int design_text_input_password_icon=0x7f04002a;
-        public static final int fragment_fragment_question=0x7f04002b;
+        public static final int fragment_question=0x7f04002b;
         public static final int item_card=0x7f04002c;
         public static final int item_list=0x7f04002d;
         public static final int notification_media_action=0x7f04002e;

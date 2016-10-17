@@ -44,6 +44,7 @@ public class VuePartie extends FragmentActivity {
     private void initialiserVue() {
         vueQuestions = (ViewPager) findViewById(R.id.vueQuestions);
         vueQuestions.setPageTransformer(false, new ZoomAnimationListe());
+        //vueQuestions.setRotation(90);
     }
 
     @Override

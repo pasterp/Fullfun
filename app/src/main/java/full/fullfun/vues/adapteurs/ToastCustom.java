@@ -20,6 +20,8 @@ import static android.R.id.message;
 
 public class ToastCustom {
 
+    public static final int ERREUR = 4;
+
     public ToastCustom(Activity activity, int cas){
         //Definition du contexte, de l'inflater, du conteneur du toast et du toast.
         Context context = activity.getApplicationContext();
@@ -49,7 +51,13 @@ public class ToastCustom {
                 text.setText("Commencement de la partie !");
                 image.setImageResource(R.drawable.ic_flash_on_black_24dp);
                 break;
+            case ERREUR:
+                text.setText("Erreur à la génération : le Set n'est pas compatible avec les joueurs sélectionnés");
+                image.setImageResource(R.drawable.ic_flash_on_black_24dp);
+                break;
             default:
+                text.setText("It works !");
+                image.setImageResource(R.drawable.ic_flash_on_black_24dp);
                 break;
         }
 
