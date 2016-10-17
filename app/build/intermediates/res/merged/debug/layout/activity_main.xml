@@ -39,18 +39,5 @@
         android:layout_margin="5sp"
         app:elevation="5dp" />
 
-    <android.support.design.widget.FloatingActionButton
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:clickable="true"
-        app:fabSize="mini"
-        app:srcCompat="@android:drawable/ic_menu_add"
-        android:id="@+id/ajouterJoueur"
-        app:layout_anchor="@+id/viewpager"
-        app:layout_anchorGravity="bottom|left"
-        android:layout_gravity="center_vertical|center_horizontal"
-        android:layout_margin="5sp"
-        app:elevation="5dp" />
-
 
 </android.support.design.widget.CoordinatorLayout>

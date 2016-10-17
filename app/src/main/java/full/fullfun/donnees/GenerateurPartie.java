@@ -174,7 +174,7 @@ public class GenerateurPartie {
                 else if (q.getTexte().contains(TAG_GORGEE_ALEATOIRE_MULTIPLE))
                     parserGorgee(q, setFinal.getDifficulte(), TAG_GORGEE_ALEATOIRE_MULTIPLE);
                 else
-                    ok = true;
+                    ok = true; // Aucun tag détecté -> Le texte a été entièrement traitée
             }
 
         }
