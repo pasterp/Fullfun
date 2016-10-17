@@ -14,13 +14,10 @@ import android.widget.ImageButton;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 import full.fullfun.R;
+import full.fullfun.donnees.BaseDeDonnees;
 import full.fullfun.donnees.JoueurDAO;
-import full.fullfun.modeles.Joueur;
-import full.fullfun.modeles.Sexe;
 import full.fullfun.vues.adapteurs.PageVueAdapteur;
 import full.fullfun.vues.adapteurs.ToastCustom;
 import full.fullfun.vues.fragments.FragmentJoueurs;
@@ -52,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
 
     protected FloatingActionButton boutonLancerPartie;
 
-    protected ImageButton ajouterSetouJoueur;
+    protected ImageButton ajouterSetOuJoueur;
 
 
     /***** Méthodes *****/
@@ -62,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         // Initialisation des DAO
+        BaseDeDonnees.getInstance(getBaseContext());
         try {
             JoueurDAO.getInstance().chargerSauvegarde(openFileInput("joueurs.xml"));
         } catch (FileNotFoundException e) {
@@ -81,8 +79,8 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         ActionBar ab = getSupportActionBar();
-        ajouterSetouJoueur = (ImageButton) findViewById(R.id.ajouter);
-        ajouterSetouJoueur.setOnClickListener(new View.OnClickListener() {
+        ajouterSetOuJoueur = (ImageButton) findViewById(R.id.ajouter);
+        ajouterSetOuJoueur.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 new ToastCustom(MainActivity.this, 0);
