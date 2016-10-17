@@ -39,7 +39,7 @@ public class GenerateurPartie {
 
     private final String TAG_GORGEE_ALEATOIRE =          "#{g}";
 
-    private final String TAG_GORGEE_ALEATOIRE_MULTIPLE = "#{gs}"; // Gorgée aléatoire forcément supérieur à 1
+    private final String TAG_GORGEE_ALEATOIRE_MULTIPLE = "#{gs}"; // Gorgée aléatoire strictement supérieur à 1
 
     /***** Attributs *****/
 

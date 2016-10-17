@@ -17,9 +17,6 @@ import full.fullfun.R;
 
 import static android.R.id.message;
 
-/**
- * Created by 1634836 on 15/10/2016.
- */
 
 public class ToastCustom {
 
@@ -34,7 +31,7 @@ public class ToastCustom {
         TextView text = (TextView) layout.findViewById(R.id.toast_text);
         ImageView image  = (ImageView) layout.findViewById(R.id.toast_ico);
 
-
+        // TODO: 15/10/2016 Passer chaque cas en public static pour plus de propreté et compréhension.
         switch (cas) {
             case 0:
                 text.setText("It works !");
@@ -43,7 +40,6 @@ public class ToastCustom {
             case 1:
                 text.setText("Selectionner au moins un set !");
                 image.setImageResource(R.drawable.ic_error_outline_black_24dp);
-
                 break;
             case 2:
                 text.setText("Selectionner au moins un joueur !");

@@ -5,13 +5,8 @@ import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.List;
 
-import full.fullfun.modeles.GroupeJoueur;
 import full.fullfun.modeles.Joueur;
 
-
-/**
- * Created by 1634836 on 03/10/2016.
- */
 
 public class JoueurDAO {
 

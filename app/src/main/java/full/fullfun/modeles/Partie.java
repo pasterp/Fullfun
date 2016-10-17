@@ -1,4 +1,4 @@
-package full.fullfun.donnees;
+package full.fullfun.modeles;
 
 import android.util.Log;
 
@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+import full.fullfun.donnees.GenerateurPartie;
 import full.fullfun.modeles.Joueur;
 import full.fullfun.modeles.Question;
 import full.fullfun.modeles.SetQuestions;
