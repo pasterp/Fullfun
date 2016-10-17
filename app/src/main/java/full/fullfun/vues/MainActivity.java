@@ -30,12 +30,16 @@ import full.fullfun.vues.fragments.FragmentSets;
 public class MainActivity extends AppCompatActivity {
 
 
+    /***** Constantes *****/
+
     private static final int FRAGMENT_SETS = 1;
 
     private static final int FRAGMENT_JOUEURS = 0;
 
     private static final int TOAST_SET = 1;
+
     private static final int TOAST_JOUEUR = 2;
+
     private static final int TOAST_PARTIE = 3;
 
 
@@ -49,6 +53,9 @@ public class MainActivity extends AppCompatActivity {
     protected FloatingActionButton boutonLancerPartie;
 
     protected ImageButton ajouterSetouJoueur;
+
+
+    /***** Méthodes *****/
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,30 +74,13 @@ public class MainActivity extends AppCompatActivity {
                 e1.printStackTrace();
             }
         }
-        // FloatingActionButton permettant d'ajouter un Joueur codé en brut - Juste pour debug; à remplacer
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.ajouterJoueur);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                try {
-                    JoueurDAO.getInstance().ajouterJoueur(new Joueur(0, "Quentin", Sexe.Homme));
-                    JoueurDAO.getInstance().sauvegarderJoueurs(openFileOutput("joueurs.xml", Context.MODE_PRIVATE));
-                    fragmentJoueurs.rafraichir();
-                } catch (FileNotFoundException e) {
-                    e.printStackTrace();
-                }
-            }
-        });
         instancierFragments();
 
-        /***** Ajout de la toolbar a l'activite principale *****/
+        //Ajout de la toolbar a l'activite principale
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         ActionBar ab = getSupportActionBar();
-        //ab.setDisplayShowTitleEnabled(true); // disable the default title element here (for centered title)
-
-
         ajouterSetouJoueur = (ImageButton) findViewById(R.id.ajouter);
         ajouterSetouJoueur.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -100,11 +90,11 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-        /***** Reglage du viewpager pour chaque tabs   *****/
+        // Reglage du viewpager pour chaque tabs
         ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
         setupViewPager(viewPager);
 
-        /***** mise en place de la tabs dans la toolbar *****/
+        // mise en place de la tabs dans la toolbar
         TabLayout tabs = (TabLayout) findViewById(R.id.tabs);
         tabs.setupWithViewPager(viewPager);
 
