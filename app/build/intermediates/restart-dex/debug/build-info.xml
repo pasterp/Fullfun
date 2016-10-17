@@ -5,40 +5,33 @@
     density="xxhdpi"
     format="8"
     plugin-version="2.2.1"
-    timestamp="197304483819530"
+    timestamp="35686559574854"
     token="477967454622851"
-    verifier="COMPATIBLE" >
+    verifier="FULL_BUILD_REQUESTED" >
 
     <task
         name="javac"
-        duration="456" />
+        duration="0" />
     <task
         name="instant-run-dex"
-        duration="135" />
+        duration="0" />
     <task
         name="instant-run-transform"
-        duration="113" />
+        duration="0" />
     <task
         name="verifier"
-        duration="49" />
+        duration="0" />
 
     <artifact
-        location="C:\Users\1634836\Documents\GitHub\Fullfun\app\build\intermediates\reload-dex\debug\classes.dex"
-        type="RELOAD_DEX" />
+        location="C:\Users\1634836\Documents\GitHub\Fullfun\app\build\outputs\apk\app-debug.apk"
+        type="MAIN" />
 
     <build
-        timestamp="197126843109957"
+        timestamp="35686559574854"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Users\1634836\Documents\GitHub\Fullfun\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
-    </build>
-    <build
-        timestamp="197304483819530"
-        verifier="COMPATIBLE" >
-        <artifact
-            location="C:\Users\1634836\Documents\GitHub\Fullfun\app\build\intermediates\reload-dex\debug\classes.dex"
-            type="RELOAD_DEX" />
     </build>
 
 </instant-run>

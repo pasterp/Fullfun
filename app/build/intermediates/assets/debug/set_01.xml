@@ -2,14 +2,9 @@
 
 <set id = "0" nom = "Set de base" date = "30/09/2016"
          score = "5" difficulte = "3" duree = "6" createur = "Quentin">
-
     <question id="0" categorie="normale"> #{h} boit #{g} gorgée parce que c'est un homme !</question>
     <question id="1" categorie="normale">#{m} donne #{g} gorgée parce qu'il a de la chance !</question>
     <question id="2" categorie="normale">#{f} boit #{g} gorgée parce que les filles sont faibles !</question>
     <question id="3" categorie="normale">#{m} donne autant de gorgée que tu veux à #{m} !</question>
-    <question id="4" categorie="etat" etat="doubleGorgee">#{m} boit double jusqu'à nouvel ordre !
-        <question id="5" categorie="normale">#{m} ne boit plus double !</question>
-    </question>
-    <question id="6" categorie="normale">#{m} distribue #{gs} gorgée !</question>
-
+    <question id="4" categorie="normale">#{m} distribue #{gs} gorgée !</question>
 </set>

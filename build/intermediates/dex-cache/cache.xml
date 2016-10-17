@@ -93,15 +93,6 @@
     </item>
     <item
         is-multidex="false"
-        jar="C:\Users\1634836\Documents\GitHub\Fullfun\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="d8bd2268fdcbfd52c76ade65d9900cd8def93a44">
-        <dex dex="C:\Users\1634836\Documents\GitHub\Fullfun\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-24.2.0_60eb5294f534652c6c4011bb379db523cfe1b165.jar" />
-    </item>
-    <item
-        is-multidex="false"
         jar="C:\Users\1634836\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\24.2.0\support-annotations-24.2.0.jar"
         jumboMode="true"
         optimize="true"
@@ -111,11 +102,20 @@
     </item>
     <item
         is-multidex="false"
+        jar="C:\Users\1634836\Documents\GitHub\Fullfun\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="d8bd2268fdcbfd52c76ade65d9900cd8def93a44">
+        <dex dex="C:\Users\1634836\Documents\GitHub\Fullfun\app\build\intermediates\pre-dexed\debug\com.android.support-support-fragment-24.2.0_60eb5294f534652c6c4011bb379db523cfe1b165.jar" />
+    </item>
+    <item
+        is-multidex="false"
         jar="C:\Users\1634836\Documents\GitHub\Fullfun\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.1"
-        sha1="98b351b372bab14e8eb4658752229348b923c59e">
+        sha1="1ddd3398a60c3e420ca16717c05786edf5a24051">
         <dex dex="C:\Users\1634836\Documents\GitHub\Fullfun\app\build\intermediates\pre-dexed\debug\instant-run-bootstrap_fef80d2f33a1bd1d660eed2507655ead762f58de.jar" />
     </item>
     <item
@@ -178,7 +178,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.1"
-        sha1="599aa7639925730d041e441a830ad4cd9ca79bd2">
+        sha1="aa23b90568ec3915ccd36a28620b9cfc2e6c3770">
         <dex dex="C:\Users\1634836\Documents\GitHub\Fullfun\app\build\intermediates\pre-dexed\debug\instant-run_cc426dc565bb5f387093a2b9f6607bcd88ef8928.jar" />
     </item>
 
