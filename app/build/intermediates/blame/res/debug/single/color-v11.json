@@ -4,14 +4,6 @@
         "source": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\color-v11\\abc_background_cache_hint_selector_material_light.xml"
     },
     {
-        "merged": "C:\\Users\\1634836\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_light.xml",
-        "source": "C:\\Users\\1634836\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\color-v11\\abc_background_cache_hint_selector_material_light.xml"
-    },
-    {
-        "merged": "C:\\Users\\1634836\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_dark.xml",
-        "source": "C:\\Users\\1634836\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\color-v11\\abc_background_cache_hint_selector_material_dark.xml"
-    },
-    {
         "merged": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\color-v11\\abc_background_cache_hint_selector_material_dark.xml",
         "source": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\color-v11\\abc_background_cache_hint_selector_material_dark.xml"
     }

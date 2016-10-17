@@ -2,6 +2,7 @@ package full.fullfun.modeles;
 
 import android.util.Log;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -9,7 +10,7 @@ import java.util.List;
 import full.fullfun.donnees.GenerateurPartie;
 
 
-public class Partie {
+public class Partie implements Serializable{
 
     /***** Attributs *****/
 

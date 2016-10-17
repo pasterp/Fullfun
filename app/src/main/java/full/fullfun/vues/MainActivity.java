@@ -1,6 +1,7 @@
 package full.fullfun.vues;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
@@ -17,7 +18,9 @@ import java.io.IOException;
 
 import full.fullfun.R;
 import full.fullfun.donnees.BaseDeDonnees;
+import full.fullfun.donnees.GenerateurPartie;
 import full.fullfun.donnees.JoueurDAO;
+import full.fullfun.modeles.Partie;
 import full.fullfun.vues.adapteurs.PageVueAdapteur;
 import full.fullfun.vues.adapteurs.ToastCustom;
 import full.fullfun.vues.fragments.FragmentJoueurs;
@@ -145,6 +148,10 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     new ToastCustom(MainActivity.this,TOAST_PARTIE);
+                    Partie partie = GenerateurPartie.getInstance().genererPartie(fragmentSets.getSetSelect(), fragmentJoueurs.getJoueursSelect());
+                    Intent lancerPartie = new Intent(MainActivity.this, VuePartie.class);
+                    lancerPartie.putExtra("partie", partie);
+                    startActivity(lancerPartie);
                 }
             });
         }else {

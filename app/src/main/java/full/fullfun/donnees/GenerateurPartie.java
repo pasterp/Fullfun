@@ -56,7 +56,7 @@ public class GenerateurPartie {
     }
 
 
-    public GenerateurPartie getInstance(){
+    public static GenerateurPartie getInstance(){
         if (instance == null)
             instance = new GenerateurPartie();
         return instance;
@@ -83,7 +83,7 @@ public class GenerateurPartie {
         setFinal.setId(999);
         setFinal.setCreateur("FullFun");
         setFinal.setScore(5);
-        setFinal.setDate(SimpleDateFormat.getInstance().format(Calendar.getInstance()));
+        setFinal.setDate("2016-01-01");
         int totalDifficulte = 0;
         // Regroupe toutes les questions dans un même set.
         List<Question> questions = new ArrayList<>();

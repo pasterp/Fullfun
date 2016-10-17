@@ -1,10 +1,11 @@
 package full.fullfun.modeles;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class SetQuestions {
+public class SetQuestions  implements Serializable{
 
     /***** Attributs *****/
 
