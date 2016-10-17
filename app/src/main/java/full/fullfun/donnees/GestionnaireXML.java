@@ -199,10 +199,8 @@ public class GestionnaireXML {
      * Ecrit tout les GroupeJoueurs dans le fichier passé en paramètre par le biais du flux.
      * @param flux Le flux d'écriture.
      */
-    public void sauvegarderGroupeJoueurs(List<Joueur> joueurs, OutputStream flux){
-
+    public void sauvegarderJoueurs(List<Joueur> joueurs, OutputStream flux){
         XmlSerializer serializer = Xml.newSerializer();
-
         try {
             serializer.setOutput(flux, "UTF-8");
             serializer.startDocument(null, true);
@@ -219,6 +217,42 @@ public class GestionnaireXML {
             serializer.endDocument();
             serializer.flush();
             flux.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    /**
+     * Sauvegarde le SetQuestion passé en paramètre dans son propre fichier XML.
+     * @param setQ Le SetQuestions à sauvegarder.
+     * @param flux Le flux d'écriture.
+     */
+    public void sauvegarderSet(SetQuestions setQ, OutputStream flux){
+        XmlSerializer serializer = Xml.newSerializer();
+        try{
+            serializer.setOutput(flux, "UTF-8");
+            serializer.startDocument(null ,true);
+            serializer.setFeature("http://xmlpull.org/v1/doc/features.html#indent-output", true);
+
+            // Ecriture des attributs du SetQuestion
+            serializer.startTag(null, SET);
+            serializer.attribute(null, ID, String.valueOf(setQ.getId()));
+            serializer.attribute(null, CREATEUR, setQ.getCreateur());
+            serializer.attribute(null, DATE, setQ.getDate());
+            serializer.attribute(null, DIFFICULTE, String.valueOf(setQ.getDifficulte()));
+            serializer.attribute(null, DUREE, String.valueOf(setQ.getDuree()));
+            serializer.attribute(null, NOM, setQ.getNom());
+            serializer.attribute(null, SCORE, String.valueOf(setQ.getScore()));
+            // Ecriture des questions du Set
+            for (Question q : setQ.getListeQuestions()){
+                serializer.startTag(null, QUESTION);
+                serializer.attribute(null, ID, String.valueOf(q.getId()));
+                serializer.attribute(null, CATEGORIE, q.getCategorie());
+                serializer.text(q.getTexte());
+                serializer.endTag(null, QUESTION);
+            }
+
+            serializer.endTag(null, SET);
         } catch (IOException e) {
             e.printStackTrace();
         }

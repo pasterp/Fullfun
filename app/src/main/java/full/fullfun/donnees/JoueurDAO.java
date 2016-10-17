@@ -68,7 +68,7 @@ public class JoueurDAO {
      * @param flux Flux d'écriture.
      */
     public void sauvegarderJoueurs(OutputStream flux){
-        new GestionnaireXML().sauvegarderGroupeJoueurs(listeJoueurs, flux);
+        new GestionnaireXML().sauvegarderJoueurs(listeJoueurs, flux);
     }
 
     /**

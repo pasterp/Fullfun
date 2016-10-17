@@ -130,4 +130,11 @@ public class BaseDeDonnees extends SQLiteOpenHelper {
             getWritableDatabase().insertWithOnConflict(TABLE_QUESTION, null, valeurs, SQLiteDatabase.CONFLICT_IGNORE);
         }
     }
+
+    /**
+     * Méthodeu tilisée pour nettoyer la base après une partie.
+     */
+    public void viderBase(){
+        onUpgrade(getWritableDatabase(), 1, 1);
+    }
 }

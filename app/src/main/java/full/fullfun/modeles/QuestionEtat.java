@@ -7,6 +7,7 @@ package full.fullfun.modeles;
  * au joueur affichée en première et une autre pour désactiver l'état, affiché <code>duree</code>
  * tours après la 1ère.
  * @see Question
+ * @deprecated
  */
 public class QuestionEtat extends Question {
 
