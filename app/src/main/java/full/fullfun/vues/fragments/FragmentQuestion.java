@@ -27,9 +27,6 @@ public class FragmentQuestion extends Fragment {
         ViewGroup vue = (ViewGroup) inflater.inflate(R.layout.fragment_question, container, false);
         texteQuestion = (TextView) vue.findViewById(R.id.texteQuestion);
         texteQuestion.setText(getArguments().getString("texteQuestion"));
-
-
-
         return vue;
     }
 }

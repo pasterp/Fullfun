@@ -20,12 +20,15 @@ public class Partie implements Serializable{
 
     private List<Joueur> joueurs;
 
+    private int taille;
+
     /***** Constructeurs *****/
 
     public Partie(){
         setQuestions = new SetQuestions();
         questionsArchivees = new ArrayList<>();
         joueurs = new ArrayList<>();
+        taille = 0;
     }
 
     /***** Méthodes *****/
@@ -36,6 +39,7 @@ public class Partie implements Serializable{
      */
     public void ajouterSet(SetQuestions set){
         setQuestions.ajouterQuestionsFromSetQuestions(set);
+        taille += set.getListeQuestions().size();
     }
 
     /**
@@ -86,5 +90,13 @@ public class Partie implements Serializable{
 
     public SetQuestions getSetQuestions() {
         return setQuestions;
+    }
+
+    public int getTaille() {
+        return taille;
+    }
+
+    public boolean isBeforeLast() {
+        return setQuestions.getListeQuestions().size() == 1;
     }
 }

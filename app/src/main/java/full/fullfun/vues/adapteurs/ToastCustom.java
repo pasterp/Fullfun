@@ -22,6 +22,8 @@ public class ToastCustom {
 
     public static final int ERREUR = 4;
 
+    public static final int FIN_PARTIE = 5;
+
     public ToastCustom(Activity activity, int cas){
         //Definition du contexte, de l'inflater, du conteneur du toast et du toast.
         Context context = activity.getApplicationContext();
@@ -53,6 +55,10 @@ public class ToastCustom {
                 break;
             case ERREUR:
                 text.setText("Erreur à la génération : le Set n'est pas compatible avec les joueurs sélectionnés");
+                image.setImageResource(R.drawable.ic_error_outline_black_24dp);
+                break;
+            case FIN_PARTIE:
+                text.setText("La partie est terminée !");
                 image.setImageResource(R.drawable.ic_flash_on_black_24dp);
                 break;
             default:

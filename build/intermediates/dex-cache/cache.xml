@@ -7,7 +7,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.1"
-        sha1="999c5543ba5394ac9516ecf6ae07414a4224ed49">
+        sha1="6169987ef908d2373b45f60cec5cbc1664adc0ac">
         <dex dex="C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_12906ef5b25c329e1afacd5f94d4ebfa79abb891\classes.dex" />
     </item>
     <item
@@ -18,42 +18,6 @@
         revision="24.0.1"
         sha1="045be695d968dd707691cc55d23746dbf8cf569a">
         <dex dex="C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.0_a338c8a1a354b4b1bd8850655935f94d8b07df18\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="fcc945a86ebcbf527429acb8216ec7dae2c06417">
-        <dex dex="C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-24.2.0_13229ba9c783cb83a5f5fa397263a78094f51012\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\exploded-aar\com.android.support\design\24.2.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="23eb0d2998a782213b56168cbf23a0688b9111d9">
-        <dex dex="C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-24.2.0_ca636ba7e36fbef57747deb8461d78b2c18fe7d7\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="c3c638be6e650b165ab9ae144857b64e82787fad">
-        <dex dex="C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-24.2.0_3259516f42b6e627de22db7d6a5d043805c71543\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.0\jars\libs\internal_impl-24.2.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="032a4b53def5e2ceedfc2e793b126c0163cfa1dd">
-        <dex dex="C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.0_8ac1a6df1836088f4c8a5fb6f78fc65392c35339\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -90,15 +54,6 @@
         revision="24.0.1"
         sha1="96e33a7aaee00ab64270e2a9887b8f9ef32c8b73">
         <dex dex="C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-cardview-v7-24.2.0_8243893336846245ca8494c87df6d40e5c8a57be\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="d8bd2268fdcbfd52c76ade65d9900cd8def93a44">
-        <dex dex="C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-24.2.0_cdaff88d52eda4748be76b7120b50f171101e9df\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -142,7 +97,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.1"
-        sha1="a77fcf5d4c63f04cfa94fc0053818dec08380b64">
+        sha1="f87d1859538a7d7c3927186deefc2f46ce1ccdee">
         <dex dex="C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_4e4d9effc36ebe396ebbd8b902d56dc134211931\classes.dex" />
     </item>
     <item
@@ -165,21 +120,66 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="24.0.1"
-        sha1="beac40bcc8a320a896dd15f5109cfcaea5e1e0e3">
-        <dex dex="C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-24.2.0_6ddbb9e7a3929871042065ac21cbd85f8632d7ab\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="24.0.1"
         sha1="f9b41622897665678d31d78e57a361cb0cebcb0d">
         <dex dex="C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-24.2.0_0985f760ecdbe39c6e9d578c27ee86d3aa99973e\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="fcc945a86ebcbf527429acb8216ec7dae2c06417">
+        <dex dex="C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-24.2.0_13229ba9c783cb83a5f5fa397263a78094f51012\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\exploded-aar\com.android.support\design\24.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="23eb0d2998a782213b56168cbf23a0688b9111d9">
+        <dex dex="C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-24.2.0_ca636ba7e36fbef57747deb8461d78b2c18fe7d7\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="c3c638be6e650b165ab9ae144857b64e82787fad">
+        <dex dex="C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-24.2.0_3259516f42b6e627de22db7d6a5d043805c71543\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.0\jars\libs\internal_impl-24.2.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="032a4b53def5e2ceedfc2e793b126c0163cfa1dd">
+        <dex dex="C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-24.2.0_8ac1a6df1836088f4c8a5fb6f78fc65392c35339\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="d8bd2268fdcbfd52c76ade65d9900cd8def93a44">
+        <dex dex="C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-24.2.0_cdaff88d52eda4748be76b7120b50f171101e9df\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="24.0.1"
+        sha1="beac40bcc8a320a896dd15f5109cfcaea5e1e0e3">
+        <dex dex="C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-24.2.0_6ddbb9e7a3929871042065ac21cbd85f8632d7ab\classes.dex" />
     </item>
 
 </items>
