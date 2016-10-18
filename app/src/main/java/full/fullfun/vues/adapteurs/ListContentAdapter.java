@@ -31,7 +31,6 @@ public class ListContentAdapter extends RecyclerView.Adapter<ListContentAdapter.
 
     /***** Attributs ******/
 
-    private Context mContext;
 
     private List<Joueur> listeJoueur;
 
@@ -51,8 +50,7 @@ public class ListContentAdapter extends RecyclerView.Adapter<ListContentAdapter.
     }
 
     /***** Constructeur ******/
-    public ListContentAdapter(Context mContext, List<Joueur> listeJoueur) {
-        this.mContext = mContext;
+    public ListContentAdapter(List<Joueur> listeJoueur) {
         this.listeJoueur = listeJoueur;
     }
 

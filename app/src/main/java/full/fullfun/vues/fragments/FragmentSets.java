@@ -58,7 +58,7 @@ public class FragmentSets extends Fragment {
         accesseurDAO.chargerSauvegardeAsset(getResources().getAssets());
         listeSetQuestions = accesseurDAO.getListeSetQuestion();
         mAdapter = new CardContentAdapter(getActivity().getApplicationContext(),listeSetQuestions);
-        mAdapter.setIntentDetailsSets(new Intent(mainActivity.getApplicationContext(), DetailsSetQuestions.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
+        mAdapter.setIntentDetailsSets(new Intent(getActivity(), DetailsSetQuestions.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
         mRecyclerView.setAdapter(mAdapter);
         mRecyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(getActivity());

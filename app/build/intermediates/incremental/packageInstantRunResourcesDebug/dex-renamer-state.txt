@@ -1,9 +1,1 @@
-<<<<<<< HEAD
-#Tue Oct 18 16:36:59 EDT 2016
-=======
-<<<<<<< HEAD
-#Tue Oct 18 12:25:18 EDT 2016
-=======
-#Tue Oct 18 11:30:36 EDT 2016
->>>>>>> fb41ccfd16c02c4cb4e0991e02ea3ffe37ae8d57
->>>>>>> 3d0c8fd72b57d42f82cead8ecbd903bd0582188c
+#Tue Oct 18 17:36:40 EDT 2016

@@ -21,16 +21,10 @@
         <activity
             android:name=".vues.VuePartie"
             android:screenOrientation="landscape" />
-<<<<<<< HEAD
         <activity android:name=".vues.AjoutJoueur" />
-        <activity android:name=".vues.DetailsSetQuestions"></activity>
-=======
-<<<<<<< HEAD
+        <activity android:name=".vues.DetailsSetQuestions"/>
         <activity android:name=".Externe.GestionPhoto"/>
-=======
-        <activity android:name=".vues.AjoutJoueur"></activity>
->>>>>>> fb41ccfd16c02c4cb4e0991e02ea3ffe37ae8d57
->>>>>>> 3d0c8fd72b57d42f82cead8ecbd903bd0582188c
+        <activity android:name=".vues.AjoutJoueur"/>
     </application>
 
 </manifest>

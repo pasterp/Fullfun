@@ -73,7 +73,7 @@ public class FragmentJoueurs extends Fragment {
     /***** Instanciation des items et du layout*****/
     private void initRecyclerView() {
         listeJoueurs = accesseurDAO.getListeJoueurs();
-        mAdapter = new ListContentAdapter(mainActivity.getApplicationContext(), listeJoueurs);
+        mAdapter = new ListContentAdapter(listeJoueurs);
         mAdapter.setMainActivity(mainActivity);
         mAdapter.setCustomListener(new CustomListClickEcouteur() {
             @Override

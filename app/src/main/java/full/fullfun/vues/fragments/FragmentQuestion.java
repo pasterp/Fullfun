@@ -1,13 +1,7 @@
 package full.fullfun.vues.fragments;
 
-<<<<<<< HEAD
 import android.content.Intent;
-=======
-import android.annotation.TargetApi;
 import android.graphics.Color;
-import android.graphics.PorterDuff;
-import android.os.Build;
->>>>>>> fb41ccfd16c02c4cb4e0991e02ea3ffe37ae8d57
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -26,15 +20,14 @@ public class FragmentQuestion extends Fragment{
     /***** Attributs *****/
 
     private TextView texteQuestion;
+
     private ImageView image;
 
-<<<<<<< HEAD
+    private int questionActuelle;
+
     private static final int PRENDRE_PHOTO = 1;
 
 
-
-=======
->>>>>>> fb41ccfd16c02c4cb4e0991e02ea3ffe37ae8d57
     @Override
     public View onCreateView(LayoutInflater inflater, final ViewGroup container, Bundle savedInstanceState) {
 
@@ -49,7 +42,7 @@ public class FragmentQuestion extends Fragment{
             @Override
             public boolean onLongClick(View view) {
                 Intent actionPrendrePhoto = new Intent(view.getContext(), GestionPhoto.class);
-
+                questionActuelle = getArguments().getInt("position");
                 startActivityForResult(actionPrendrePhoto,PRENDRE_PHOTO);
                 return true;
             }
@@ -58,15 +51,14 @@ public class FragmentQuestion extends Fragment{
         return vue;
     }
 
-<<<<<<< HEAD
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         new ToastCustom(getActivity(), 1);
-=======
+
+    }
 
     public void griser() {
         if (texteQuestion != null)
             texteQuestion.setBackgroundColor(Color.DKGRAY);
->>>>>>> fb41ccfd16c02c4cb4e0991e02ea3ffe37ae8d57
     }
 }
