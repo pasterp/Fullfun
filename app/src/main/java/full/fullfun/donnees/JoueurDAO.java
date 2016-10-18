@@ -61,8 +61,8 @@ public class JoueurDAO {
     public void chargerSauvegarde(InputStream flux){
         listeJoueurs = new GestionnaireXML().lireJoueurs(flux);
         for (Joueur j : listeJoueurs){
-            if (j.getId() > Joueur.lastId)
-                Joueur.setLastId(j.getId());
+            if (j.getId() > Joueur.nextId)
+                Joueur.setNextId(j.getId());
         }
     }
 

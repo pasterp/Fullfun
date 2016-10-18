@@ -20,10 +20,6 @@ public class FragmentQuestion extends Fragment {
 
     private TextView texteQuestion;
 
-
-
-
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 

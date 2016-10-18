@@ -80,7 +80,10 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent ouvrirEditeurJoueur = new Intent(MainActivity.this, AjoutJoueur.class);
-                ouvrirEditeurJoueur.putExtra("joueur", new Joueur(-1, "", Sexe.Homme));
+                Joueur j = new Joueur();
+                j.setSexe(Sexe.Homme);
+                j.setPseudo("");
+                ouvrirEditeurJoueur.putExtra("joueur", j);
                 startActivity(ouvrirEditeurJoueur);
             }
         });
@@ -143,7 +146,7 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
 
-                    Partie partie = null;
+                    Partie partie;
                     try {
                         partie = GenerateurPartie.getInstance().genererPartie(fragmentSets.getSetSelect(), fragmentJoueurs.getJoueursSelect());
                         Intent lancerPartie = new Intent(MainActivity.this, VuePartie.class);

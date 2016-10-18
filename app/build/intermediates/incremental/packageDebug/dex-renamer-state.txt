@@ -1,4 +1,4 @@
-#Tue Oct 18 15:16:41 EDT 2016
+#Tue Oct 18 15:59:44 EDT 2016
 base.0=C\:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_12906ef5b25c329e1afacd5f94d4ebfa79abb891
 renamed.1=classes.dex
 renamed.0=classes2.dex

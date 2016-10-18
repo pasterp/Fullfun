@@ -15,9 +15,9 @@ public class Joueur implements Serializable{
      */
     protected int id;
 
-    protected int nextId = 1;
+    public static int nextId = 0;
 
-    public static int lastId = 0;
+
     /**
      * Pseudo du joueur. C'est ce pseudo qui est affiché lors du jeu dans les questions.
      * @see full.fullfun.donnees.GenerateurPartie
@@ -42,7 +42,6 @@ public class Joueur implements Serializable{
     public Joueur(){
         nextId ++;
         id = nextId;
-        setLastId(id);
     }
 
     /**
@@ -56,8 +55,8 @@ public class Joueur implements Serializable{
         this.id = id;
         this.pseudo = pseudo;
         this.sexe = sexe;
-        if (this.id > lastId)
-            setLastId(id);
+        if (this.id > nextId)
+            setNextId(id);
     }
 
     /***** Accesseurs *****/
@@ -147,8 +146,8 @@ public class Joueur implements Serializable{
         return j.id == this.id;
     }
 
-    public static void setLastId(int id) {
-        Log.e(lastId + " < ", String.valueOf(id));
-        lastId = id;
+    public static void setNextId(int id) {
+        Log.e(nextId + " < ", String.valueOf(id));
+        nextId = id;
     }
 }

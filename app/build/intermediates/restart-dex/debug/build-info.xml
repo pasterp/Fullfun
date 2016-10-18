@@ -5,33 +5,46 @@
     density="xxhdpi"
     format="8"
     plugin-version="2.2.1"
-    timestamp="18693257979555"
+    timestamp="21476985621333"
     token="-5814025905430453719"
-    verifier="FULL_BUILD_REQUESTED" >
+    verifier="FIELD_REMOVED" >
 
     <task
         name="javac"
-        duration="2661" />
+        duration="4605" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="335" />
+        duration="136" />
     <task
         name="verifier"
-        duration="55" />
+        duration="103" />
 
     <artifact
-        location="C:\Users\quent\Documents\GitHub\Fullfun\app\build\outputs\apk\app-debug.apk"
-        type="MAIN" />
+        location="C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_6\classes.dex"
+        type="DEX" />
+    <artifact
+        location="C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_5\classes.dex"
+        type="DEX" />
 
     <build
-        timestamp="18693257979555"
+        timestamp="21289348936000"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
             location="C:\Users\quent\Documents\GitHub\Fullfun\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
+    </build>
+    <build
+        timestamp="21476985621333"
+        verifier="FIELD_REMOVED" >
+        <artifact
+            location="C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_6\classes.dex"
+            type="DEX" />
+        <artifact
+            location="C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_5\classes.dex"
+            type="DEX" />
     </build>
 
 </instant-run>
