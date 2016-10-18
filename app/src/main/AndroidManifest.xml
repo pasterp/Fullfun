@@ -18,7 +18,8 @@
         <activity
             android:name=".vues.VuePartie"
             android:screenOrientation="landscape" />
-        <activity android:name=".vues.AjoutJoueur"></activity>
+        <activity android:name=".vues.AjoutJoueur" />
+        <activity android:name=".vues.DetailsSetQuestions"></activity>
     </application>
 
 </manifest>

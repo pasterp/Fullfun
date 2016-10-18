@@ -1,6 +1,7 @@
 package full.fullfun.vues.fragments;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -13,6 +14,7 @@ import java.util.List;
 
 import full.fullfun.donnees.SetQuestionsDAO;
 import full.fullfun.modeles.SetQuestions;
+import full.fullfun.vues.DetailsSetQuestions;
 import full.fullfun.vues.MainActivity;
 import full.fullfun.vues.adapteurs.CardContentAdapter;
 import full.fullfun.R;
@@ -56,6 +58,7 @@ public class FragmentSets extends Fragment {
         accesseurDAO.chargerSauvegardeAsset(getResources().getAssets());
         listeSetQuestions = accesseurDAO.getListeSetQuestion();
         mAdapter = new CardContentAdapter(getActivity().getApplicationContext(),listeSetQuestions);
+        mAdapter.setIntentDetailsSets(new Intent(mainActivity.getApplicationContext(), DetailsSetQuestions.class).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK));
         mRecyclerView.setAdapter(mAdapter);
         mRecyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(getActivity());

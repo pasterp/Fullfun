@@ -76,7 +76,7 @@
             android:textSize="@dimen/article_subheading" />
 
         <ImageButton
-            android:id="@+id/card_menu"
+            android:id="@+id/card_details"
             android:layout_width="@dimen/cards_button_width"
             android:layout_height="@dimen/cards_button_height"
             android:layout_marginRight="@dimen/seize_padding"

@@ -26,6 +26,7 @@
             android:name="full.fullfun.vues.VuePartie"
             android:screenOrientation="landscape" />
         <activity android:name="full.fullfun.vues.AjoutJoueur" />
+        <activity android:name="full.fullfun.vues.DetailsSetQuestions" />
     </application>
 
 </manifest>
