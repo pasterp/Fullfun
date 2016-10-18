@@ -204,8 +204,17 @@
         "source": "C:\\Users\\1634836\\Documents\\GitHub\\Fullfun\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
+<<<<<<< HEAD
         "merged": "C:\\Users\\1634836\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_screen_simple_overlay_action_mode.xml",
         "source": "C:\\Users\\1634836\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.2.0\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
+=======
+        "merged": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_ajout_joueur.xml",
+        "source": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\src\\main\\res\\layout\\activity_ajout_joueur.xml"
+    },
+    {
+        "merged": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_layout_tab_text.xml",
+        "source": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.2.0\\res\\layout\\design_layout_tab_text.xml"
+>>>>>>> fb41ccfd16c02c4cb4e0991e02ea3ffe37ae8d57
     },
     {
         "merged": "C:\\Users\\1634836\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu.xml",

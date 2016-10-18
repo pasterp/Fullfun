@@ -60,6 +60,10 @@ public class JoueurDAO {
      */
     public void chargerSauvegarde(InputStream flux){
         listeJoueurs = new GestionnaireXML().lireJoueurs(flux);
+        for (Joueur j : listeJoueurs){
+            if (j.getId() > Joueur.nextId)
+                Joueur.setNextId(j.getId());
+        }
     }
 
 
@@ -77,6 +81,17 @@ public class JoueurDAO {
      * @see Joueur
      */
     public void ajouterJoueur(Joueur joueur){
+        for (Joueur j : listeJoueurs){
+            if (j.equals(joueur)){
+                j.setPseudo(joueur.getPseudo());
+                j.setSexe(joueur.getSexe());
+                return;
+            }
+        }
         listeJoueurs.add(joueur);
+    }
+
+    public void supprimerJoueur(Joueur joueur) {
+        listeJoueurs.remove(joueur);
     }
 }

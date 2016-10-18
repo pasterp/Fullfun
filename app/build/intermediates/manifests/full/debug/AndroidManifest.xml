@@ -27,7 +27,11 @@
         <activity
             android:name="full.fullfun.vues.VuePartie"
             android:screenOrientation="landscape" />
+<<<<<<< HEAD
         <activity android:name="full.fullfun.Externe.GestionPhoto" />
+=======
+        <activity android:name="full.fullfun.vues.AjoutJoueur" />
+>>>>>>> fb41ccfd16c02c4cb4e0991e02ea3ffe37ae8d57
     </application>
 
 </manifest>

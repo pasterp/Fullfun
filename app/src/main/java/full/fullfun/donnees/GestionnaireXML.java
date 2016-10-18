@@ -19,6 +19,7 @@ import full.fullfun.modeles.Joueur;
 import full.fullfun.modeles.Question;
 import full.fullfun.modeles.QuestionEtat;
 import full.fullfun.modeles.SetQuestions;
+import full.fullfun.modeles.Sexe;
 
 public class GestionnaireXML {
 
@@ -173,10 +174,10 @@ public class GestionnaireXML {
                     case XmlPullParser.START_TAG:
                         // Si on détecte une balise Joueur.
                         if(nom.equals(JOUEUR)){
-                            joueur = new Joueur();
-                            joueur.setId(Integer.parseInt(lecteur.getAttributeValue(null, ID)));
-                            joueur.setPseudo(lecteur.getAttributeValue(null, PSEUDO));
-                            joueur.setSexe(lecteur.getAttributeValue(null, SEXE));
+                            int id = Integer.parseInt(lecteur.getAttributeValue(null, ID));
+                            String pseudo = lecteur.getAttributeValue(null, PSEUDO);
+                            Sexe sexe = Sexe.factory(lecteur.getAttributeValue(null, SEXE));
+                            joueur = new Joueur(id, pseudo, sexe);
                             joueurs.add(joueur);
                         }
                         break;

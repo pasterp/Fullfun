@@ -32,8 +32,6 @@ public class ZoomAnimationListe implements ViewPager.PageTransformer {
             vue.setAlpha(0);
         }else if (position <= 1){
             float scaling = Math.max(MIN_SCALE, 1 - Math.abs(position));
-            float margeVerticale = hauteurPage * (1 - scaling) / 2;
-            float margeHorizontal = largeurPage * (1 - scaling) / 2;
 
             vue.setTranslationX(largeurPage * -position);
 

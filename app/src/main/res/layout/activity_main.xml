@@ -21,7 +21,7 @@
 
 
     <android.support.v4.view.ViewPager
-            android:id="@+id/viewpager"
+            android:id="@+id/viewPagerMain"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:layout_behavior="@string/appbar_scrolling_view_behavior" />
@@ -33,7 +33,7 @@
         app:fabSize="mini"
         app:srcCompat="@android:drawable/ic_media_play"
         android:id="@+id/boutonLancerPartie"
-        app:layout_anchor="@+id/viewpager"
+        app:layout_anchor="@+id/viewPagerMain"
         app:layout_anchorGravity="bottom|right"
         android:layout_gravity="center_vertical|center_horizontal"
         android:layout_margin="5sp"

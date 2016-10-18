@@ -102,7 +102,9 @@ public class SetQuestions  implements Serializable{
     }
 
     public void setListeQuestions(List<Question> listeQuestions) {
-        this.listeQuestions = listeQuestions;
+        for (Question q : listeQuestions){
+            this.listeQuestions.add(new Question(q.getId(), q.getCategorie(), q.getTexte()));
+        }
     }
 
     public void ajouterQuestion(Question question){

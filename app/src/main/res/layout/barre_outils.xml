@@ -20,7 +20,7 @@ android:layout_height="match_parent">
             android:src="@drawable/ic_ajouter_joueur"
             android:layout_marginLeft="@dimen/seize_padding"
             android:layout_gravity="right"
-            android:id="@+id/boutonAJouterJoueur"
+            android:id="@+id/boutonAjouterJoueur"
             android:background="@color/colorPrimary"
 
             />

@@ -1,6 +1,10 @@
 -- Merging decision tree log ---
 manifest
+<<<<<<< HEAD
 ADDED from C:\Users\1634836\Documents\GitHub\Fullfun\app\src\main\AndroidManifest.xml:2:1-27:12
+=======
+ADDED from C:\Users\quent\Documents\GitHub\Fullfun\app\src\main\AndroidManifest.xml:2:1-24:12
+>>>>>>> fb41ccfd16c02c4cb4e0991e02ea3ffe37ae8d57
 	package
 		ADDED from C:\Users\1634836\Documents\GitHub\Fullfun\app\src\main\AndroidManifest.xml:3:5-27
 		INJECTED from C:\Users\1634836\Documents\GitHub\Fullfun\app\src\main\AndroidManifest.xml
@@ -22,6 +26,7 @@ ADDED from C:\Users\1634836\Documents\GitHub\Fullfun\app\src\main\AndroidManifes
 	android:name
 		ADDED from C:\Users\1634836\Documents\GitHub\Fullfun\app\src\main\AndroidManifest.xml:6:22-78
 application
+<<<<<<< HEAD
 ADDED from C:\Users\1634836\Documents\GitHub\Fullfun\app\src\main\AndroidManifest.xml:8:5-25:19
 MERGED from [com.android.support:cardview-v7:24.2.0] C:\Users\1634836\Documents\GitHub\Fullfun\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\24.2.0\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:design:24.2.0] C:\Users\1634836\Documents\GitHub\Fullfun\app\build\intermediates\exploded-aar\com.android.support\design\24.2.0\AndroidManifest.xml:22:5-20
@@ -34,6 +39,20 @@ MERGED from [com.android.support:support-core-utils:24.2.0] C:\Users\1634836\Doc
 MERGED from [com.android.support:support-media-compat:24.2.0] C:\Users\1634836\Documents\GitHub\Fullfun\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.0\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-core-ui:24.2.0] C:\Users\1634836\Documents\GitHub\Fullfun\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.0\AndroidManifest.xml:25:5-20
 MERGED from [com.android.support:support-fragment:24.2.0] C:\Users\1634836\Documents\GitHub\Fullfun\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.0\AndroidManifest.xml:25:5-20
+=======
+ADDED from C:\Users\quent\Documents\GitHub\Fullfun\app\src\main\AndroidManifest.xml:5:5-22:19
+MERGED from [com.android.support:cardview-v7:24.2.0] C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\24.2.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:24.2.0] C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\exploded-aar\com.android.support\design\24.2.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:24.2.0] C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-vector-drawable:24.2.0] C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\24.2.0\AndroidManifest.xml:23:5-20
+MERGED from [com.android.support:support-compat:24.2.0] C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\exploded-aar\com.android.support\support-compat\24.2.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:animated-vector-drawable:24.2.0] C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\24.2.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:24.2.0] C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.2.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-utils:24.2.0] C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\exploded-aar\com.android.support\support-core-utils\24.2.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-media-compat:24.2.0] C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\24.2.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-core-ui:24.2.0] C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\24.2.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-fragment:24.2.0] C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\exploded-aar\com.android.support\support-fragment\24.2.0\AndroidManifest.xml:25:5-20
+>>>>>>> fb41ccfd16c02c4cb4e0991e02ea3ffe37ae8d57
 	android:label
 		ADDED from C:\Users\1634836\Documents\GitHub\Fullfun\app\src\main\AndroidManifest.xml:11:9-41
 	android:supportsRtl
@@ -59,6 +78,7 @@ ADDED from C:\Users\1634836\Documents\GitHub\Fullfun\app\src\main\AndroidManifes
 	android:name
 		ADDED from C:\Users\1634836\Documents\GitHub\Fullfun\app\src\main\AndroidManifest.xml:18:27-74
 activity#full.fullfun.vues.VuePartie
+<<<<<<< HEAD
 ADDED from C:\Users\1634836\Documents\GitHub\Fullfun\app\src\main\AndroidManifest.xml:21:9-23:53
 	android:screenOrientation
 		ADDED from C:\Users\1634836\Documents\GitHub\Fullfun\app\src\main\AndroidManifest.xml:23:13-50
@@ -68,6 +88,17 @@ activity#full.fullfun.Externe.GestionPhoto
 ADDED from C:\Users\1634836\Documents\GitHub\Fullfun\app\src\main\AndroidManifest.xml:24:9-57
 	android:name
 		ADDED from C:\Users\1634836\Documents\GitHub\Fullfun\app\src\main\AndroidManifest.xml:24:19-55
+=======
+ADDED from C:\Users\quent\Documents\GitHub\Fullfun\app\src\main\AndroidManifest.xml:18:9-20:53
+	android:screenOrientation
+		ADDED from C:\Users\quent\Documents\GitHub\Fullfun\app\src\main\AndroidManifest.xml:20:13-50
+	android:name
+		ADDED from C:\Users\quent\Documents\GitHub\Fullfun\app\src\main\AndroidManifest.xml:19:13-43
+activity#full.fullfun.vues.AjoutJoueur
+ADDED from C:\Users\quent\Documents\GitHub\Fullfun\app\src\main\AndroidManifest.xml:21:9-63
+	android:name
+		ADDED from C:\Users\quent\Documents\GitHub\Fullfun\app\src\main\AndroidManifest.xml:21:19-51
+>>>>>>> fb41ccfd16c02c4cb4e0991e02ea3ffe37ae8d57
 uses-sdk
 INJECTED from C:\Users\1634836\Documents\GitHub\Fullfun\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:multidex:1.0.1] C:\Users\1634836\Documents\GitHub\Fullfun\app\build\intermediates\exploded-aar\com.android.support\multidex\1.0.1\AndroidManifest.xml:18:5-42

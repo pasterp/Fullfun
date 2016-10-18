@@ -1,6 +1,8 @@
 package full.fullfun.modeles;
 
 
+import android.util.Log;
+
 import java.io.Serializable;
 
 public class Joueur implements Serializable{
@@ -12,6 +14,9 @@ public class Joueur implements Serializable{
      * Id du joueur.
      */
     protected int id;
+
+    public static int nextId = 0;
+
 
     /**
      * Pseudo du joueur. C'est ce pseudo qui est affiché lors du jeu dans les questions.
@@ -35,6 +40,8 @@ public class Joueur implements Serializable{
      * Constructeur par défaut. Ne fait rien.
      */
     public Joueur(){
+        nextId ++;
+        id = nextId;
     }
 
     /**
@@ -48,6 +55,8 @@ public class Joueur implements Serializable{
         this.id = id;
         this.pseudo = pseudo;
         this.sexe = sexe;
+        if (this.id > nextId)
+            setNextId(id);
     }
 
     /***** Accesseurs *****/
@@ -134,6 +143,11 @@ public class Joueur implements Serializable{
         if (!(o instanceof Joueur))
             return false;
         Joueur j = (Joueur)o;
-        return j.id == this.id && j.pseudo.equals(this.pseudo) && j.sexe.equals(this.sexe);
+        return j.id == this.id;
+    }
+
+    public static void setNextId(int id) {
+        Log.e(nextId + " < ", String.valueOf(id));
+        nextId = id;
     }
 }
