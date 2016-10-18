@@ -23,6 +23,7 @@ public class ToastCustom {
     public static final int ERREUR = 4;
 
     public static final int FIN_PARTIE = 5;
+    public static final int ANNULER_AJOUT_JOUEUR = 6;
 
     public ToastCustom(Activity activity, int cas){
         //Definition du contexte, de l'inflater, du conteneur du toast et du toast.
@@ -60,6 +61,10 @@ public class ToastCustom {
             case FIN_PARTIE:
                 text.setText("La partie est terminée !");
                 image.setImageResource(R.drawable.ic_flash_on_black_24dp);
+                break;
+            case ANNULER_AJOUT_JOUEUR:
+                text.setText("Annulation de l'ajout");
+                image.setImageResource(R.drawable.ic_error_outline_black_24dp);
                 break;
             default:
                 text.setText("It works !");

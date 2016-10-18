@@ -1,17 +1,23 @@
 package full.fullfun.vues;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.ButtonBarLayout;
 import android.support.v7.widget.Toolbar;
 
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import java.io.FileNotFoundException;
@@ -82,15 +88,40 @@ public class MainActivity extends AppCompatActivity {
         //Ajout de la toolbar a l'activite principale
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        ActionBar ab = getSupportActionBar();
-        ajouterSetOuJoueur = (ImageButton) findViewById(R.id.ajouter);
-        ajouterSetOuJoueur.setOnClickListener(new View.OnClickListener() {
+        ImageButton boutonAjouterJoueur = (ImageButton) toolbar.findViewById(R.id.boutonAJouterJoueur);
+        boutonAjouterJoueur.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                new ToastCustom(MainActivity.this, 0);
+            public void onClick(View v) {
+                AlertDialog.Builder dialogueConstructeur = new AlertDialog.Builder(MainActivity.this);
+                dialogueConstructeur.setTitle("Ajouter un joueur");
+                LayoutInflater inflater = (LayoutInflater)getBaseContext()
+                        .getSystemService(LAYOUT_INFLATER_SERVICE);
+                dialogueConstructeur.setView(inflater.inflate(R.layout.dialogue_ajouter_joueur, null));
+
+                dialogueConstructeur.setPositiveButton("Ajouter", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        // Ajout joueur
+                    }
+                });
+                dialogueConstructeur.setNegativeButton("Annuler", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        new ToastCustom(MainActivity.this, ToastCustom.ANNULER_AJOUT_JOUEUR);
+                    }
+                });
+                AlertDialog dialogue = dialogueConstructeur.create();
+                dialogue.show();
+                Spinner spinnerSexe = (Spinner) findViewById(R.id.spinnerSexe);
+                ArrayAdapter<CharSequence> spinnerAdapteur =
+                        ArrayAdapter.createFromResource(dialogue.getContext(), R.array.sexeListe, android.R.layout.simple_spinner_item);
+                spinnerAdapteur.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                spinnerSexe.setAdapter(spinnerAdapteur);
+
             }
         });
+
+
 
 
         // Reglage du viewpager pour chaque tabs

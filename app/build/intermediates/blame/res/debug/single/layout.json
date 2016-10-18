@@ -156,6 +156,10 @@
         "source": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.2.0\\res\\layout\\design_bottom_sheet_dialog.xml"
     },
     {
+        "merged": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dialogue_ajouter_joueur.xml",
+        "source": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\src\\main\\res\\layout\\dialogue_ajouter_joueur.xml"
+    },
+    {
         "merged": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_menu_item.xml",
         "source": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\24.2.0\\res\\layout\\design_navigation_menu_item.xml"
     },

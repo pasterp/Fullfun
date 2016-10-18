@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import full.fullfun.R;
+import full.fullfun.donnees.BaseDeDonnees;
 import full.fullfun.modeles.Partie;
 import full.fullfun.vues.adapteurs.ListeQuestionsAdapteur;
 import full.fullfun.vues.adapteurs.ToastCustom;
@@ -66,6 +67,7 @@ public class VuePartie extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 new ToastCustom(VuePartie.this, ToastCustom.FIN_PARTIE);
+                BaseDeDonnees.getInstance().viderBase();
                 finish();
             }
         });
