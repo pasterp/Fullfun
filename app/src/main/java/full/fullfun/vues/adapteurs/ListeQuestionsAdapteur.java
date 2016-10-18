@@ -19,8 +19,7 @@ import full.fullfun.vues.fragments.FragmentQuestion;
 
 public class ListeQuestionsAdapteur extends FragmentStatePagerAdapter {
 
-
-    /***** Attrbuts *****/
+    /***** Attributs *****/
 
     List<Question> listeQuestions;
 
@@ -47,6 +46,20 @@ public class ListeQuestionsAdapteur extends FragmentStatePagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
+<<<<<<< HEAD
+        if (partie.hasQuestions()){
+            questionActuel = partie.getQuestionSuivante();
+            FragmentQuestion frag = new FragmentQuestion();
+            Bundle arg = new Bundle();
+            arg.putString("texteQuestion", questionActuel.getTexte());
+            frag.setArguments(arg);
+                        if (partie.isBeforeLast())
+                vue.finPartie();
+            return frag;
+        }
+
+        return null;
+=======
         questionActuel = listeQuestions.get(position);
         FragmentQuestion frag = new FragmentQuestion();
         Bundle arg = new Bundle();
@@ -57,6 +70,7 @@ public class ListeQuestionsAdapteur extends FragmentStatePagerAdapter {
             vue.finPartie();
 
         return frag;
+>>>>>>> fb41ccfd16c02c4cb4e0991e02ea3ffe37ae8d57
     }
 
     @Override

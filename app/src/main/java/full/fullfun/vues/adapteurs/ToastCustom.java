@@ -24,8 +24,27 @@ public class ToastCustom {
 
     public static final int FIN_PARTIE = 5;
     public static final int ANNULER_AJOUT_JOUEUR = 6;
+<<<<<<< HEAD
+    public ToastCustom(Activity activity, String string){
+        Context context = activity.getApplicationContext();
+        LayoutInflater inflater = activity.getLayoutInflater();
+        View idToast = activity.findViewById(R.id.toast_id);
+        View layout = inflater.inflate(R.layout.toast_custom, (ViewGroup) idToast);
+=======
     public static final int ANNULER_SUPPRESSION = 7;
+>>>>>>> fb41ccfd16c02c4cb4e0991e02ea3ffe37ae8d57
 
+        //instantiation des variables
+        TextView text = (TextView) layout.findViewById(R.id.toast_text);
+        ImageView image  = (ImageView) layout.findViewById(R.id.toast_ico);
+        text.setText(string);
+        image.setImageResource(R.drawable.ic_error_outline_black_24dp);
+        Toast toast = new Toast(context);
+        toast.setDuration(Toast.LENGTH_SHORT);
+        toast.setView(layout);
+        toast.show();
+
+    }
     public ToastCustom(Activity activity, int cas){
         //Definition du contexte, de l'inflater, du conteneur du toast et du toast.
         Context context = activity.getApplicationContext();

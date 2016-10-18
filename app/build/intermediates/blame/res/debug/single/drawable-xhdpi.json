@@ -1,30 +1,35 @@
 [
     {
-        "merged": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_menu_black_24dp.png",
-        "source": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_menu_black_24dp.png"
+        "merged": "C:\\Users\\1634836\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_action_name.png",
+        "source": "C:\\Users\\1634836\\Documents\\GitHub\\Fullfun\\app\\src\\main\\res\\drawable-xhdpi\\ic_action_name.png"
     },
     {
-        "merged": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_action_name.png",
-        "source": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\src\\main\\res\\drawable-xhdpi\\ic_action_name.png"
+        "merged": "C:\\Users\\1634836\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_share_black_24dp.png",
+        "source": "C:\\Users\\1634836\\Documents\\GitHub\\Fullfun\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_share_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_flash_on_black_24dp.png",
-        "source": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_flash_on_black_24dp.png"
+        "merged": "C:\\Users\\1634836\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_error_outline_black_24dp.png",
+        "source": "C:\\Users\\1634836\\Documents\\GitHub\\Fullfun\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_error_outline_black_24dp.png"
     },
     {
-        "merged": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_error_outline_black_24dp.png",
-        "source": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_error_outline_black_24dp.png"
+        "merged": "C:\\Users\\1634836\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_ajouter_joueur.png",
+        "source": "C:\\Users\\1634836\\Documents\\GitHub\\Fullfun\\app\\src\\main\\res\\drawable-xhdpi\\ic_ajouter_joueur.png"
     },
     {
+<<<<<<< HEAD
+        "merged": "C:\\Users\\1634836\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_flash_on_black_24dp.png",
+        "source": "C:\\Users\\1634836\\Documents\\GitHub\\Fullfun\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_flash_on_black_24dp.png"
+=======
         "merged": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_action_valider.png",
         "source": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\src\\main\\res\\drawable-xhdpi\\ic_action_valider.png"
     },
     {
         "merged": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_ajouter_joueur.png",
         "source": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\src\\main\\res\\drawable-xhdpi\\ic_ajouter_joueur.png"
+>>>>>>> fb41ccfd16c02c4cb4e0991e02ea3ffe37ae8d57
     },
     {
-        "merged": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_share_black_24dp.png",
-        "source": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_share_black_24dp.png"
+        "merged": "C:\\Users\\1634836\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_menu_black_24dp.png",
+        "source": "C:\\Users\\1634836\\Documents\\GitHub\\Fullfun\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_menu_black_24dp.png"
     }
 ]

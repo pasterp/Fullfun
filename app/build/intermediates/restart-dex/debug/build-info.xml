@@ -1,23 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
-    abi="arm64-v8a,armeabi-v7a,armeabi"
-    api-level="21"
-    density="xxhdpi"
+    abi="x86"
+    api-level="23"
+    density="420dpi"
     format="8"
     plugin-version="2.2.1"
+<<<<<<< HEAD
     timestamp="25308209922666"
+=======
+<<<<<<< HEAD
+    timestamp="100556783215698"
+    token="477967454622851"
+    verifier="CLASS_ADDED" >
+
+    <task
+        name="javac"
+        duration="537" />
+=======
+    timestamp="21476985621333"
+>>>>>>> 3d0c8fd72b57d42f82cead8ecbd903bd0582188c
     token="-5814025905430453719"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
+<<<<<<< HEAD
         duration="558" />
+=======
+        duration="4605" />
+>>>>>>> fb41ccfd16c02c4cb4e0991e02ea3ffe37ae8d57
+>>>>>>> 3d0c8fd72b57d42f82cead8ecbd903bd0582188c
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
+<<<<<<< HEAD
         duration="21" />
+=======
+<<<<<<< HEAD
+        duration="125" />
+    <task
+        name="verifier"
+        duration="69" />
+
+    <artifact
+        location="C:\Users\1634836\Documents\GitHub\Fullfun\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_5\classes.dex"
+        type="DEX" />
+    <artifact
+        location="C:\Users\1634836\Documents\GitHub\Fullfun\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0\classes.dex"
+        type="DEX" />
+    <artifact
+        location="C:\Users\1634836\Documents\GitHub\Fullfun\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_2\classes.dex"
+        type="DEX" />
+
+    <build
+        timestamp="99989194421818"
+=======
+        duration="136" />
+>>>>>>> 3d0c8fd72b57d42f82cead8ecbd903bd0582188c
     <task
         name="verifier"
         duration="2" />
@@ -27,17 +68,43 @@
         type="DEX" />
 
     <build
+<<<<<<< HEAD
         timestamp="23498111742666"
+=======
+        timestamp="21289348936000"
+>>>>>>> fb41ccfd16c02c4cb4e0991e02ea3ffe37ae8d57
+>>>>>>> 3d0c8fd72b57d42f82cead8ecbd903bd0582188c
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="C:\Users\quent\Documents\GitHub\Fullfun\app\build\outputs\apk\app-debug.apk"
+            location="C:\Users\1634836\Documents\GitHub\Fullfun\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />
     </build>
     <build
+<<<<<<< HEAD
         timestamp="25308209922666"
         verifier="COLD_SWAP_REQUESTED" >
+=======
+<<<<<<< HEAD
+        timestamp="100556783215698"
+        verifier="CLASS_ADDED" >
+        <artifact
+            location="C:\Users\1634836\Documents\GitHub\Fullfun\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_5\classes.dex"
+            type="DEX" />
+        <artifact
+            location="C:\Users\1634836\Documents\GitHub\Fullfun\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_0\classes.dex"
+            type="DEX" />
+        <artifact
+            location="C:\Users\1634836\Documents\GitHub\Fullfun\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_2\classes.dex"
+=======
+        timestamp="21476985621333"
+        verifier="FIELD_REMOVED" >
+        <artifact
+            location="C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_6\classes.dex"
+            type="DEX" />
+>>>>>>> 3d0c8fd72b57d42f82cead8ecbd903bd0582188c
         <artifact
             location="C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_5\classes.dex"
+>>>>>>> fb41ccfd16c02c4cb4e0991e02ea3ffe37ae8d57
             type="DEX" />
     </build>
 

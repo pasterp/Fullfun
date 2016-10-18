@@ -24,6 +24,8 @@ public class VuePartie extends AppCompatActivity {
 
     protected PagerAdapter listeAdapteur;
 
+
+
     /***** Méthodes *****/
 
     @Override
@@ -37,14 +39,18 @@ public class VuePartie extends AppCompatActivity {
     }
 
     private void initialiserAdapteurs() {
+
         listeAdapteur = new ListeQuestionsAdapteur(getSupportFragmentManager(), partie, this);
         vueQuestions.setAdapter(listeAdapteur);
+        // Set the gesture detector as the double tap
+        // listener.
     }
 
     private void initialiserVue() {
         ((FloatingActionButton)findViewById(R.id.boutonFinPartie)).hide();
         vueQuestions = (ViewPager) findViewById(R.id.vueQuestions);
         vueQuestions.setPageTransformer(false, new ZoomAnimationListe());
+
     }
 
     @Override
