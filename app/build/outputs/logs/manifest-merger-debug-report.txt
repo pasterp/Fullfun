@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\quent\Documents\GitHub\Fullfun\app\src\main\AndroidManifest.xml:2:1-21:12
+ADDED from C:\Users\quent\Documents\GitHub\Fullfun\app\src\main\AndroidManifest.xml:2:1-24:12
 	package
 		ADDED from C:\Users\quent\Documents\GitHub\Fullfun\app\src\main\AndroidManifest.xml:3:5-27
 		INJECTED from C:\Users\quent\Documents\GitHub\Fullfun\app\src\main\AndroidManifest.xml
@@ -14,7 +14,7 @@ ADDED from C:\Users\quent\Documents\GitHub\Fullfun\app\src\main\AndroidManifest.
 		INJECTED from C:\Users\quent\Documents\GitHub\Fullfun\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\quent\Documents\GitHub\Fullfun\app\src\main\AndroidManifest.xml
 application
-ADDED from C:\Users\quent\Documents\GitHub\Fullfun\app\src\main\AndroidManifest.xml:5:5-19:19
+ADDED from C:\Users\quent\Documents\GitHub\Fullfun\app\src\main\AndroidManifest.xml:5:5-22:19
 MERGED from [com.android.support:cardview-v7:24.2.0] C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\24.2.0\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:design:24.2.0] C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\exploded-aar\com.android.support\design\24.2.0\AndroidManifest.xml:22:5-20
 MERGED from [com.android.support:appcompat-v7:24.2.0] C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\24.2.0\AndroidManifest.xml:25:5-20
@@ -51,11 +51,15 @@ ADDED from C:\Users\quent\Documents\GitHub\Fullfun\app\src\main\AndroidManifest.
 	android:name
 		ADDED from C:\Users\quent\Documents\GitHub\Fullfun\app\src\main\AndroidManifest.xml:15:27-74
 activity#full.fullfun.vues.VuePartie
-ADDED from C:\Users\quent\Documents\GitHub\Fullfun\app\src\main\AndroidManifest.xml:18:9-99
+ADDED from C:\Users\quent\Documents\GitHub\Fullfun\app\src\main\AndroidManifest.xml:18:9-20:53
 	android:screenOrientation
-		ADDED from C:\Users\quent\Documents\GitHub\Fullfun\app\src\main\AndroidManifest.xml:18:50-87
+		ADDED from C:\Users\quent\Documents\GitHub\Fullfun\app\src\main\AndroidManifest.xml:20:13-50
 	android:name
-		ADDED from C:\Users\quent\Documents\GitHub\Fullfun\app\src\main\AndroidManifest.xml:18:19-49
+		ADDED from C:\Users\quent\Documents\GitHub\Fullfun\app\src\main\AndroidManifest.xml:19:13-43
+activity#full.fullfun.vues.AjoutJoueur
+ADDED from C:\Users\quent\Documents\GitHub\Fullfun\app\src\main\AndroidManifest.xml:21:9-63
+	android:name
+		ADDED from C:\Users\quent\Documents\GitHub\Fullfun\app\src\main\AndroidManifest.xml:21:19-51
 uses-sdk
 INJECTED from C:\Users\quent\Documents\GitHub\Fullfun\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 MERGED from [com.android.support:cardview-v7:24.2.0] C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\exploded-aar\com.android.support\cardview-v7\24.2.0\AndroidManifest.xml:20:5-43

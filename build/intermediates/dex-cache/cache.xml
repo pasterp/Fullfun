@@ -7,7 +7,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.1"
-        sha1="de95075a453b385fd2f7ae67c45bc7fb8183a795">
+        sha1="09c59f3dd0176c3f16df0744c878c1152de1f7c2">
         <dex dex="C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_12906ef5b25c329e1afacd5f94d4ebfa79abb891\classes.dex" />
     </item>
     <item
@@ -97,7 +97,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.1"
-        sha1="73984a673a81bfba38d262a3bd9b7675ce6962ce">
+        sha1="87f85440c6151462bf5b17edfab0159f2345b1d2">
         <dex dex="C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_4e4d9effc36ebe396ebbd8b902d56dc134211931\classes.dex" />
     </item>
     <item

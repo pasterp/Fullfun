@@ -79,4 +79,8 @@ public class JoueurDAO {
     public void ajouterJoueur(Joueur joueur){
         listeJoueurs.add(joueur);
     }
+
+    public void supprimerJoueur(Joueur joueur) {
+        listeJoueurs.remove(joueur);
+    }
 }

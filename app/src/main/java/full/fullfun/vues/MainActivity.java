@@ -1,34 +1,26 @@
 package full.fullfun.vues;
 
-import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.ButtonBarLayout;
 import android.support.v7.widget.Toolbar;
 
-import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.ArrayAdapter;
 import android.widget.ImageButton;
-import android.widget.Spinner;
-import android.widget.Toast;
 
 import java.io.FileNotFoundException;
-import java.io.IOException;
 
 import full.fullfun.R;
 import full.fullfun.donnees.BaseDeDonnees;
 import full.fullfun.donnees.GenerateurPartie;
 import full.fullfun.donnees.JoueurDAO;
 import full.fullfun.exceptions.ParsingNomJoueurImpossibleException;
+import full.fullfun.modeles.Joueur;
 import full.fullfun.modeles.Partie;
+import full.fullfun.modeles.Sexe;
 import full.fullfun.vues.adapteurs.PageVueAdapteur;
 import full.fullfun.vues.adapteurs.ToastCustom;
 import full.fullfun.vues.fragments.FragmentJoueurs;
@@ -60,8 +52,6 @@ public class MainActivity extends AppCompatActivity {
 
     protected FloatingActionButton boutonLancerPartie;
 
-    protected ImageButton ajouterSetOuJoueur;
-
 
     /***** Méthodes *****/
 
@@ -75,24 +65,19 @@ public class MainActivity extends AppCompatActivity {
             JoueurDAO.getInstance().chargerSauvegarde(openFileInput("joueurs.xml"));
         } catch (FileNotFoundException e) {
             e.printStackTrace();
-            try {
-                openFileOutput("joueurs.xml", Context.MODE_PRIVATE);
-                JoueurDAO.getInstance().chargerSauvegarde(getResources().getAssets().open("joueurs.xml"));
-                JoueurDAO.getInstance().sauvegarderJoueurs(openFileOutput("joueurs.xml", Context.MODE_PRIVATE));
-            } catch (IOException e1) {
-                e1.printStackTrace();
-            }
         }
         instancierFragments();
 
         //Ajout de la toolbar a l'activite principale
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        ImageButton boutonAjouterJoueur = (ImageButton) toolbar.findViewById(R.id.boutonAJouterJoueur);
+        ImageButton boutonAjouterJoueur = (ImageButton) toolbar.findViewById(R.id.boutonAjouterJoueur);
         boutonAjouterJoueur.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent ouvrirEditeurJoueur = new Intent(MainActivity.this, AjoutJoueur.class);
+                ouvrirEditeurJoueur.putExtra("joueur", new Joueur(-1, "", Sexe.Homme));
+                startActivity(ouvrirEditeurJoueur);
             }
         });
 
@@ -100,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         // Reglage du viewpager pour chaque tabs
-        ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
+        ViewPager viewPager = (ViewPager) findViewById(R.id.viewPagerMain);
         setupViewPager(viewPager);
 
         // mise en place de la tabs dans la toolbar
@@ -110,7 +95,6 @@ public class MainActivity extends AppCompatActivity {
         boutonLancerPartie = (FloatingActionButton) findViewById(R.id.boutonLancerPartie);
         boutonLancerPartie.hide();
     }
-
 
     private void instancierFragments() {
         fragmentJoueurs = new FragmentJoueurs();
@@ -129,7 +113,6 @@ public class MainActivity extends AppCompatActivity {
         fragmentSets.setMainActivity(this);
     }
 
-
     public void verifierLancementPartie(){
         if (!fragmentJoueurs.getJoueursSelect().isEmpty() && fragmentSets.getSetSelect().isEmpty()){
             boutonLancerPartie.show();
@@ -137,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     new ToastCustom(MainActivity.this,TOAST_SET);
-                    ((ViewPager)findViewById(R.id.viewpager)).setCurrentItem(FRAGMENT_SETS);
+                    ((ViewPager)findViewById(R.id.viewPagerMain)).setCurrentItem(FRAGMENT_SETS);
 
                 }
             });
@@ -147,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     new ToastCustom(MainActivity.this,TOAST_JOUEUR);
-                    ((ViewPager)findViewById(R.id.viewpager)).setCurrentItem(FRAGMENT_JOUEURS);
+                    ((ViewPager)findViewById(R.id.viewPagerMain)).setCurrentItem(FRAGMENT_JOUEURS);
                 }
             });
         }else if(!fragmentJoueurs.getJoueursSelect().isEmpty() && !fragmentSets.getSetSelect().isEmpty()){
@@ -172,5 +155,44 @@ public class MainActivity extends AppCompatActivity {
         }else {
             boutonLancerPartie.hide();
         }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        BaseDeDonnees.getInstance(getBaseContext());
+        try {
+            JoueurDAO.getInstance().chargerSauvegarde(openFileInput("joueurs.xml"));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        instancierFragments();
+
+        //Ajout de la toolbar a l'activite principale
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        ImageButton boutonAjouterJoueur = (ImageButton) toolbar.findViewById(R.id.boutonAjouterJoueur);
+        boutonAjouterJoueur.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent ouvrirEditeurJoueur = new Intent(MainActivity.this, AjoutJoueur.class);
+                ouvrirEditeurJoueur.putExtra("joueur", new Joueur(-1, "", Sexe.Homme));
+                startActivity(ouvrirEditeurJoueur);
+            }
+        });
+
+
+
+
+        // Reglage du viewpager pour chaque tabs
+        ViewPager viewPager = (ViewPager) findViewById(R.id.viewPagerMain);
+        setupViewPager(viewPager);
+
+        // mise en place de la tabs dans la toolbar
+        TabLayout tabs = (TabLayout) findViewById(R.id.tabs);
+        tabs.setupWithViewPager(viewPager);
+
+        boutonLancerPartie = (FloatingActionButton) findViewById(R.id.boutonLancerPartie);
+        boutonLancerPartie.hide();
     }
 }

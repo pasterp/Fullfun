@@ -15,7 +15,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".vues.VuePartie" android:screenOrientation="landscape"></activity>
+        <activity
+            android:name=".vues.VuePartie"
+            android:screenOrientation="landscape" />
+        <activity android:name=".vues.AjoutJoueur"></activity>
     </application>
 
 </manifest>

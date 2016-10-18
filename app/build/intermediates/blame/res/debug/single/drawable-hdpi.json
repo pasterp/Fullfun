@@ -8,6 +8,10 @@
         "source": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\src\\main\\res\\drawable-hdpi\\ic_action_name.png"
     },
     {
+        "merged": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_action_valider.png",
+        "source": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\src\\main\\res\\drawable-hdpi\\ic_action_valider.png"
+    },
+    {
         "merged": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_flash_on_black_24dp.png",
         "source": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_flash_on_black_24dp.png"
     },

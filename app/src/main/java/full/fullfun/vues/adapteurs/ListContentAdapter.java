@@ -1,7 +1,10 @@
 package full.fullfun.vues.adapteurs;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.graphics.Color;
+import android.support.design.widget.Snackbar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.util.SparseBooleanArray;
@@ -15,6 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import full.fullfun.R;
+import full.fullfun.donnees.JoueurDAO;
 import full.fullfun.modeles.Joueur;
 import full.fullfun.modeles.Sexe;
 import full.fullfun.vues.MainActivity;
@@ -33,6 +37,12 @@ public class ListContentAdapter extends RecyclerView.Adapter<ListContentAdapter.
 
     private MainActivity mainActivity;
 
+    private CustomListClickEcouteur ecouteur;
+
+    public  void setCustomListener(CustomListClickEcouteur ecouteur){
+        this.ecouteur = ecouteur;
+    }
+
     /***** Liste des joueurs selecitonne******/
     public List<Joueur> joueursSelect = new ArrayList<>();
 
@@ -40,7 +50,7 @@ public class ListContentAdapter extends RecyclerView.Adapter<ListContentAdapter.
         this.mainActivity = mainActivity;
     }
 
-    /***** fonction qui recupere les elements graphiques******/
+    /***** Classe qui recupere les elements graphiques******/
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         private SparseBooleanArray selectedItems = new SparseBooleanArray();
         protected TextView textNom;
@@ -50,13 +60,23 @@ public class ListContentAdapter extends RecyclerView.Adapter<ListContentAdapter.
             super(vue);
             textNom =  (TextView) vue.findViewById(R.id.listNom);
             imgSexe = (ImageView) vue.findViewById(R.id.listSexImg);
-            //texteNom.setOnClickListener(this);
+            vue.setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View v) {
+                    if (ecouteur != null) {
+                        ecouteur.onItemLongClick(v, getLayoutPosition());
+                    }
+                    return true;
+                }
+            });
         }
 
         @Override
         public void onClick(View view) {
             //action au clic qu'un element !
         }
+
+
     }
 
     /***** Constructeur ******/
@@ -113,4 +133,5 @@ public class ListContentAdapter extends RecyclerView.Adapter<ListContentAdapter.
     public List<Joueur> getJoueursSelect(){
         return joueursSelect;
     }
+
 }
