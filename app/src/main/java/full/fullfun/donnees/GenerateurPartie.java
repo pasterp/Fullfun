@@ -2,15 +2,13 @@ package full.fullfun.donnees;
 
 import android.util.Log;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Collections;
-import java.util.Date;
 import java.util.List;
 import java.util.Random;
 import java.util.regex.Pattern;
 
+import full.fullfun.exceptions.ParsingNomJoueurImpossibleException;
 import full.fullfun.modeles.Joueur;
 import full.fullfun.modeles.Partie;
 import full.fullfun.modeles.Question;
@@ -56,7 +54,7 @@ public class GenerateurPartie {
     }
 
 
-    public GenerateurPartie getInstance(){
+    public static GenerateurPartie getInstance(){
         if (instance == null)
             instance = new GenerateurPartie();
         return instance;
@@ -75,7 +73,8 @@ public class GenerateurPartie {
      * @param joueurs Une List contenant tout les joueurs de la partie.
      * @return La Partie prête à l'utilisage.
      */
-    public Partie genererPartie(List<SetQuestions> sets, List<Joueur> joueurs){
+    public Partie genererPartie(List<SetQuestions> sets, List<Joueur> joueurs)
+            throws ParsingNomJoueurImpossibleException {
         Partie partie = new Partie();
         partie.ajouterJoueurs(joueurs);
 
@@ -83,7 +82,7 @@ public class GenerateurPartie {
         setFinal.setId(999);
         setFinal.setCreateur("FullFun");
         setFinal.setScore(5);
-        setFinal.setDate(SimpleDateFormat.getInstance().format(Calendar.getInstance()));
+        setFinal.setDate("2016-01-01");
         int totalDifficulte = 0;
         // Regroupe toutes les questions dans un même set.
         List<Question> questions = new ArrayList<>();
@@ -156,7 +155,7 @@ public class GenerateurPartie {
      * @param setFinal Le SetQuestion final à parser.
      * @param joueurs La liste des joueurs.
      */
-    private void parserQuestions(SetQuestions setFinal, List<Joueur> joueurs) {
+    private void parserQuestions(SetQuestions setFinal, List<Joueur> joueurs) throws ParsingNomJoueurImpossibleException{
         boolean ok;
         // Parsing des questions
         for (Question q : setFinal.getListeQuestions()){
@@ -174,7 +173,7 @@ public class GenerateurPartie {
                 else if (q.getTexte().contains(TAG_GORGEE_ALEATOIRE_MULTIPLE))
                     parserGorgee(q, setFinal.getDifficulte(), TAG_GORGEE_ALEATOIRE_MULTIPLE);
                 else
-                    ok = true;
+                    ok = true; // Aucun tag détecté -> Le texte a été entièrement traitée
             }
 
         }
@@ -209,7 +208,7 @@ public class GenerateurPartie {
      * @param joueurs La liste des joueurs.
      * @param tag Le tag correspondant au genre.
      */
-    private void parserNom(Question q, List<Joueur> joueurs, String tag) {
+    private void parserNom(Question q, List<Joueur> joueurs, String tag) throws ParsingNomJoueurImpossibleException {
         List<Joueur> potentielsJoueurs = new ArrayList<>();
         Sexe sexe;
         switch (tag){
@@ -233,14 +232,19 @@ public class GenerateurPartie {
                     potentielsJoueurs.add(j);
             }
         }
-        // Parsing du nom en UNE LIGNE: Remplace le tag par un nom de joueur choisi aléatoirement.
-        q.setTexte(
-                q.getTexte().replaceFirst(Pattern.quote(tag),
-                        potentielsJoueurs.get(new Random().nextInt(potentielsJoueurs.size())).getPseudo()));
-        // Si la question est une question d'état, alors le nom du joueur est aussi remplacée dans la question de fin d'état
+        try {
+            // Parsing du nom en UNE LIGNE: Remplace le tag par un nom de joueur choisi aléatoirement.
+            q.setTexte(
+                    q.getTexte().replaceFirst(Pattern.quote(tag),
+                            potentielsJoueurs.get(new Random().nextInt(potentielsJoueurs.size())).getPseudo()));
+            // Si la question est une question d'état, alors le nom du joueur est aussi remplacée dans la question de fin d'état
         /*if (q instanceof QuestionEtat)
             ((QuestionEtat)q).getQuestionFinEtat().setTexte(
                     q.getTexte().replaceFirst(Pattern.quote(tag),
                             potentielsJoueurs.get(new Random().nextInt(potentielsJoueurs.size())).getPseudo()));*/
+        }catch (IllegalArgumentException e){
+            throw new ParsingNomJoueurImpossibleException();
+        }
+
     }
 }

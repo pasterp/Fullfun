@@ -12,6 +12,10 @@
         "source": "C:\\Users\\1634836\\Documents\\GitHub\\Fullfun\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_error_outline_black_24dp.png"
     },
     {
+        "merged": "C:\\Users\\1634836\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_ajouter_joueur.png",
+        "source": "C:\\Users\\1634836\\Documents\\GitHub\\Fullfun\\app\\src\\main\\res\\drawable-xhdpi\\ic_ajouter_joueur.png"
+    },
+    {
         "merged": "C:\\Users\\1634836\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi\\ic_flash_on_black_24dp.png",
         "source": "C:\\Users\\1634836\\Documents\\GitHub\\Fullfun\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_flash_on_black_24dp.png"
     },

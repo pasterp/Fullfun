@@ -2,6 +2,7 @@ package full.fullfun.modeles;
 
 import android.util.Log;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -9,7 +10,7 @@ import java.util.List;
 import full.fullfun.donnees.GenerateurPartie;
 
 
-public class Partie {
+public class Partie implements Serializable{
 
     /***** Attributs *****/
 
@@ -19,12 +20,15 @@ public class Partie {
 
     private List<Joueur> joueurs;
 
+    private int taille;
+
     /***** Constructeurs *****/
 
     public Partie(){
         setQuestions = new SetQuestions();
         questionsArchivees = new ArrayList<>();
         joueurs = new ArrayList<>();
+        taille = 0;
     }
 
     /***** Méthodes *****/
@@ -35,6 +39,7 @@ public class Partie {
      */
     public void ajouterSet(SetQuestions set){
         setQuestions.ajouterQuestionsFromSetQuestions(set);
+        taille += set.getListeQuestions().size();
     }
 
     /**
@@ -85,5 +90,13 @@ public class Partie {
 
     public SetQuestions getSetQuestions() {
         return setQuestions;
+    }
+
+    public int getTaille() {
+        return taille;
+    }
+
+    public boolean isBeforeLast() {
+        return setQuestions.getListeQuestions().size() == 1;
     }
 }

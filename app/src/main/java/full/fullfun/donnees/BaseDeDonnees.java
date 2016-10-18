@@ -23,13 +23,13 @@ public class BaseDeDonnees extends SQLiteOpenHelper {
 
     private final String TABLE_QUESTION = "Question";
 
-    private final String TABLE_SET = "Set";
+    private final String TABLE_SET = "SetQuestion";
 
     private final String REQ_CREATE_TABLE_QUESTION =
             "Create table Question (id INTEGER PRIMARY KEY, categorie TEXT, texte TEXT, idSet INTEGER)";
 
     private final String REQ_CREATE_TABLE_SET =
-            "Create table Set (id INTEGER PRIMARY KEY, nom TEXT, createur TEXT, difficulte INTEGER, " +
+            "Create table SetQuestion (id INTEGER PRIMARY KEY, nom TEXT, createur TEXT, difficulte INTEGER, " +
                     "date TEXT, duree INTEGER, score INTEGER)";
 
     private final String REQ_CREATE_TABLE_JOUEUR =
@@ -39,7 +39,7 @@ public class BaseDeDonnees extends SQLiteOpenHelper {
             "Drop table Question";
 
     private final String REQ_SUPPRIMER_TABLE_SET =
-            "Drop table Set";
+            "Drop table SetQuestion";
 
     private final String REQ_SUPPRIMER_TABLE_JOUEUR =
             "Drop table Joueur";
@@ -49,7 +49,7 @@ public class BaseDeDonnees extends SQLiteOpenHelper {
             "Select * From Question";
 
     private final String REQ_SELECT_SETS =
-            "Select * From Set";
+            "Select * From SetQuestion";
 
     private final String REQ_SELECT_JOUEURS =
             "Select * From Joueur";

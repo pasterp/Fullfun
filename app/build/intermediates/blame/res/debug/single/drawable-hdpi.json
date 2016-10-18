@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\Users\\1634836\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_ajouter_joueur.png",
+        "source": "C:\\Users\\1634836\\Documents\\GitHub\\Fullfun\\app\\src\\main\\res\\drawable-hdpi\\ic_ajouter_joueur.png"
+    },
+    {
         "merged": "C:\\Users\\1634836\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi\\ic_flash_on_black_24dp.png",
         "source": "C:\\Users\\1634836\\Documents\\GitHub\\Fullfun\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_flash_on_black_24dp.png"
     },

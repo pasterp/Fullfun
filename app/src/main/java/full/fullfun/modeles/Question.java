@@ -1,6 +1,8 @@
 package full.fullfun.modeles;
 
-public class Question {
+import java.io.Serializable;
+
+public class Question implements Serializable{
 
     /***** Attributs *****/
 

@@ -1,7 +1,9 @@
 package full.fullfun.modeles;
 
 
-public class Joueur {
+import java.io.Serializable;
+
+public class Joueur implements Serializable{
 
 
     /***** Attributs *****/

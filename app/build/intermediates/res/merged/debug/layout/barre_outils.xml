@@ -5,6 +5,7 @@
 
     android:orientation="vertical" android:layout_width="match_parent"
 android:layout_height="match_parent">
+
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -16,10 +17,10 @@ android:layout_height="match_parent">
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_action_name"
+            android:src="@drawable/ic_ajouter_joueur"
             android:layout_marginLeft="@dimen/seize_padding"
             android:layout_gravity="right"
-            android:id="@+id/ajouter"
+            android:id="@+id/boutonAJouterJoueur"
             android:background="@color/colorPrimary"
 
             />
