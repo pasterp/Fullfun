@@ -50,35 +50,6 @@ public class ListContentAdapter extends RecyclerView.Adapter<ListContentAdapter.
         this.mainActivity = mainActivity;
     }
 
-    /***** Classe qui recupere les elements graphiques******/
-    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
-        private SparseBooleanArray selectedItems = new SparseBooleanArray();
-        protected TextView textNom;
-        protected ImageView imgSexe;
-
-        public ViewHolder(View vue) {
-            super(vue);
-            textNom =  (TextView) vue.findViewById(R.id.listNom);
-            imgSexe = (ImageView) vue.findViewById(R.id.listSexImg);
-            vue.setOnLongClickListener(new View.OnLongClickListener() {
-                @Override
-                public boolean onLongClick(View v) {
-                    if (ecouteur != null) {
-                        ecouteur.onItemLongClick(v, getLayoutPosition());
-                    }
-                    return true;
-                }
-            });
-        }
-
-        @Override
-        public void onClick(View view) {
-            //action au clic qu'un element !
-        }
-
-
-    }
-
     /***** Constructeur ******/
     public ListContentAdapter(Context mContext, List<Joueur> listeJoueur) {
         this.mContext = mContext;
@@ -134,4 +105,35 @@ public class ListContentAdapter extends RecyclerView.Adapter<ListContentAdapter.
         return joueursSelect;
     }
 
+
+
+
+    /***** Classe qui recupere les elements graphiques******/
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+        private SparseBooleanArray selectedItems = new SparseBooleanArray();
+        protected TextView textNom;
+        protected ImageView imgSexe;
+
+        public ViewHolder(View vue) {
+            super(vue);
+            textNom =  (TextView) vue.findViewById(R.id.listNom);
+            imgSexe = (ImageView) vue.findViewById(R.id.listSexImg);
+            vue.setOnLongClickListener(new View.OnLongClickListener() {
+                @Override
+                public boolean onLongClick(View v) {
+                    if (ecouteur != null) {
+                        ecouteur.onItemLongClick(v, getLayoutPosition());
+                    }
+                    return true;
+                }
+            });
+        }
+
+        @Override
+        public void onClick(View view) {
+            //action au clic qu'un element !
+        }
+
+
+    }
 }

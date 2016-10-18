@@ -3,6 +3,9 @@ package full.fullfun.vues;
 import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentTransaction;
+import android.support.v4.content.LocalBroadcastManager;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -21,6 +24,7 @@ import full.fullfun.exceptions.ParsingNomJoueurImpossibleException;
 import full.fullfun.modeles.Joueur;
 import full.fullfun.modeles.Partie;
 import full.fullfun.modeles.Sexe;
+import full.fullfun.vues.adapteurs.ListContentAdapter;
 import full.fullfun.vues.adapteurs.PageVueAdapteur;
 import full.fullfun.vues.adapteurs.ToastCustom;
 import full.fullfun.vues.fragments.FragmentJoueurs;
@@ -160,39 +164,14 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        BaseDeDonnees.getInstance(getBaseContext());
-        try {
-            JoueurDAO.getInstance().chargerSauvegarde(openFileInput("joueurs.xml"));
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        }
-        instancierFragments();
+        fragmentJoueurs.setMainActivity(this);
+        fragmentSets.setMainActivity(this);
+    }
 
-        //Ajout de la toolbar a l'activite principale
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        ImageButton boutonAjouterJoueur = (ImageButton) toolbar.findViewById(R.id.boutonAjouterJoueur);
-        boutonAjouterJoueur.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent ouvrirEditeurJoueur = new Intent(MainActivity.this, AjoutJoueur.class);
-                ouvrirEditeurJoueur.putExtra("joueur", new Joueur(-1, "", Sexe.Homme));
-                startActivity(ouvrirEditeurJoueur);
-            }
-        });
-
-
-
-
-        // Reglage du viewpager pour chaque tabs
-        ViewPager viewPager = (ViewPager) findViewById(R.id.viewPagerMain);
-        setupViewPager(viewPager);
-
-        // mise en place de la tabs dans la toolbar
-        TabLayout tabs = (TabLayout) findViewById(R.id.tabs);
-        tabs.setupWithViewPager(viewPager);
-
-        boutonLancerPartie = (FloatingActionButton) findViewById(R.id.boutonLancerPartie);
-        boutonLancerPartie.hide();
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        fragmentJoueurs.setMainActivity(this);
+        fragmentSets.setMainActivity(this);
     }
 }
