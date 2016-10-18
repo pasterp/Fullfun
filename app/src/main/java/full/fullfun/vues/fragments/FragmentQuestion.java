@@ -1,5 +1,9 @@
 package full.fullfun.vues.fragments;
 
+import android.annotation.TargetApi;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -28,5 +32,11 @@ public class FragmentQuestion extends Fragment {
         texteQuestion = (TextView) vue.findViewById(R.id.texteQuestion);
         texteQuestion.setText(getArguments().getString("texteQuestion"));
         return vue;
+    }
+
+
+    public void griser() {
+        if (texteQuestion != null)
+            texteQuestion.setBackgroundColor(Color.DKGRAY);
     }
 }

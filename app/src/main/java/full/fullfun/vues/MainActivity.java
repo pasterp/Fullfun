@@ -92,31 +92,6 @@ public class MainActivity extends AppCompatActivity {
         boutonAjouterJoueur.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AlertDialog.Builder dialogueConstructeur = new AlertDialog.Builder(MainActivity.this);
-                dialogueConstructeur.setTitle("Ajouter un joueur");
-                LayoutInflater inflater = (LayoutInflater)getBaseContext()
-                        .getSystemService(LAYOUT_INFLATER_SERVICE);
-                dialogueConstructeur.setView(inflater.inflate(R.layout.dialogue_ajouter_joueur, null));
-
-                dialogueConstructeur.setPositiveButton("Ajouter", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        // Ajout joueur
-                    }
-                });
-                dialogueConstructeur.setNegativeButton("Annuler", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        new ToastCustom(MainActivity.this, ToastCustom.ANNULER_AJOUT_JOUEUR);
-                    }
-                });
-                AlertDialog dialogue = dialogueConstructeur.create();
-                dialogue.show();
-                Spinner spinnerSexe = (Spinner) findViewById(R.id.spinnerSexe);
-                ArrayAdapter<CharSequence> spinnerAdapteur =
-                        ArrayAdapter.createFromResource(dialogue.getContext(), R.array.sexeListe, android.R.layout.simple_spinner_item);
-                spinnerAdapteur.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                spinnerSexe.setAdapter(spinnerAdapteur);
 
             }
         });

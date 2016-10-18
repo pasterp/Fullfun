@@ -95,6 +95,7 @@ public class GenerateurPartie {
         // Moyenne des difficultés de tout les sets.
         setFinal.setDifficulte(totalDifficulte / sets.size());
         parserQuestions(setFinal, joueurs);
+        Collections.shuffle(setFinal.getListeQuestions());
         partie.ajouterSet(setFinal);
 
         // Ajout de la partie à la base de données.

@@ -99,4 +99,8 @@ public class Partie implements Serializable{
     public boolean isBeforeLast() {
         return setQuestions.getListeQuestions().size() == 1;
     }
+
+    public Question getQuestionArchivee(int i){
+        return questionsArchivees.get(i);
+    }
 }
