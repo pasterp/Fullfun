@@ -75,16 +75,16 @@ public class SetQuestionsDAO {
      */
     public void chargerSauvegardeAsset(AssetManager manageurAssets){
         if (this.manageurAsset == null) {
-            SetQuestions setQuestions = null;
             this.manageurAsset = manageurAssets;
 
             try {
-                setQuestions = new GestionnaireXML().lireSetQuestions(manageurAsset.open("set_01.xml"));
+                listeSetQuestion.add(new GestionnaireXML().lireSetQuestions(manageurAsset.open("set_01.xml")));
+                listeSetQuestion.add(new GestionnaireXML().lireSetQuestions(manageurAsset.open("set_02.xml")));
             } catch (IOException e) {
                 e.printStackTrace();
             }
 
-            listeSetQuestion.add(setQuestions);
+
         }
     }
 

@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import full.fullfun.Externe.GestionPhoto;
+import full.fullfun.externe.GestionPhoto;
 import full.fullfun.R;
 import full.fullfun.vues.adapteurs.ToastCustom;
 

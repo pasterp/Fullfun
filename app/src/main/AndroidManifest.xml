@@ -23,7 +23,7 @@
             android:screenOrientation="landscape" />
         <activity android:name=".vues.AjoutJoueur" />
         <activity android:name=".vues.DetailsSetQuestions"/>
-        <activity android:name=".Externe.GestionPhoto"/>
+        <activity android:name=".externe.GestionPhoto"/>
         <activity android:name=".vues.AjoutJoueur"/>
     </application>
 

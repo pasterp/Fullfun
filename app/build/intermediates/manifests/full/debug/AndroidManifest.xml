@@ -29,7 +29,7 @@
             android:screenOrientation="landscape" />
         <activity android:name="full.fullfun.vues.AjoutJoueur" />
         <activity android:name="full.fullfun.vues.DetailsSetQuestions" />
-        <activity android:name="full.fullfun.Externe.GestionPhoto" />
+        <activity android:name="full.fullfun.externe.GestionPhoto" />
         <activity android:name="full.fullfun.vues.AjoutJoueur" />
     </application>
 

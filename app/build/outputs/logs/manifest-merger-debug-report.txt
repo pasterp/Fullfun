@@ -72,7 +72,7 @@ activity#full.fullfun.vues.DetailsSetQuestions
 ADDED from C:\Users\quent\Documents\GitHub\Fullfun\app\src\main\AndroidManifest.xml:25:9-61
 	android:name
 		ADDED from C:\Users\quent\Documents\GitHub\Fullfun\app\src\main\AndroidManifest.xml:25:19-59
-activity#full.fullfun.Externe.GestionPhoto
+activity#full.fullfun.externe.GestionPhoto
 ADDED from C:\Users\quent\Documents\GitHub\Fullfun\app\src\main\AndroidManifest.xml:26:9-57
 	android:name
 		ADDED from C:\Users\quent\Documents\GitHub\Fullfun\app\src\main\AndroidManifest.xml:26:19-55

@@ -30,18 +30,21 @@ public class GenerateurPartie {
      * pour avoir des valeurs "correctes" de gorgées.
      */
     private static final int MARGE_GORGEE = 2;
+    private static final int LIMITE_GORGEE = 10;
 
     /***** Constantes *****/
 
-    private final String TAG_HOMME =                     "#{h}";
+    private final String TAG_HOMME                     = "#{h}";
 
-    private final String TAG_FEMME =                     "#{f}";
+    private final String TAG_FEMME                     = "#{f}";
 
-    private final String TAG_MIXTE =                     "#{m}";
+    private final String TAG_MIXTE                     = "#{m}";
 
-    private final String TAG_GORGEE_ALEATOIRE =          "#{g}";
+    private final String TAG_GORGEE_ALEATOIRE          = "#{g}";
 
     private final String TAG_GORGEE_ALEATOIRE_MULTIPLE = "#{gs}"; // Gorgée aléatoire strictement supérieur à 1
+
+    private final String TAG_GORGEE_ALEATOIRE_EXTREME  = "#{gx}"; // Nombre élevé de gorgée !
 
     /***** Attributs *****/
 
@@ -173,6 +176,8 @@ public class GenerateurPartie {
                     parserGorgee(q, setFinal.getDifficulte(), TAG_GORGEE_ALEATOIRE);
                 else if (q.getTexte().contains(TAG_GORGEE_ALEATOIRE_MULTIPLE))
                     parserGorgee(q, setFinal.getDifficulte(), TAG_GORGEE_ALEATOIRE_MULTIPLE);
+                else if( q.getTexte().contains(TAG_GORGEE_ALEATOIRE_EXTREME))
+                    parserGorgee(q, setFinal.getDifficulte(), TAG_GORGEE_ALEATOIRE_EXTREME);
                 else
                     ok = true; // Aucun tag détecté -> Le texte a été entièrement traitée
             }
@@ -197,6 +202,13 @@ public class GenerateurPartie {
                 break;
             case TAG_GORGEE_ALEATOIRE_MULTIPLE:
                 nbr = 2 + new Random().nextInt(difficulte + MARGE_GORGEE);
+                q.setTexte(q.getTexte().replaceFirst(Pattern.quote(tag), String.valueOf(nbr)));
+                q.setTexte(q.getTexte().replaceFirst(Pattern.quote("gorgée"), "gorgées"));
+                break;
+            case TAG_GORGEE_ALEATOIRE_EXTREME:
+                nbr = 4 + new Random().nextInt(difficulte + MARGE_GORGEE);
+                if (nbr > LIMITE_GORGEE)
+                    nbr = LIMITE_GORGEE;
                 q.setTexte(q.getTexte().replaceFirst(Pattern.quote(tag), String.valueOf(nbr)));
                 q.setTexte(q.getTexte().replaceFirst(Pattern.quote("gorgée"), "gorgées"));
                 break;
