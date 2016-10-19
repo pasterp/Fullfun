@@ -32,6 +32,20 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:layout_marginBottom="5dp"
-        android:layout_marginRight="5dp"/>
+        android:layout_marginRight="5dp" />
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        app:srcCompat="@drawable/de6"
+        android:id="@+id/boutonDe"
+        app:rippleColor="@android:color/white"
+        app:elevation="2dp"
+        android:layout_above="@+id/boutonFinPartie"
+        android:layout_alignLeft="@+id/boutonFinPartie"
+        android:layout_alignStart="@+id/boutonFinPartie"
+        app:backgroundTint="@android:color/holo_orange_dark"
+        android:onClick="jouerAuxDes" />
 
 </RelativeLayout>

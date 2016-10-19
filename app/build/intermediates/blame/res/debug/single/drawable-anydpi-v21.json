@@ -1,18 +1,18 @@
 [
     {
-        "merged": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\ic_share_black_24dp.xml",
-        "source": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_share_black_24dp.xml"
+        "merged": "/home/pascal/Fullfun/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_share_black_24dp.xml",
+        "source": "/home/pascal/Fullfun/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_share_black_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\ic_error_outline_black_24dp.xml",
-        "source": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_error_outline_black_24dp.xml"
+        "merged": "/home/pascal/Fullfun/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_flash_on_black_24dp.xml",
+        "source": "/home/pascal/Fullfun/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_flash_on_black_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\ic_flash_on_black_24dp.xml",
-        "source": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_flash_on_black_24dp.xml"
+        "merged": "/home/pascal/Fullfun/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_menu_black_24dp.xml",
+        "source": "/home/pascal/Fullfun/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_menu_black_24dp.xml"
     },
     {
-        "merged": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21\\ic_menu_black_24dp.xml",
-        "source": "C:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_menu_black_24dp.xml"
+        "merged": "/home/pascal/Fullfun/app/build/intermediates/res/merged/debug/drawable-anydpi-v21/ic_error_outline_black_24dp.xml",
+        "source": "/home/pascal/Fullfun/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_error_outline_black_24dp.xml"
     }
 ]

@@ -1,61 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <instant-run
     abi="arm64-v8a,armeabi-v7a,armeabi"
-    api-level="21"
-    density="xxhdpi"
+    api-level="23"
+    density="xxxhdpi"
     format="8"
     plugin-version="2.2.1"
-    timestamp="46982431429777"
-    token="-5814025905430453719"
-    verifier="COLD_SWAP_REQUESTED" >
+    timestamp="3809121640297"
+    token="-7767476101032699356"
+    verifier="COMPATIBLE" >
 
     <task
         name="javac"
-        duration="0" />
+        duration="205" />
     <task
         name="instant-run-dex"
-        duration="0" />
+        duration="18" />
     <task
         name="instant-run-transform"
-        duration="0" />
+        duration="36" />
     <task
         name="verifier"
-        duration="0" />
+        duration="1" />
 
     <artifact
-        location="C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
-        type="RESOURCES" />
+        location="/home/pascal/Fullfun/app/build/intermediates/reload-dex/debug/classes.dex"
+        type="RELOAD_DEX" />
 
     <build
-        timestamp="46004392925333"
+        timestamp="3602626592332"
         verifier="FULL_BUILD_REQUESTED" >
         <artifact
-            location="C:\Users\quent\Documents\GitHub\Fullfun\app\build\outputs\apk\app-debug.apk"
+            location="/home/pascal/Fullfun/app/build/outputs/apk/app-debug.apk"
             type="MAIN" />
     </build>
     <build
-        timestamp="46122035906222"
-        verifier="R_CLASS_CHANGE" >
+        timestamp="3809121640297"
+        verifier="COMPATIBLE" >
         <artifact
-            location="C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_1\classes.dex"
-            type="DEX" />
-        <artifact
-            location="C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_2\classes.dex"
-            type="DEX" />
-    </build>
-    <build
-        timestamp="46818751490222"
-        verifier="FIELD_ADDED" >
-        <artifact
-            location="C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\transforms\dex\debug\folders\1000\5\slice_5\classes.dex"
-            type="DEX" />
-    </build>
-    <build
-        timestamp="46982431429777"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="C:\Users\quent\Documents\GitHub\Fullfun\app\build\intermediates\instant-run-resources\resources-debug.ir.ap_"
-            type="RESOURCES" />
+            location="/home/pascal/Fullfun/app/build/intermediates/reload-dex/debug/classes.dex"
+            type="RELOAD_DEX" />
     </build>
 
 </instant-run>

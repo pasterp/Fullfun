@@ -11,6 +11,13 @@
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
+    <uses-feature
+        android:glEsVersion="0x00010000"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.sensor.accelerometer"
+        android:required="true" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -29,8 +36,7 @@
             android:screenOrientation="landscape" />
         <activity android:name="full.fullfun.vues.AjoutJoueur" />
         <activity android:name="full.fullfun.vues.DetailsSetQuestions" />
-        <activity android:name="full.fullfun.externe.GestionPhoto" />
-        <activity android:name="full.fullfun.vues.AjoutJoueur" />
+        <activity android:name="full.fullfun.Externe.GestionPhoto" />
     </application>
 
 </manifest>

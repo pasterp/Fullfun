@@ -1,4 +1,4 @@
-package full.fullfun.externe;
+package full.fullfun.Externe;
 
 import android.Manifest;
 import android.content.Intent;

@@ -1,7 +1,7 @@
-#Tue Oct 18 22:52:25 EDT 2016
-base.0=C\:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_12906ef5b25c329e1afacd5f94d4ebfa79abb891
+#Wed Oct 19 19:15:11 EDT 2016
+base.0=/home/pascal/Fullfun/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_46fa5527b6c6ff218b3464fd41a4106a662b8a9d
 renamed.1=classes.dex
 renamed.0=classes2.dex
-file.1=C\:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_4e4d9effc36ebe396ebbd8b902d56dc134211931\\classes.dex
-base.1=C\:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_4e4d9effc36ebe396ebbd8b902d56dc134211931
-file.0=C\:\\Users\\quent\\Documents\\GitHub\\Fullfun\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_12906ef5b25c329e1afacd5f94d4ebfa79abb891\\classes.dex
+file.1=/home/pascal/Fullfun/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_c873826d4924482d6d58b2411ebbae3f3f5cd3e0/classes.dex
+base.1=/home/pascal/Fullfun/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_c873826d4924482d6d58b2411ebbae3f3f5cd3e0
+file.0=/home/pascal/Fullfun/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_46fa5527b6c6ff218b3464fd41a4106a662b8a9d/classes.dex
