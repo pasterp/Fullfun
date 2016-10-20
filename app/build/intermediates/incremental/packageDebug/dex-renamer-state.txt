@@ -1,4 +1,4 @@
-#Wed Oct 19 19:15:11 EDT 2016
+#Wed Oct 19 21:50:53 EDT 2016
 base.0=/home/pascal/Fullfun/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_46fa5527b6c6ff218b3464fd41a4106a662b8a9d
 renamed.1=classes.dex
 renamed.0=classes2.dex

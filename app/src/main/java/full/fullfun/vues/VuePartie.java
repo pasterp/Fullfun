@@ -112,7 +112,13 @@ public class VuePartie extends AppCompatActivity {
         surfaceOpenGlDé = new MaSurfaceOpenGl(this);
 
         RelativeLayout layout = (RelativeLayout) findViewById(R.id.activity_vue_partie);
-        setContentView(surfaceOpenGlDé);
+
+        RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams(
+                RelativeLayout.LayoutParams.WRAP_CONTENT,
+                RelativeLayout.LayoutParams.WRAP_CONTENT);
+        lp.addRule(RelativeLayout.ALIGN_PARENT_LEFT);
+
+        layout.addView(surfaceOpenGlDé, lp);
     }
 
     @Override
@@ -120,7 +126,9 @@ public class VuePartie extends AppCompatActivity {
         if(surfaceOpenGlDé == null)
             super.onBackPressed();
         else {
-            ((RelativeLayout) findViewById(R.id.activity_vue_partie)).removeView(surfaceOpenGlDé);
+            surfaceOpenGlDé.vider();
+            RelativeLayout layout = (RelativeLayout) findViewById(R.id.activity_vue_partie);
+            layout.removeView(surfaceOpenGlDé);
             surfaceOpenGlDé = null;
         }
     }

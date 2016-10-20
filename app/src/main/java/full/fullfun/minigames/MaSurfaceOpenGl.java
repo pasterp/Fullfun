@@ -50,4 +50,8 @@ public class MaSurfaceOpenGl extends GLSurfaceView {
     public void lancerLeDé(){
         renduOpenGL.lancerLeDé();
     }
+
+    public void vider(){
+        renduOpenGL.nettoyer();
+    }
 }

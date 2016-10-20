@@ -7,7 +7,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.1"
-        sha1="c29be65fcabad960224251baf016dc3e3c0e5e36">
+        sha1="26b7db0abc8b555d16e45a90ea7c735c3b5918cb">
         <dex dex="/home/pascal/Fullfun/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_46fa5527b6c6ff218b3464fd41a4106a662b8a9d/classes.dex" />
     </item>
     <item
@@ -106,7 +106,7 @@
         jumboMode="true"
         optimize="true"
         revision="24.0.1"
-        sha1="50d9b2de09ea21db3d2f38e93b70309f4ea65523">
+        sha1="88dbe7305687b80b8e87b04e9b64fb0322225d56">
         <dex dex="/home/pascal/Fullfun/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_c873826d4924482d6d58b2411ebbae3f3f5cd3e0/classes.dex" />
     </item>
     <item

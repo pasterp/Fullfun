@@ -23,6 +23,8 @@ public class MonRenduOpenGL implements Renderer {
     private float mTargX, mTargY;
     private float mVitesse = 5;
 
+    private boolean active;
+
     private Context mContexte;
 
     public MonRenduOpenGL(Context c){
@@ -43,6 +45,8 @@ public class MonRenduOpenGL implements Renderer {
 
         mDé = new Dé(0, 0, -5);
         mDé.chargerTextures(gl, mContexte);
+
+        active = true;
     }
 
     @Override
@@ -61,6 +65,9 @@ public class MonRenduOpenGL implements Renderer {
     @Override
     public void onDrawFrame(GL10 gl) {
         gl.glClear(GL10.GL_COLOR_BUFFER_BIT | GL10.GL_DEPTH_BUFFER_BIT);
+
+        if (!active)
+            return;
 
         gl.glLoadIdentity();
 
@@ -101,5 +108,9 @@ public class MonRenduOpenGL implements Renderer {
         mRotY = 0.0f;
         mTargX = randomFace();
         mTargY = randomFace();
+    }
+
+    public void nettoyer() {
+        active = false;
     }
 }
